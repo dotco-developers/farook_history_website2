@@ -1,0 +1,74 @@
+
+
+.sec{
+    min-height: 90vh;
+    position: relative;
+}
+
+.im{
+    width: 237px;
+    height: 285px;
+    border-radius: 30px;
+   
+}
+.card{
+    width: 270px;
+   display: block;
+margin-left: auto;
+margin-right: auto;  
+margin-top: 10px;
+margin-bottom: 10px;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 20px 0px;
+   border-radius: 30px;
+   margin-top: -10px;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    z-index: -1;
+    background-color: rgb(181, 181, 181);
+    opacity: .2;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  }
+  .card p{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    font-size: 17px;
+    font-family: "Poppins";
+  }
+
+  .head{
+    font-size: 58px;
+    color: #982B35;
+    font-family: "Madimi One";
+    text-align: center;
+    margin-bottom: 120px;
+}
+
+.rbn{
+    width: 100%;
+position: absolute;
+height: 150px;
+background-color: #982B35;
+z-index: -1;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+.rowe{
+    display: flex;
+    justify-content: space-evenly;
+}

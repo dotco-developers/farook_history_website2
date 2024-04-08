@@ -1,0 +1,26 @@
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+  }
+  
+  .card {
+    width: 200px;
+    height: 300px;
+    margin: 0 70px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+    position: absolute;
+  }
+  
+  .selected {
+    transform: rotateY(0deg) translateZ(200px);
+    z-index: 9;
+  }
+  

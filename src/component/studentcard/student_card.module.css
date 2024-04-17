@@ -1,0 +1,149 @@
+.wrap
+{
+    width: 60%;
+    height: max-content;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 0px 30px;
+    display: block;
+    margin: auto;
+    background-color: white;
+    position: relative;
+}
+.im{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+display: block;
+margin: auto;
+padding-left: 1px;
+   
+}
+.wrap h6{
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-size: 20px;
+    color:#982B35 ;
+    font-weight: 600;
+}
+.wrap p{
+    color: black;
+}
+.pera{
+    margin: auto;
+    margin-left: 30px;
+}
+.col_out{
+    display: flex;
+    align-items: center;
+}
+.qute{
+    width: 30px;
+    height: 30px;
+    color: #982B35;
+    margin-bottom: 10px;
+}
+.qute2{
+    width: 30px;
+    height: 30px;
+    color: #982B35;
+    display: block;
+    float: right;
+    margin-top: 10px;
+}
+
+
+.wrap { 
+    height: 450px; 
+    overflow-y: scroll; 
+} 
+
+.wrap::-webkit-scrollbar { 
+    width: 8px; /* Set the width of the scrollbar */
+} 
+
+.wrap::-webkit-scrollbar-track { 
+    background: transparent; /* Set track background to transparent */
+} 
+
+.wrap::-webkit-scrollbar-thumb { 
+    background: #982B35; 
+    border-radius: 20px;
+    width: 8px; /* Set the width of the scrollbar thumb */
+    height: 20%; /* Set the height of the scrollbar thumb */
+} 
+
+.wrap::-webkit-scrollbar-thumb:hover { 
+    background: #555; 
+} 
+
+.wrap::-webkit-scrollbar-button { 
+    display: none; 
+} 
+
+.content_wrap{
+    margin: 100px 0px;
+    position: relative;
+}
+
+
+.hider{
+    position: fixed;
+    width: 200px;
+    height: 79px;
+    top: 0;
+    left: 10;
+    background-color: #982B35;
+    contain: content;
+}
+.al_r{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+@media(max-width:1114px){
+    .wrap{
+        display: flex;
+        flex-direction: column;
+    }
+   
+}
+@media (max-width:991px) {
+    .content_wrap{
+        margin: 28px 0px;
+    }
+    .im{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    }
+    .wrap{
+
+        width: 80%;
+    }
+}
+
+
+@media(max-width:767px){
+    /* .im{
+        margin-left: 2px;
+    } */
+    .wrap p{
+        margin-left: 5px;
+        
+    }
+    .wrap h6{
+        margin-left: 5px;
+    }
+    .pera{
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+    .wrap{
+        border-top: solid 6px #982B35;
+        border-bottom: solid 6px #982B35;
+        height: 700px;
+
+    }
+}

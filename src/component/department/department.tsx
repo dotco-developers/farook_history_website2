@@ -7,7 +7,7 @@ export default function department() {
     <section className={styles.department}>
       <div className="container">
         <div className="row">
-          <div className="col-lg-6 col-md-6 col-12">
+          <div className="col-lg-6 col-md-12 col-12">
             <h6 className={styles.head}>
               DEPARTMENT
               <br /> PROFILE
@@ -28,7 +28,7 @@ export default function department() {
               </span>{" "}
             </button>
           </div>
-          <div className={`col-lg-6 col-md-6 col-12 ${styles.algn}`}>
+          <div className={`col-lg-6 col-md-12 col-12 ${styles.algn}`}>
             <div className={styles.im}>
                 <Image src={im} className={styles.im1} alt=""></Image>
             </div>

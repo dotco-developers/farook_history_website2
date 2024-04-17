@@ -1,40 +1,94 @@
 // components/Carousel.js
-// components/Carousel.js
-"use client"
-import { useState } from 'react';
-import styles from './event.module.css';
-
-const Carousel = () => {
-  const [selectedCard, setSelectedCard] = useState(0);
-
-  const handleClick = (index) => {
-    setSelectedCard(index);
+"use client";
+import React, { Component } from "react";
+import Carousel from "react-spring-3d-carousel";
+import { config } from "react-spring";
+import styles from "./event.module.css"; // Import CSS module
+import Image from "next/image";
+import im from "../../../public/news2.jpg";
+export default class Example extends Component {
+  state = {
+    goToSlide: 0,
+    offsetRadius: 2,
+    showNavigation: false,
+    config: config.gentle,
   };
 
-  const cards = [
-    { id: 0, text: 'Card 1' },
-    { id: 1, text: 'Card 2' },
-    { id: 2, text: 'Card 3' },
-  ];
+  slides = [
+    {
+      key: '1',
+      content: (
+        <div className={`${styles.outer}`} >
+          <div className={` ${styles.c_out}`}>
+            <Image src={im} alt="" className={styles.im}></Image>
+          </div>
+          <div className={styles.c_out2}>
+            <h2 className={styles.head}>LOREM3</h2>
+            <p className={styles.pera}>
+              Lorem ipsum dolor sit amet sdam maiores animi iusto eveniet soluta
+            </p>
+          </div>
+        </div>
+      ),
+    },
+    {
+      key: '2',
+      content: (
+        <div className={`${styles.outer}`}>
+          <div className={` ${styles.c_out}`}>
+            <Image src={im} alt="" className={styles.im}></Image>
+          </div>
+          <div className={styles.c_out2}>
+            <h2 className={styles.head}>LOREM2</h2>
+            <p className={styles.pera}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+              deleniti adipisci quibusdam maiores animi iusto eveniet soluta
+            </p>
+          </div>
+        </div>
+      ),
+    },
+    {
+      key: '3',
+      content: (
+        <div className={`${styles.outer}`} style={{zIndex:100}}>
+          <div className={` ${styles.c_out}`}>
+            <Image src={im} alt="" className={styles.im}></Image>
+          </div>
+          <div className={styles.c_out2}>
+            <h2 className={styles.head}>LOREM1</h2>
+            <p className={styles.pera}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+              deleniti adipisci quibusdam maiores animi iusto eveniet soluta
+            </p>
+          </div>
+        </div>
+      ),
+    },
+  ].map((slide, index) => {
+    return { ...slide, onClick: () => this.setState({ goToSlide: index }) };
+  });
 
-  const renderCards = () => {
-    return cards.map((card, index) => (
-      <div
-        key={card.id}
-        className={`${styles.card} ${
-          selectedCard === index ? styles.selected : ''
-        }`}
-        onClick={() => handleClick(index)}
-        style={{
-          transform: `rotateY(${(index - selectedCard) * 120}deg) translateZ(200px)  `,
-        }}
-      >
-        {card.text}
-      </div>
-    ));
+  onChangeInput = (e) => {
+    this.setState({
+      [e.target.name]: parseInt(e.target.value, 10) || 0,
+    });
   };
 
-  return <div className={styles.carousel}>{renderCards()}</div>;
-};
-
-export default Carousel;
+  render() {
+    const selectedSlide = this.state.goToSlide
+    return (
+      <>
+        <div className={`container ${styles.container1}`} style={{zIndex: 10000}}>
+          <Carousel
+            slides={this.slides}
+            goToSlide={this.state.goToSlide}
+            offsetRadius={this.state.offsetRadius}
+            showNavigation={this.state.showNavigation}
+            animationConfig={this.state.config}
+          />
+        </div>
+      </>
+    );
+  }
+}

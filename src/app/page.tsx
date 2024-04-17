@@ -3,14 +3,17 @@ import "../app/globals.css"
 import Department from "@/component/department/department";
 import Archieves from "@/component/archieves/Archieves";
 import News from "@/component/News/News";
-import Event from "../component/event/Event"
+import Eventpage from "../component/eventpage/Eventpage"
+import Students from "../component/students/Student"
+
 export default function Home() {
   return (
     <>
     <Landing></Landing>
     <Department></Department>
-    <Event></Event>
+    <Eventpage></Eventpage>
     <Archieves></Archieves>
+    <Students></Students>
     <News></News>
     </>
   );

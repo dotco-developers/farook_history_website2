@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from "@/component/Footer/Footer";
 
 
 
@@ -22,7 +23,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         
-        {children}</body>
+        {children}
+        <Footer></Footer>
+        </body>
     </html>
   );
 }

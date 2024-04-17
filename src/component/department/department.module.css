@@ -9,6 +9,8 @@
 .department{
     min-height: 100vh;
     padding: 55px 0px;
+    overflow-x: hidden;
+
 }
 .content{   
     margin-top: 70px;
@@ -33,6 +35,7 @@
     width:100%;
     height: 100%;
     border-radius: 40px;
+    object-fit: fill;
     
     
 }
@@ -67,4 +70,17 @@
     border-radius: 40px;
    left: 18px;
 
+}
+@media(max-width:992px){
+    .im{
+        height: 100%;
+    }
+   
+}
+
+@media(max-width:767px){
+    .im{
+        height: 100%;
+    }
+   
 }

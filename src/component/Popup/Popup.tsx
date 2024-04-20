@@ -63,14 +63,15 @@ export default function Popup({ handle }: any) {
             </div>
 
             <input type="text" placeholder="Topic"></input>
+            <input type="text" placeholder="Author"></input>
             <div className="row">
-              <div className="col-lg-6 col-12">
+              <div className="col-lg-6 col-6">
                 <div className={styles.txt_up} onClick={texthandle}>
                   <FontAwesomeIcon icon={faClone} className={styles.icar} />
                   <p>paste ur content</p>
                 </div>
               </div>
-              <div className="col-lg-6 col-12">     
+              <div className="col-lg-6 col-6">     
                <label className={styles.im} htmlFor="upload-photo">  
                   <FontAwesomeIcon
                     icon={faCameraRetro}

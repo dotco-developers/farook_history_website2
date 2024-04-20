@@ -3,9 +3,12 @@
     display: flex;
     align-items: center;
     position: relative;
+    padding-top: 50px;
     overflow-x: hidden;
+    position: relative;
 
 }
+
 .bnr{
     position: absolute;
     width: 100%;
@@ -15,4 +18,6 @@
     transform: translate(-50%,-50%);
     background-color: #DFDFDF;
     z-index: 0;
+    margin-top: 26px;
+
   }

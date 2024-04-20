@@ -1,9 +1,9 @@
 /* components/Carousel.module.css */
 
 .im{
-  width: 243px;
-  height: 200px;
-  border-radius: 46px;
+  width: 315px;
+  height: auto;
+  border-radius: 20px;
  
 }
 .c_out{
@@ -33,8 +33,22 @@
 .pera{
   margin-left: 20px;
   font-family: "Poppins";
-}
+ 
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3; 
 
+}
+@media(max-width:991px){
+  .outer{
+    width: 400px;
+  }
+  .head{
+    margin-bottom: 15px;
+  }
+  
+}
 
 
 @media(max-width:767px){

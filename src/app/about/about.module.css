@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+/* .headmain::before{
+    background-image: url('/bg-about-t4.png');
+    background-size: cover;
+    content: "";
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+} */
+
+
+
+.headsub{
+    padding-top: 12rem;
+}
+.headsub h1{
+    font-family: "Madimi One", sans-serif;
+    color: #982B35;
+    font-size: 3rem;
+}
+.headsub p{
+    font-family: "poppins";
+    color: black;
+    line-height: 2rem;
+    font-size:1.5rem;
+    font-weight: 300;
+}
+
+
+.counter{
+    display: flex;
+    width: auto;
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+}
+.countersub{
+    text-align: left;
+   
+}
+
+@media (max-width:768px) {
+    .counter{
+        flex-direction: column;
+        align-items: center;
+    }
+    .countersub{
+        text-align: center;
+        padding-bottom: 3rem;
+       
+    }
+    
+}
+
+.countersub h3{
+    font-family: "Madimi One", sans-serif;
+    font-size: 3rem;
+    color: #982B35;
+    margin-bottom: 0px;
+}
+.countersub h5{
+    font-family: "poppins";
+    font-size: 1.2rem;
+    color: #982B35;
+    font-weight: 200;
+}
+.div2::before{
+    background-image: url('/bg-about.png');
+    background-size: cover;
+    content: "";
+    background-size: cover;
+    position: absolute;
+    top:-1169px;
+    right: 0px;
+    bottom: 170px;
+    left: 0px;
+    opacity: 0.15;
+    z-index: -1;
+
+}
+.div2{
+    height: 50vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.shape1{
+    width: 100%;
+    height: 5rem;
+    background-color:#982B35 ;
+    position: absolute;
+    z-index: 1;
+
+
+
+
+}
+
+.content{
+   
+    width: 60%;
+    height: auto;
+    border-radius: 20px;
+   position: relative;
+   z-index: 2;
+   
+   
+}
+
+.car1{
+width: 100%;
+height: 100%;
+background-color: white;
+border-radius: 20px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+padding-bottom: 4rem;
+transition: 2s ease-in-out;
+transition-duration: 2s;
+
+
+}
+@media (max-width:768px) {
+    .content{
+        width: 90%;
+    }
+    
+}
+
+.content .btnwrap{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.headwrap{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+   
+}
+.headwrap .title{
+    color: #982B35;
+    font-family: "Madimi One", sans-serif;
+
+}
+.icon1{
+    font-size: 2.7rem;
+    color: #982B35;
+}
+.para{
+    padding:0rem 3rem;
+
+}
+.para p{
+    font-family: "poppins";
+}
+.btnwrap{
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 2rem; */
+   
+    
+    
+}
+.btnwrap .btn1{
+    background-color: #982B35;
+    border: #982B35;
+    padding: 3px 30px ;
+    border-radius: 10px;
+    margin: 0 3px;
+}
+
+
+/* faculty  page css starts here*/
+
+.headingfac{
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    padding: 3rem 0rem;
+
+  
+}
+.headingfac h1{
+    color: #982B35;
+    font-family: "Madimi One", sans-serif;
+
+}
+
+.facultywrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4rem;
+    
+}
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.faccard{
+    text-align: center;
+    background-color: #79797933;
+    margin: 0px 10px;
+    padding: 1rem 1rem;
+    padding-bottom: 2.5rem;
+    width: fit-content;
+    border-radius: 500px 500px 500px 500px;
+    position: relative;
+    transition: 2s ease-in-out;
+}
+.readmore{
+    opacity: 0;
+    position: absolute;
+    bottom: 6%;
+    left: 30%;
+    transform: translate(-50% -50%);
+    transition: 1s ease-in;
+    
+}
+.readmore a{
+    font-family: "poppins";
+    font-style: normal;
+    text-decoration: none;
+    color: #982B35;
+}
+
+.faccard:hover{
+    padding-bottom: 5rem;
+    transition: .5s ease-in-out;
+}
+.faccard:hover .readmore{
+    opacity: 1;
+   
+   
+}
+
+
+.facimg1{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.facicons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iconimg{
+    color: #982B35;
+    font-size: 2.5rem;
+}
+.facdata{
+    padding-top: 1rem;
+}
+.facdata h4{
+    color: #982B35;
+    font-family:"poppins";
+    font-weight: 500;
+}
+.facdata h6{
+    color: black;
+    font-family: "poppins";
+    font-weight: 300;
+}
+
+.div3{
+    height: 50vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5rem;
+
+}
+.prgdatawrap{
+    width: 100%;
+}
+.prgdatawrap1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    background-color: #982B35;
+    width: 90%;
+    border-radius: 3px;
+    margin: auto;
+}
+.prgdatawrap1 .prgdata{
+    color: white;
+    font-size: 1rem;
+}
+.prgdatawrap2{
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    background-color: white;
+    width: 90%;
+    border-radius: 3px;
+    margin: auto;
+}
+
+.headwrap button{
+    background-color: #444444;
+    border-radius: 10px;
+    border: 1px solid #444444 ;
+    padding: 10px 10px;
+    color: white;
+    font-weight: 600;
+}
+.prgdata{
+ padding: 0px 20px;
+}
+
+
+
+
+
+/* slide animation */

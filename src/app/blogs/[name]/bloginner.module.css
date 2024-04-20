@@ -1,7 +1,7 @@
 
 .sec{
     min-height: 90vh;
-    padding: 30px 0px;
+    padding: 90px 0px;
 }
 .head{
     font-size: 45px;
@@ -41,4 +41,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.a_ic{
+    width: 15px;
+    height: 15px;
+    color: #982B35;
+    margin: 0px 5px;
+  
+    
+}
+.date{
+    margin-left: 65px;
+   display: flex;
+    margin-bottom: 10px;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media(max-width:767px){
+    .pera{
+        margin: 40px 0px;
+        font-size: 20px;
+    }
+    .im{
+        margin-left: 1px;
+    }
 }

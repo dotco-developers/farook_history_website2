@@ -53,9 +53,13 @@ export default function Landing() {
                 </div>
               </div>
               <div className={`col-lg-3 ${styles.c_out}`}>
+              <a href="#dep">
                 <div className={styles.wrapp}>
-                  <FontAwesomeIcon icon={faCaretDown} className={styles.ic2} />
+                
+                  <FontAwesomeIcon icon={faCaretDown} className={styles.ic2}  />
+                 
                 </div>
+                </a>
               </div>
             </div>
           </div>

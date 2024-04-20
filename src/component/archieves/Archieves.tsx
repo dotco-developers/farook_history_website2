@@ -3,7 +3,7 @@ import styles from "./archieves.module.css";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 export default function Archieves() {
   return (
-    <section className={styles.sec}>
+    <section className={styles.sec} id="archieve">
       <div className="container">
         <div className="row">
           <div className="col-lg-6 col-md-6 col-12">

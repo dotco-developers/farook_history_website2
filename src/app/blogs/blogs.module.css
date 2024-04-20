@@ -2,6 +2,7 @@
 
 .sc{
     position: relative;
+    padding: 95px 0px;
 }
 .btn{
     background-color:#982B35 ;
@@ -117,4 +118,23 @@ margin-left: 20px;
     z-index: 0;
     top: 0;
     left: 0;
+}
+.auth{
+    display: flex;
+}
+.auth p{
+    font-family: "Poppins";
+    font-size: 14px;
+}
+.a_ic{
+    width: 13px;
+    height: 13px;
+    color: #982B35;
+    margin: 0px 5px;
+}
+@media(max-width:767px){
+    .wr{
+        width: 90%;
+    }
+    
 }

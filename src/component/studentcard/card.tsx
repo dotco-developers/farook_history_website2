@@ -4,18 +4,39 @@ import Image from "next/image";
 import styles from "./student_card.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Card_scrol() {
 
+  // const [value, setvalue] = useState(0)
 
+  // useEffect(() => {
+  //   const altdivs=document.getElementsByClassName('alt')
+  //   const len=altdivs.length
+  //   let currentindex=0
+  //  const handle=()=>{
+  //   if (currentindex<=len) {
+  //     altdivs[currentindex? currentindex:0]?.scrollIntoView({behavior:"smooth",block:"center"})
+  //     setvalue(currentindex)
+  //     console.log("function called");  
+  //     currentindex++;
+  //   }else{
+  //     currentindex=0
+  //   }
+  //  }  
+      
+  //  const intervalId = setInterval(handle, 3000);
+  //  return () => clearInterval(intervalId);
+    
+  // }, [])
+   
   return (
     <>
-      <div className={styles.wrap}  id="wr" >
+      <div className={styles.wrap} id="wr">
         <div className={`row alt  ${styles.content_wrap}`}>
           <div className="col-lg-4 col-md-12 col-12">
             <h6>LOREM</h6>
-            <p>
+            <p className={styles.conten}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est,
               rerum ex, minima corrupti quae labore ducimus quam dolor minus hic
               totam modi quod expedita eaque cum quibusdam eos natus delectus?
@@ -42,7 +63,7 @@ export default function Card_scrol() {
         <div className={`row alt  ${styles.content_wrap}`}>
           <div className="col-lg-4 col-md-12 col-12">
             <h6>LOREM</h6>
-            <p>
+            <p className={styles.conten}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est,
               rerum ex, minima corrupti quae labore ducimus quam dolor minus hic
               totam modi quod expedita eaque cum quibusdam eos natus delectus?
@@ -68,10 +89,14 @@ export default function Card_scrol() {
         <div className={`row alt ${styles.content_wrap}`}>
           <div className="col-lg-4 col-md-12 col-12">
             <h6>LOREM</h6>
-            <p>
+            <p className={styles.conten}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est,
               rerum ex, minima corrupti quae labore ducimus quam dolor minus hic
               totam modi quod expedita eaque cum quibusdam eos natus delectus?
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Cupiditate neque mollitia molestiae nihil, natus soluta. Ad
+              molestiae sed dicta dolorum expedita cum labore assumenda nobis.
+              Minima earum deserunt quis voluptates?
             </p>
             <div></div>
           </div>

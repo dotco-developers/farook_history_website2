@@ -46,6 +46,8 @@
     font-size: 18px;
     border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: block;
+    margin: auto;
 
 
 }
@@ -77,6 +79,7 @@ font-family: "Poppins";
 margin-top: 3px;
 border: none;
 display: flex;
+background-color: white;
 }
 .round{
     width: 30px;
@@ -85,9 +88,7 @@ display: flex;
     border-radius: 100%;
 }
 .ic{
-
-    width: 14px;
-    height: 14px;
+    font-size: 13px;
     margin-right: 6px;
 }
 .ic2{
@@ -109,14 +110,16 @@ display: flex;
     width: 30px;
    position: relative;
    border-radius: 10px;
+   
   
 }
 .c_out{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
 }
 .gg{
-    height: 80vh;
+    height: 85vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -125,8 +128,9 @@ display: flex;
 }
 
 .bg{
-height: 100%;
-width: 100%;
+    margin-bottom: -60px;
+    height: 90%;
+    width: 83%;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -172,8 +176,7 @@ justify-content: center;
     color: white;
   }
 
-
-  @media(max-width:767px){
+  @media(max-width:991px){
     .wrapp{
         display: none;
     }
@@ -183,6 +186,12 @@ justify-content: center;
         margin-top: -20px;
         margin-bottom: 20px;
     }
+
+  }
+
+  @media(max-width:767px){
+   
+    
     .head p{
         font-size: 30px;
         margin-bottom: 6px;
@@ -193,7 +202,10 @@ justify-content: center;
     }
     .bg img{
         width: 132%;
-        margin-left: -32px;
+        margin-left: -24px;
     }
-    
+    .bg{
+        width: 101%;
+        margin-bottom: 53px;
+    }
   }

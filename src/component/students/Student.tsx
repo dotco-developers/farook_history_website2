@@ -19,7 +19,6 @@ export default function Students() {
           </div>
           <div className={`col-lg-12 col-md-12 col-12 ${styles.r_out}`}>
           <div className={styles.rbn} ></div>
-
             <Card></Card>
           </div>
         </div>

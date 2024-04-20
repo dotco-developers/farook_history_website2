@@ -34,15 +34,14 @@ export default class Example extends Component {
     {
       key: '2',
       content: (
-        <div className={`${styles.outer}`}>
+        <div className={`${styles.outer}`} >
           <div className={` ${styles.c_out}`}>
             <Image src={im} alt="" className={styles.im}></Image>
           </div>
           <div className={styles.c_out2}>
             <h2 className={styles.head}>LOREM2</h2>
             <p className={styles.pera}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-              deleniti adipisci quibusdam maiores animi iusto eveniet soluta
+              Lorem ipsum dolor sit amet sdam maiores animi iusto eveniet soluta
             </p>
           </div>
         </div>
@@ -51,15 +50,14 @@ export default class Example extends Component {
     {
       key: '3',
       content: (
-        <div className={`${styles.outer}`} style={{zIndex:100}}>
+        <div className={`${styles.outer}`} >
           <div className={` ${styles.c_out}`}>
             <Image src={im} alt="" className={styles.im}></Image>
           </div>
           <div className={styles.c_out2}>
             <h2 className={styles.head}>LOREM1</h2>
             <p className={styles.pera}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-              deleniti adipisci quibusdam maiores animi iusto eveniet soluta
+              Lorem ipsum dolor sit amet sdam maiores animi iusto eveniet soluta
             </p>
           </div>
         </div>
@@ -79,7 +77,7 @@ export default class Example extends Component {
     const selectedSlide = this.state.goToSlide
     return (
       <>
-        <div className={`container ${styles.container1}`} style={{zIndex: 10000}}>
+        <div className={`container ${styles.container1}`} style={{zIndex: 99}}>
           <Carousel
             slides={this.slides}
             goToSlide={this.state.goToSlide}

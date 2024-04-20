@@ -1,6 +1,6 @@
 
 "use client"
-import { faFilter, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faCalendarDays, faFilter, faMagnifyingGlass, faUser } from "@fortawesome/free-solid-svg-icons";
 import styles from "./blogs.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
@@ -85,6 +85,10 @@ export default function Blogs() {
             <div className={styles.card}>
               <Image src={im} alt="" className={styles.im}></Image>
               <h2>LOREM</h2>
+              <div className={styles.auth}>
+                <p> <FontAwesomeIcon icon={faCalendarDays} className={styles.a_ic} />DATE</p> 
+                <p style={{marginLeft:"10px"}}><FontAwesomeIcon icon={faUser} className={styles.a_ic}/>NAME</p>
+              </div>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure a
                 atque, officiis quia itaque impedit modi corporis hic placeat

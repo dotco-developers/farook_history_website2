@@ -9,13 +9,14 @@
 
 }
 .ftr p{
-    font-size: 22px;
+    font-size: 19px;
     color: white;
     font-family: "Poppins";
+    margin: 15px 0px;
 
 }
 .ftr h6{
-    font-size: 32px;
+    font-size: 27px;
     font-weight: 300;
     font-family: "Poppins";
     margin-bottom: 63px;
@@ -34,18 +35,13 @@
     color: #982B35;
 }
 .l_ic{
-    width: 20px;
-    height: 20px;
-    color: #262428;
+    width: 40px;
+    height: 40px;
     display: block;
-    margin: auto;
+    margin: auto 6px;
+
 }
-.outer{
-   
-    padding: 10px;
-    border-radius: 100%;
-    background-color: white;
-}
+
 .wrap_ic{
     display: flex;
     justify-content: flex-end;
@@ -58,7 +54,7 @@
     padding: 30px 0px;
 }
 .svg1{
-    position: absolute;
+    
     margin-bottom: -30px;
   
 }

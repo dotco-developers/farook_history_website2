@@ -1,0 +1,73 @@
+
+
+
+.card h3{
+    font-family: "Madimi One";
+    font-size: 30px;
+    font-weight: 600;
+    display: block;
+    margin: 20px auto;
+    width: max-content;
+}
+.sec{
+    padding: 120px 0px;
+}
+.card{
+    width: 90%;
+    display: block;
+    margin: auto;
+   
+    padding: 30px 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    background: transparent;
+}
+.card p{
+   text-align: center;
+}
+.lg{
+    width: max-content;
+    display: block;
+    margin: 20px auto;
+}
+.head{
+    width: max-content;
+    margin: 0px auto;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: "Madimi One";
+    padding: 40px 0px;
+    padding-bottom: 60px;
+}
+.mainic{
+    width: 70px;
+    height: 70px;
+}
+.card:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #CF9CA1;
+}
+.click{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #CF9CA1;
+}
+@media(max-width:991px){
+    .card p{
+        display: none;
+    }
+    .card{
+       margin: 20px auto;
+       padding: 10px 10px;
+       display: flex;
+       align-items: center;
+    }
+    .card img{
+            width: 40px;
+            height: 40px;
+            margin-left: auto;
+            margin-right: auto;
+    }
+    .card h3{
+        font-size: 20px;
+    }
+}

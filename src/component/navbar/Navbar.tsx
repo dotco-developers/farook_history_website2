@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import im from "../../../public/fc-logo.svg";
-import styles from "./Navbar.module.css"
+import "../../app/globals.css"
 function NavBar() {
   const [navbar, setNavbar] = useState(false);
   return (
@@ -39,35 +39,35 @@ function NavBar() {
                 navbar ? 'p-12 md:p-0 block' : 'hidden'
               }`}
             >
-              <ul className=" h-screen md:h-auto items-center justify-center md:flex ">
-                <li className="mx-1 font-semibold text-[Madimi One]	 pb-6 text-xl text-black py-2 md:px-6 text-center   hover:text-[#982B35]  ">
-                  <Link href="#about" onClick={() => setNavbar(!navbar)} className='text-black hover:text-[#982B35] no-underline '>
-                   <p className='hover:text-[#982B35] block m-auto'>About</p> 
+              <ul className=" h-screen md:h-auto items-center justify-center md:flex  ">
+                <li className="mx-1 font-semibold text-[Madimi One]	 pb-6 text-xl text-black py-2 md:px-6 text-center   hover:text-[#982B35] list  ">
+                  <Link href="#about" onClick={() => setNavbar(!navbar)} className='text-black hover:text-[#982B35] no-underline w-max'>
+                   <p className='hover:text-[#982B35] block m-auto w-max'>About</p> 
                   </Link>
                 </li>
-                <li className="mx-1  font-semibold pb-6 text-xl text-black py-2 px-6 text-center    hover:text-[#982B35]   ">
-                  <Link href="#blog" onClick={() => setNavbar(!navbar)} className='text-black hover:text-[#982B35] no-underline '>
-                  <p className='hover:text-[#982B35] block m-auto'>Research</p> 
+                <li className="mx-1 font-semibold text-[Madimi One]	 pb-6 text-xl text-black py-2 md:px-6 text-center   hover:text-[#982B35] list  ">
+                  <Link href="#about" onClick={() => setNavbar(!navbar)} className='text-black hover:text-[#982B35] no-underline w-max'>
+                   <p className='hover:text-[#982B35] block m-auto w-max'>Research</p> 
                   </Link>
                 </li>
-                <li className="mx-1  font-semibold pb-6 text-xl text-black py-2 px-6 text-center  hover:text-[#982B35]    ">
-                  <Link href="#contact" onClick={() => setNavbar(!navbar)} className='hover:text-[#982B35] no-underline text-black'>
-                  <p className='hover:text-[#982B35] block m-auto'>Programmes</p> 
+                <li className="mx-1 font-semibold text-[Madimi One]	 pb-6 text-xl text-black py-2 md:px-6 text-center   hover:text-[#982B35] list  ">
+                  <Link href="#about" onClick={() => setNavbar(!navbar)} className='text-black hover:text-[#982B35] no-underline w-max'>
+                   <p className='hover:text-[#982B35] block m-auto w-max'>Programmes</p> 
                   </Link>
                 </li>
-                <li className="mx-1 font-semibold pb-6 text-xl text-black py-2 px-6 text-center    hover:text-[#982B35]    ">
-                  <Link href="#projects" onClick={() => setNavbar(!navbar)} className='hover:text-[#982B35] no-underline text-black'>
-                  <p className='hover:text-[#982B35] block m-auto'>Centres</p> 
+                <li className="mx-1 font-semibold text-[Madimi One]	 pb-6 text-xl text-black py-2 md:px-6 text-center   hover:text-[#982B35] list  ">
+                  <Link href="#about" onClick={() => setNavbar(!navbar)} className='text-black hover:text-[#982B35] no-underline w-max'>
+                   <p className='hover:text-[#982B35] block m-auto w-max'>Centres</p> 
                   </Link>
                 </li>
-                <li className="mx-1 font-semibold pb-6 text-xl text-black py-2 px-6 text-center    hover:text-[#982B35]    ">
-                  <Link href="#projects" onClick={() => setNavbar(!navbar)} className='hover:text-[#982B35] no-underline text-black'>
-                  <p className='hover:text-[#982B35] block m-auto'>Faculty</p> 
+                <li className="mx-1 font-semibold text-[Madimi One]	 pb-6 text-xl text-black py-2 md:px-6 text-center   hover:text-[#982B35] list  ">
+                  <Link href="#about" onClick={() => setNavbar(!navbar)} className='text-black hover:text-[#982B35] no-underline w-max'>
+                   <p className='hover:text-[#982B35] block m-auto w-max'>Faculty</p> 
                   </Link>
                 </li>
-                <li className="mx-1 font-semibold pb-6 text-xl text-black py-2 px-6 text-center    hover:text-[#982B35]    ">
-                  <Link href="#projects" onClick={() => setNavbar(!navbar)} className='hover:text-[#982B35] no-underline text-black'>
-                  <p className='hover:text-[#982B35] block m-auto'>Blogs</p> 
+                <li className="mx-1 font-semibold text-[Madimi One]	 pb-6 text-xl text-black py-2 md:px-6 text-center   hover:text-[#982B35] list  ">
+                  <Link href="#about" onClick={() => setNavbar(!navbar)} className='text-black hover:text-[#982B35] no-underline w-max'>
+                   <p className='hover:text-[#982B35] block m-auto w-max'>Blogs</p> 
                   </Link>
                 </li>
               </ul>

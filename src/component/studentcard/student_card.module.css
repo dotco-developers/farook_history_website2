@@ -1,6 +1,6 @@
 .wrap
 {
-    width: 60%;
+    width: 67%;
     height: max-content;
     border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -12,12 +12,17 @@
 }
 .im{
     width: 100%;
-    height: auto;
+    height:240px;
     border-radius: 20px;
 display: block;
 margin: auto;
 padding-left: 1px;
+object-fit: cover;
    
+}
+.imalg{
+    display: flex;
+    align-items: center;
 }
 .wrap h6{
     margin-bottom: 30px;
@@ -83,7 +88,7 @@ padding-left: 1px;
 } 
 
 .content_wrap{
-    margin: 100px 0px;
+    margin: 78px 0px;
     position: relative;
 }
 
@@ -109,11 +114,22 @@ padding-left: 1px;
   overflow: hidden;
   -webkit-line-clamp: 7; 
 }
-.pera{
+/* .pera{
     display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
   -webkit-line-clamp: 8; 
+} */
+.icc{
+    width: 30px;
+    height: 30px;
+    margin: 0px 6px;
+
+}
+
+.ic_wr{
+    display: flex;
+    margin-top: 20px;
 }
 @media(max-width:1114px){
     .wrap{
@@ -129,10 +145,16 @@ padding-left: 1px;
     .im{
     padding-top: 10px;
     padding-bottom: 10px;
+    width: 75%;
+    height: 80%;
+    border-radius: 40px;
     }
     .wrap{
-
-        width: 80%;
+        height: 497px;
+       width: 80%;
+    }
+    .pera{
+        margin-left: 0px;
     }
 }
 
@@ -151,6 +173,7 @@ padding-left: 1px;
     .pera{
         margin-top: 10px;
         margin-left: 5px;
+        margin-bottom: 10px;
     }
     .wrap{
         border-top: solid 6px #982B35;
@@ -159,8 +182,13 @@ padding-left: 1px;
       
 
     }
-    .wrap img{
-        height: 70vw;
+    .im{
+        width: 100%;
+        height: auto;
         border-radius: 47px
     }
+    .content_wrap{
+        border-bottom: solid 1px #982B35;
+    }
 }
+

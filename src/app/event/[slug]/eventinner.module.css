@@ -1,0 +1,225 @@
+
+
+.sec{
+   height: max-content;
+    padding-top: 110px;
+    padding-bottom: 120px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.bnrim{
+    width: 100%;
+    height: 45vw;
+    position: relative;
+    object-fit: cover;   
+    object-fit: cover;
+}
+.popup{
+    position: relative;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 100px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 85%;
+    background-color: white;
+    z-index: 99;
+    border-radius: 60px;
+    margin-top: -255px;
+}
+.row1 h2{
+    color: #982B35;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: "Madimi One";
+}
+.row1 p{
+    color: #797979;
+    font-family: "Poppins";
+    margin: 6px 0px;
+    font-size: 18px;
+    font-weight: 300;
+}
+.icc{
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+}
+.row1 label{
+    margin: 0px 7px;
+    border: solid .5px #797979;
+    border-radius: 20px;
+    padding: 8px;
+    color: #797979;
+
+
+}
+.btn{
+    padding: 16px 25px;
+    background-color: #982B35;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    display: block;
+    float: right;
+}
+.row1{
+    padding-bottom: 70px;
+}
+.row2{
+   padding-top: 40px;
+    border-top: solid 1px #797979;
+}
+.row2 h2{
+    font-size: 25px;
+    font-family: "Madimi One";
+    margin-bottom: 40px;
+    font-weight: 500;
+    color: #982B35;
+}
+.row2 p{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Poppins";
+    line-height: 36px;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.faccard{
+    text-align: center;
+    background-color: #79797933;
+    margin: 0px 10px;
+    padding: 1rem 1rem;
+    padding-bottom: 2.5rem;
+    width: fit-content;
+    border-radius: 500px 500px 500px 500px;
+    position: relative;
+    transition: 2s ease-in-out;
+}
+.readmore{
+    opacity: 0;
+    position: absolute;
+    bottom: 6%;
+    left: 30%;
+    transform: translate(-50% -50%);
+    transition: 1s ease-in;
+    
+}
+.readmore a{
+    font-family: "poppins";
+    font-style: normal;
+    text-decoration: none;
+    color: #982B35;
+}
+
+.faccard:hover{
+    padding-bottom: 5rem;
+    transition: .5s ease-in-out;
+}
+.faccard:hover .readmore{
+    opacity: 1;
+   
+   
+}
+
+
+.facimg1{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.facicons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iconimg{
+    color: #982B35;
+    font-size: 2.5rem;
+    width: 50px;
+    height: 50px;
+}
+.facdata{
+    padding-top: 1rem;
+}
+.facdata h4{
+    color: #982B35;
+    font-family:"poppins";
+    font-weight: 500;
+}
+.facdata h6{
+    color: black;
+    font-family: "poppins";
+    font-weight: 300;
+}
+.row3{
+    padding-top: 50px;
+}
+.row3 h2{
+font-family: "Madimi One";
+color: #982B35;
+font-size: 30px;
+font-weight: 500;
+margin-bottom: 40px;
+}
+
+
+/* @media(max-width:1210px){
+    .popup{
+        top: 10%;
+    }
+} */
+
+
+@media(max-width:991px){
+    .row1{
+        padding-bottom: 20px;
+    }
+    .row2 p{
+        font-size: 15px;
+        line-height: 32px;
+    }
+    .row2 h2{
+        margin-bottom: 10px;
+    }
+    .btn{
+        margin: 30px 0px;
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+    .popup{
+        padding: 40px;
+        width: 90%;
+        margin-top: -120px;
+    }
+    .row1 label{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+  
+}
+@media(max-width:500px){
+    .popup
+    {
+        margin-top: -60px;
+    }
+}
+/* @media(max-width:560px){
+    .popup{
+        top: 7%;
+    }
+
+} 
+@media(max-width:390px){
+    .popup{
+        top: 7%;
+    }
+}   */

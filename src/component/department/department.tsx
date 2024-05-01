@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./department.module.css";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
-import im from "../../../public/profile.png"
+import im from "../../../public/icons grey/prof.png"
 export default function department() {
   return (
     <section className={styles.department} id="dep">

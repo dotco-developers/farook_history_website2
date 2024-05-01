@@ -23,21 +23,16 @@ export default function Inner() {
     <section className={styles.sec}>
       <div className="container">
         <div className="row" >
-          <div className="col-lg-6 col-12">
+          <div className={`col-lg-4 col-12 ${styles.im_out}`}>
             <Image src={im} alt="" className={styles.im}></Image>
           </div>
-          <div className={`col-lg-6 col-12 ${styles.c_out}`} >
+          <div className={`col-lg-8 col-12 ${styles.c_out}`} >
           <h2 className={styles.n_head}>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
               expedita praesentium, fuga, totam esse id itaque laborum, enim
             </h2>
             
             <p> <FontAwesomeIcon icon={faCalendarDays} className={styles.a_ic} />DATE</p> 
-
-          </div>
-          
-          <div className="col-lg-12 col-12">
-           
             <p className={`${styles.pera}`}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
               minus magni numquam voluptatum incidunt repellendus id possimus
@@ -50,9 +45,10 @@ export default function Inner() {
              
             </p>
           </div>
+    
           <div className="col-lg-12 col-12">
             <a  href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
-                "Check out this news article: " + baseurl + url
+                "Department of history" + baseurl + url
               )}`} >
             <Image src={share} alt="" className={styles.sh}></Image>
           </a>

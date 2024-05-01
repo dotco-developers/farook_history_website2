@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./landing.module.css";
-import im from "../../../public/four.png";
+import im from "../../../public/icons grey/globfour.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCaretDown,

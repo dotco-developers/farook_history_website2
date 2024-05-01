@@ -1,6 +1,30 @@
+"use client"
+import { useEffect, useState } from "react";
 import styles from "./scholar.module.css";
 
 export default function Scholar() {
+  const [data, setdata] = useState([]);
+  useEffect(() => {
+    const datafetcher = async () => {
+      try {
+        const response = await fetch(
+         "https://farook-college-backend.vercel.app/api/researchscholars/",
+          {
+            method: "GET",
+          }
+        );
+        if (!response.ok) {
+          throw new Error("server request not ok");
+        }
+        const res = await response.json();
+        setdata(res);
+      } catch (error) {
+        console.log("error in fetching scholor data" + error);
+      }
+    };
+    datafetcher();
+  }, []);
+
   return (
     <>
       <section className={styles.sec}>
@@ -31,55 +55,34 @@ export default function Scholar() {
                 </div>
               </div>
               {/* 2nd */}
-              <div className={`row ${styles.sub}`}>
-                <div className="col-lg-1 col-1">
-                  <p>1</p>
+              {
+                data.map((x:any)=>(
+                  <div className={`row ${styles.sub}`} key={x.id}>
+                  <div className="col-lg-1 col-1">
+                    <p>1</p>
+                  </div>
+                  <div className="col-lg-2 col-2 ">
+                    <p>{x.name}</p>
+                  </div>
+                  <div className="col-lg-3 col-3">
+                    <p>
+                     {x.topic}
+                    </p>
+                  </div>
+                  <div className="col-lg-2 col-2">
+                    <p>{x.guide}</p>
+                  </div>
+                  <div className="col-lg-2 col-2 ">
+                    <p>{x.mode}</p>
+                  </div>
+                  <div className="col-lg-2  col-2">
+                    <p>{x.status}</p>
+                  </div>
                 </div>
-                <div className="col-lg-2 col-2 ">
-                  <p>Lorem</p>
-                </div>
-                <div className="col-lg-3 col-3">
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Fuga, blanditiis. Harum, accusantium! Corporis, voluptas
-                    illo dolore itaque quisquam molestias nam? Facilis at
-                    voluptate vero totam pariatur illum sit quo nisi?
-                  </p>
-                </div>
-                <div className="col-lg-2 col-2">
-                  <p>Saheen</p>
-                </div>
-                <div className="col-lg-2 col-2 ">
-                  <p>Online</p>
-                </div>
-                <div className="col-lg-2  col-2">
-                  <p>Completed</p>
-                </div>
-              </div>
 
-              {/* 3rd */}
-              {/* 2nd */}
-              <div className={`row ${styles.sub}`}>
-                <div className="col-lg-1 col-1">
-                  <p>1</p>
-                </div>
-                <div className="col-lg-2 col-2 ">
-                  <p>Lorem</p>
-                </div>
-                <div className="col-lg-3 col-3">
-                  <p>Network</p>
-                </div>
-                <div className="col-lg-2 col-2">
-                  <p>Saheen</p>
-                </div>
-                <div className="col-lg-2 col-2 ">
-                  <p>Online</p>
-                </div>
-                <div className="col-lg-2  col-2">
-                  <p>Completed</p>
-                </div>
-              </div>
-
+                ))
+              }
+             
               {/* end */}
             </div>
           </div>

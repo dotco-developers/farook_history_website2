@@ -1,9 +1,10 @@
 
 
 .sec{
-    min-height: 90vh;
+    min-height: 60vh;
     position: relative;
     overflow-x: hidden;
+    padding: 50px 0px;
 
 }
 
@@ -11,6 +12,7 @@
     width: 237px;
     height: 285px;
     border-radius: 30px;
+    object-fit: cover;
    
 }
 .card{
@@ -28,7 +30,9 @@ margin-bottom: 10px;
    border-radius: 30px;
    margin-top: -10px;
    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
 }
+
 .card::before {
     content: '';
     position: absolute;
@@ -57,7 +61,8 @@ margin-bottom: 10px;
     color: #982B35;
     font-family: "Madimi One";
     text-align: center;
-    margin-bottom: 120px;
+    margin-bottom: 66px;
+    margin-top: 82px;
 }
 
 .rbn{
@@ -69,14 +74,43 @@ z-index: -1;
 top: 50%;
 left: 50%;
 transform: translate(-50%,-50%);
+margin-top: 72px;
 }
 .rowe{
     display: flex;
     justify-content: space-evenly;
+    position: relative;
+    
+}
+.gl{
+    width: 85%;
+    height: 85%;
+    position: absolute;
+    opacity: .2;
+    z-index: -2;
+}
+@media(max-width:1199px){
+    .gl{
+        height: 73%;
+    }
+}
+@media(max-width:991px){
+    .card {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .rbn{
+        opacity: 0;
+    }
+    .gl{
+        display: none;
+    }
+    
 }
 @media(max-width:767px){
     .rbn{        
       margin-top: 80px;
+      opacity: 1;
         
     }
 }

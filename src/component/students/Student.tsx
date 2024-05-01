@@ -1,9 +1,11 @@
 import styles from "./Student.module.css";
 import Card from "../../component/studentcard/card"
+import Image from "next/image";
 export default function Students() {
   return (
     <section className={styles.sec}>
-      <div className="">
+      <div className={styles.rbn} ></div>
+      <div className="container">
         <div className="row">
           <div className="col-lg-12 col-md-12 col-12">
             <div className={`container ${styles.ctn}`}>
@@ -18,7 +20,6 @@ export default function Students() {
             </div>
           </div>
           <div className={`col-lg-12 col-md-12 col-12 ${styles.r_out}`}>
-          <div className={styles.rbn} ></div>
             <Card></Card>
           </div>
         </div>

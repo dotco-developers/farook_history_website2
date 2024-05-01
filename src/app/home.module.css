@@ -1,0 +1,17 @@
+.mapp{
+    position: absolute;
+    width: 50%;
+    opacity: .1;
+    z-index: -1;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.bgg{
+    position: relative;
+}
+@media(max-width:991px){
+    .mapp{
+        width: 80%;
+    }
+}

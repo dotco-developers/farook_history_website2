@@ -132,6 +132,20 @@ margin-left: 20px;
     color: #982B35;
     margin: 0px 5px;
 }
+.arr{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.im_out{
+    position: relative;
+}
 @media(max-width:767px){
     .wr{
         width: 90%;

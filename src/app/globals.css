@@ -9,3 +9,18 @@
 a{
     text-decoration: none;
 }
+
+
+@media(max-width:991px){
+
+    .list a{
+        width: max-content;
+    }
+    .list p{
+        width: max-content;
+    }
+    .list{
+        display: flex;
+        justify-content: flex-start;
+    }
+}

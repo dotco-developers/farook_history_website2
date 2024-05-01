@@ -16,48 +16,60 @@ export default class Example extends Component {
 
   slides = [
     {
-      key: '1',
+      key: "1",
       content: (
-        <div className={`${styles.outer}`} >
-          <div className={` ${styles.c_out}`}>
+        <div className={`${styles.outer} row`}>
+          <div className={` ${styles.c_out} col-lg-6 col-12`}>
             <Image src={im} alt="" className={styles.im}></Image>
           </div>
-          <div className={styles.c_out2}>
-            <h2 className={styles.head}>LOREM3</h2>
+          <div className={`${styles.c_out2} col-lg-6 col-12`}>
+            <h2 className={styles.head}>LOREM3 </h2>
             <p className={styles.pera}>
               Lorem ipsum dolor sit amet sdam maiores animi iusto eveniet soluta
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+              debitis voluptas beatae fuga eos id quia delectus aliquam aliquid,
+              ducimus facere dolores cumque inventore deserunt unde voluptatum
+              blanditiis temporibus mollitia!
             </p>
           </div>
         </div>
       ),
     },
     {
-      key: '2',
+      key: "2",
       content: (
-        <div className={`${styles.outer}`} >
-          <div className={` ${styles.c_out}`}>
-            <Image src={im} alt="" className={styles.im}></Image>
-          </div>
-          <div className={styles.c_out2}>
-            <h2 className={styles.head}>LOREM2</h2>
-            <p className={styles.pera}>
-              Lorem ipsum dolor sit amet sdam maiores animi iusto eveniet soluta
-            </p>
-          </div>
+        <div className={`${styles.outer} row`}>
+        <div className={` ${styles.c_out} col-lg-6 col-12`}>
+          <Image src={im} alt="" className={styles.im}></Image>
         </div>
+        <div className={`${styles.c_out2} col-lg-6 col-12`}>
+          <h2 className={styles.head}>LOREM3 </h2>
+          <p className={styles.pera}>
+            Lorem ipsum dolor sit amet sdam maiores animi iusto eveniet soluta
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+            debitis voluptas beatae fuga eos id quia delectus aliquam aliquid,
+            ducimus facere dolores cumque inventore deserunt unde voluptatum
+            blanditiis temporibus mollitia!
+          </p>
+        </div>
+      </div>
       ),
     },
     {
-      key: '3',
+      key: "3",
       content: (
-        <div className={`${styles.outer}`} >
-          <div className={` ${styles.c_out}`}>
+        <div className={`${styles.outer} row`}>
+          <div className={` ${styles.c_out} col-lg-6 col-12`}>
             <Image src={im} alt="" className={styles.im}></Image>
           </div>
-          <div className={styles.c_out2}>
-            <h2 className={styles.head}>LOREM1</h2>
+          <div className={`${styles.c_out2} col-lg-6 col-12`}>
+            <h2 className={styles.head}>LOREM3 </h2>
             <p className={styles.pera}>
               Lorem ipsum dolor sit amet sdam maiores animi iusto eveniet soluta
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+              debitis voluptas beatae fuga eos id quia delectus aliquam aliquid,
+              ducimus facere dolores cumque inventore deserunt unde voluptatum
+              blanditiis temporibus mollitia!
             </p>
           </div>
         </div>
@@ -67,17 +79,20 @@ export default class Example extends Component {
     return { ...slide, onClick: () => this.setState({ goToSlide: index }) };
   });
 
-  onChangeInput = (e) => {
+  onChangeInput = (e: any) => {
     this.setState({
       [e.target.name]: parseInt(e.target.value, 10) || 0,
     });
   };
 
   render() {
-    const selectedSlide = this.state.goToSlide
+    const selectedSlide = this.state.goToSlide;
     return (
       <>
-        <div className={`container ${styles.container1}`} style={{zIndex: 99}}>
+        <div
+          className={`container ${styles.container1}`}
+          style={{ zIndex: 99 }}
+        >
           <Carousel
             slides={this.slides}
             goToSlide={this.state.goToSlide}

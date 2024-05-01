@@ -7,7 +7,7 @@
     font-family: "Madimi One";
 }
 .sec{
-    min-height: 100vh;
+    min-height: 60vh;
     padding: 55px 0px;
     overflow-x: hidden;
     position: relative;
@@ -67,8 +67,12 @@
     text-align: center;
     margin-bottom: 0px;
 }
-@media(max-width:767px){
+@media(max-width:991px){
     .wrap{
         margin-left: 0px;
     }
+    .item{
+        padding: 10px 50px;
+    }
+   
 }

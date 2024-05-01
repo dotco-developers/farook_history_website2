@@ -11,10 +11,35 @@ import { AiFillInstagram } from "react-icons/ai";
 import { FaRegFilePdf } from "react-icons/fa";
 import CountUp from "react-countup";
 
-
-
+import insta from "../../../public/icons grey/instared.png"
+import mail from "../../../public/icons grey/mailred.png"
+import lin from "../../../public/icons grey/inred.png"
+import { error } from "console";
 
 export default function about(){
+ 
+  const [data, setdata] = useState([]);
+
+
+  useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await fetch('https://farook-college-backend.vercel.app/api/countup/');
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          const responseData = await response.json();
+          setdata(responseData)
+      
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      } 
+    fetchData();
+  }, []);
+
+  
+
     const [first, setfirst] = useState(true);
 
     function handle() {
@@ -30,7 +55,7 @@ export default function about(){
   
 
     return(
-        <section id={styles.about}>
+      <section id={styles.about}>
       <div className={styles.headmain}>
         <div className="container">
           <div className="row">
@@ -50,80 +75,32 @@ export default function about(){
               </p>
             </div>
             <div className={styles.counter}>
-              <div className={`col-lg-3 col-12 ${styles.countersub} `}>
-                <h3>
-                  <CountUp
-                    start={0}
-                    end={100}
-                    duration={4}
-                    decimals={0}
-                    suffix="+"
-                  >
-                    {({ countUpRef, start }) => (
-                      <div>
-                        <span ref={countUpRef} />
-                      </div>
-                    )}
-                  </CountUp>
-                </h3>
-                <h5>students</h5>
-              </div>
+            {
+              
+                data.map((x:any)=>(
+                    <div className={`col-lg-3 col-12 ${styles.countersub} `}>
+                    <h3>
+                      <CountUp
+                        start={0}
+                        end={x.count}
+                        duration={4}
+                        decimals={0}
+                        suffix="+"
+                      >
+                        {({ countUpRef, start }) => (
+                          <div>
+                            <span ref={countUpRef} />
+                          </div>
+                        )}
+                      </CountUp>
+                    </h3>
+                    <h5>{x.name}</h5>
+                  </div>
+                    
 
-              <div className={`col-lg-3 col-12 ${styles.countersub} `}>
-                <h3>
-                  <CountUp
-                    start={0}
-                    end={100}
-                    duration={4}
-                    decimals={0}
-                    suffix="+"
-                  >
-                    {({ countUpRef, start }) => (
-                      <div>
-                        <span ref={countUpRef} />
-                      </div>
-                    )}
-                  </CountUp>
-                </h3>
-                <h5>students</h5>
-              </div>
-              <div className={`col-lg-3 col-12 ${styles.countersub} `}>
-                <h3>
-                  <CountUp
-                    start={0}
-                    end={100}
-                    duration={4}
-                    decimals={0}
-                    suffix="+"
-                  >
-                    {({ countUpRef, start }) => (
-                      <div>
-                        <span ref={countUpRef} />
-                      </div>
-                    )}
-                  </CountUp>
-                </h3>
-                <h5>students</h5>
-              </div>
-
-              <div className={`col-lg-3 col-12 ${styles.countersub} `}>
-                <h3>
-                  <CountUp
-                    start={0}
-                    end={100}
-                    duration={4}
-                    decimals={0}
-                    suffix="+"
-                  >
-                    {({ countUpRef, start }) => (
-                      <div>
-                        <span ref={countUpRef} />
-                      </div>
-                    )}
-                  </CountUp>
-                </h3>
-                <h5>students</h5>
-              </div>
+                ))
+                }
+               
             </div>
           </div>
         </div>
@@ -222,9 +199,9 @@ export default function about(){
                     <h6>Designation</h6>
                   </div>
                   <div className={styles.facicons}>
-                    <AiFillInstagram className={styles.iconimg} />
-                    <AiFillInstagram className={styles.iconimg} />
-                    <AiFillInstagram className={styles.iconimg} />
+                   <Image src={insta} alt="" className={styles.iconimg}></Image>
+                   <Image src={mail} alt="" className={styles.iconimg}></Image>
+                   <Image src={lin} alt="" className={styles.iconimg}></Image>
                   </div>
                   <div className={styles.readmore}>
                     <a href="http://">More Info</a>{" "}
@@ -242,9 +219,9 @@ export default function about(){
                     <h6>Designation</h6>
                   </div>
                   <div className={styles.facicons}>
-                    <AiFillInstagram className={styles.iconimg} />
-                    <AiFillInstagram className={styles.iconimg} />
-                    <AiFillInstagram className={styles.iconimg} />
+                  <Image src={insta} alt="" className={styles.iconimg}></Image>
+                   <Image src={mail} alt="" className={styles.iconimg}></Image>
+                   <Image src={lin} alt="" className={styles.iconimg}></Image>
                   </div>
                   <div className={styles.readmore}>
                     <a href="http://">More Info</a>{" "}
@@ -261,9 +238,9 @@ export default function about(){
                     <h6>Designation</h6>
                   </div>
                   <div className={styles.facicons}>
-                    <AiFillInstagram className={styles.iconimg} />
-                    <AiFillInstagram className={styles.iconimg} />
-                    <AiFillInstagram className={styles.iconimg} />
+                  <Image src={insta} alt="" className={styles.iconimg}></Image>
+                   <Image src={mail} alt="" className={styles.iconimg}></Image>
+                   <Image src={lin} alt="" className={styles.iconimg}></Image>
                   </div>
                   <div className={styles.readmore}>
                     <a href="http://">More Info</a>{" "}
@@ -280,9 +257,9 @@ export default function about(){
                     <h6>Designation</h6>
                   </div>
                   <div className={styles.facicons}>
-                    <AiFillInstagram className={styles.iconimg} />
-                    <AiFillInstagram className={styles.iconimg} />
-                    <AiFillInstagram className={styles.iconimg} />
+                  <Image src={insta} alt="" className={styles.iconimg}></Image>
+                   <Image src={mail} alt="" className={styles.iconimg}></Image>
+                   <Image src={lin} alt="" className={styles.iconimg}></Image>
                   </div>
                   <div className={styles.readmore}>
                     <a href="http://">More Info</a>{" "}
@@ -299,9 +276,9 @@ export default function about(){
                     <h6>Designation</h6>
                   </div>
                   <div className={styles.facicons}>
-                    <AiFillInstagram className={styles.iconimg} />
-                    <AiFillInstagram className={styles.iconimg} />
-                    <AiFillInstagram className={styles.iconimg} />
+                  <Image src={insta} alt="" className={styles.iconimg}></Image>
+                   <Image src={mail} alt="" className={styles.iconimg}></Image>
+                   <Image src={lin} alt="" className={styles.iconimg}></Image>
                   </div>
                   <div className={styles.readmore}>
                     <a href="http://">More Info</a>{" "}
@@ -318,9 +295,9 @@ export default function about(){
                     <h6>Designation</h6>
                   </div>
                   <div className={styles.facicons}>
-                    <AiFillInstagram className={styles.iconimg} />
-                    <AiFillInstagram className={styles.iconimg} />
-                    <AiFillInstagram className={styles.iconimg} />
+                  <Image src={insta} alt="" className={styles.iconimg}></Image>
+                   <Image src={mail} alt="" className={styles.iconimg}></Image>
+                   <Image src={lin} alt="" className={styles.iconimg}></Image>
                   </div>
                   <div className={styles.readmore}>
                     <a href="http://">More Info</a>{" "}

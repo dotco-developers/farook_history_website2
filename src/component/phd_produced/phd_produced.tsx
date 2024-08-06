@@ -1,6 +1,28 @@
+import { useEffect, useState } from "react";
 import styles from "./phd.module.css";
 
 export default function Scholar() {
+  const [data, setdata] = useState([]);
+  useEffect(() => {
+    const datafetcher = async () => {
+      try {
+        const response = await fetch(
+          "https://farook-college-backend.vercel.app/api/phdproduced/",
+          {
+            method: "GET",
+          }
+        );
+        if (!response.ok) {
+          throw new Error("server request not ok");
+        }
+        const res = await response.json();
+        setdata(res);
+      } catch (error) {
+        console.log("error in fetching phdproduced data" + error);
+      }
+    };
+    datafetcher();
+  }, []);
   return (
     <>
       <section className={styles.sec}>
@@ -28,58 +50,31 @@ export default function Scholar() {
                 </div>
               </div>
               {/* 2nd */}
-              <div className={`row ${styles.sub}`}>
-                <div className="col-lg-2 col-2">
-                  <p>1</p>
+              {data.map((x: any) => (
+                <div className={`row ${styles.sub}`}>
+                  <div className="col-lg-2 col-2">
+                    <p>{x.id}</p>
+                  </div>
+                  <div className="col-lg-2 col-2 ">
+                    <p>{x.year}</p>
+                  </div>
+                  <div className="col-lg-3 col-3">
+                    <p>{x.name}</p>
+                  </div>
+                  <div className="col-lg-3 col-3">
+                    <p>{x.topic}</p>
+                  </div>
+                  <div className="col-lg-2 col-2 ">
+                    <p>{x.guide}</p>
+                  </div>
                 </div>
-                <div className="col-lg-2 col-2 ">
-                  <p>Lorem</p>
-                </div>
-                <div className="col-lg-3 col-3">
-                  <p>
-                    ate vero totam pariatur
-                  </p>
-                </div>
-                <div className="col-lg-3 col-3">
-                  <p>Saheen</p>
-                </div>
-                <div className="col-lg-2 col-2 ">
-                  <p>Online</p>
-                </div>
-               
-              </div>
-
-              {/* 3rd */}
-              {/* 2nd */}
-              <div className={`row ${styles.sub}`}>
-                <div className="col-lg-2 col-2">
-                  <p>1</p>
-                </div>
-                <div className="col-lg-2 col-2 ">
-                  <p>Lorem</p>
-                </div>
-                <div className="col-lg-3 col-3">
-                  <p>
-                    ate vero totam pariatur
-                  </p>
-                </div>
-                <div className="col-lg-3 col-3">
-                  <p>Saheen</p>
-                </div>
-                <div className="col-lg-2 col-2 ">
-                  <p>Online</p>
-                </div>
-               
-              </div>
-
+              ))}
 
               {/* end */}
             </div>
           </div>
         </div>
       </section>
-
-     
     </>
   );
 }

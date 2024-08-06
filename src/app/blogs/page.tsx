@@ -8,7 +8,12 @@ import im from "../../../public/book.jpg";
 import Popup from "@/component/Popup/Popup";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
+import arr from "../../../public/icons grey/arr.png"
 export default function Blogs() {
+
+   const [data, setdata] = useState([])
+
+
     const [show, setshow] = useState(false)
 
     const bref=useRef(document.body)
@@ -18,6 +23,28 @@ export default function Blogs() {
         console.log("clck");
         
     }
+    useEffect(() => { 
+    const datafetcher=async()=>{
+      try {
+        const response =await fetch("https://farook-college-backend.vercel.app/api/blog/",{
+          method:"GET"
+        })
+        if (!response.ok) {
+          throw new Error("error in fetching blog data")
+        }
+        const res =  await response.json();
+          setdata(res)
+          console.log(data);
+          
+      }catch (error) {
+        console.log(`error`+error);
+
+      }
+    }
+      datafetcher();   
+    }, [])
+    
+
     useEffect(() => {
         if (show) {
             const popupElement = document.getElementById('popup');
@@ -81,46 +108,29 @@ export default function Blogs() {
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-4 col-md-6 col-12">
-            <div className={styles.card}>
-              <Image src={im} alt="" className={styles.im}></Image>
-              <h2>LOREM</h2>
-              <div className={styles.auth}>
-                <p> <FontAwesomeIcon icon={faCalendarDays} className={styles.a_ic} />DATE</p> 
-                <p style={{marginLeft:"10px"}}><FontAwesomeIcon icon={faUser} className={styles.a_ic}/>NAME</p>
+          {
+            data.map((x:any)=>(
+              <div className="col-lg-4 col-md-6 col-12">
+              <div className={styles.card}>
+                <div className={styles.im_out}>
+                  <Image src={arr} alt="" className={styles.arr}></Image>
+                <Image src={x.image} alt="" className={styles.im} width={200} height={200}></Image>
+                </div>
+                <h2>{x.name}</h2>
+                <div className={styles.auth}>
+                  <p> <FontAwesomeIcon icon={faCalendarDays} className={styles.a_ic} />{x.created_date}</p> 
+                  <p style={{marginLeft:"10px"}}><FontAwesomeIcon icon={faUser} className={styles.a_ic}/>{x.author}</p>
+                </div>
+                <p>
+                 {x.content}
+                </p>
               </div>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure a
-                atque, officiis quia itaque impedit modi corporis hic placeat
-                quidem necessitatibus consequatur rem veritatis id, eum, ipsum
-                accusantium perspiciatis corrupti?
-              </p>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6 col-12">
-            <div className={styles.card}>
-              <Image src={im} alt="" className={styles.im}></Image>
-              <h2>LOREM</h2>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure a
-                atque, officiis quia itaque impedit modi corporis hic placeat
-                quidem necessitatibus consequatur rem veritatis id, eum, ipsum
-                accusantium perspiciatis corrupti?
-              </p>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-6 col-12">
-            <div className={styles.card}>
-              <Image src={im} alt="" className={styles.im}></Image>
-              <h2>LOREM</h2>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure a
-                atque, officiis quia itaque impedit modi corporis hic placeat
-                quidem necessitatibus consequatur rem veritatis id, eum, ipsum
-                accusantium perspiciatis corrupti?
-              </p>
-            </div>
-          </div>
+
+            ))
+          }
+      
+          
         </div>
       </div>
     </section>

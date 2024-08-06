@@ -9,3 +9,41 @@
 a{
     text-decoration: none;
 }
+
+
+/* ????sidemenu$$$$$ */
+.offcanvas-title{
+    color: var(--primary-color);
+    font-weight: 500;
+    color: white;
+  }
+  .offcanvas-header{
+    background-color:#982B35;
+  
+  }
+  .btn-close {
+    background-color:white;
+    color: white;
+  }
+  .show{
+    margin-top: 85px;
+  }
+  
+  /* Handle on hover */
+  /* ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  } */
+
+@media(max-width:991px){
+
+    .list a{
+        width: max-content;
+    }
+    .list p{
+        width: max-content;
+    }
+    .list{
+        display: flex;
+        justify-content: flex-start;
+    }
+}

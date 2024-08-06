@@ -97,7 +97,7 @@
     padding: 10px;
 }
 .card{
-    width: 85%;
+    width: 300px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     display: block;
     margin: auto;
@@ -107,16 +107,24 @@
     margin-bottom: 20px;
 }
 .im{
-    width: 100%;
-    height: 298px;
+    display: block;
+    margin: 0px auto;
+    width:260px;
+    height: 260px;
     border-radius: 30px;
-
+    object-fit: cover;
 }
 .card h2{
     color: #982B35;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 600;
-    margin: 16px 0px;
+    margin-top: 16px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines to show */
+    -webkit-box-orient: vertical;
 }
 .card P{
     display: -webkit-box;
@@ -124,6 +132,62 @@
     overflow: hidden;
     -webkit-line-clamp: 3; 
     color: black;
-    font-size: 19px;
+    font-size: 15px;
     font-weight: 400;
+}
+.arr{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.im_out{
+    position: relative;
+}
+.op{
+    background-color: #D19FA4;
+    color: #982B35;
+    border: none;
+    outline: none;
+    padding: 6px;
+}
+.gl{
+    width: 100%;
+    height: 100%;
+}
+
+@media(max-width:991px){
+    .n_wrap{
+        width: 90%;
+    }
+    .n_wrap p{
+        width: 100%;
+    }
+    .search{
+        width: 90%;
+    }
+  .ic{
+    width: 14px;
+    height: 14px;
+  }
+  .fl{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .fl p{
+    margin-bottom: 14px;
+
+  }
+  .fl  :nth-child(1){
+    margin-left: 0px;
+  }
+ .fl select{
+    
+ }
 }

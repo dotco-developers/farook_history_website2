@@ -5,7 +5,7 @@ import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 export default function REPORTS() {
   return (
   
-      <section className={styles.sec}>
+      <section className={styles.sec} style={{overflowX:"hidden"}}>
         <div className="container">
           <div className={`row `}>
             <div className="col-lg-12 col-12">

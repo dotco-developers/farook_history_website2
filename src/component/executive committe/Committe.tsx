@@ -7,7 +7,7 @@ import lin from "../../../public/icons grey/inred.png";
 
 export default function Commttee() {
   return (
-    <section>
+    <section style={{overflowX:"hidden"}}>
       <div className={`${styles.row3} row`}>
         <div className="col-lg-12 col-12">
           <h2 className={styles.head3}>EXECUTIVE COMMITTEE</h2>

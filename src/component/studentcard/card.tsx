@@ -5,11 +5,10 @@ import styles from "./student_card.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
-import insta from "../../../public/icons grey/insta.png"
-import app from "../../../public/icons grey/app.png"
-import mail from "../../../public/icons grey/mail.png"
+import insta from "../../../public/icons grey/insta.png";
+import app from "../../../public/icons grey/app.png";
+import mail from "../../../public/icons grey/mail.png";
 export default function Card_scrol() {
-
   // const [value, setvalue] = useState(0)
 
   // useEffect(() => {
@@ -20,31 +19,34 @@ export default function Card_scrol() {
   //   if (currentindex<=len) {
   //     altdivs[currentindex? currentindex:0]?.scrollIntoView({behavior:"smooth",block:"center"})
   //     setvalue(currentindex)
-  //     console.log("function called");  
+  //     console.log("function called");
   //     currentindex++;
   //   }else{
   //     currentindex=0
   //   }
-  //  }  
-      
+  //  }
+
   //  const intervalId = setInterval(handle, 3000);
   //  return () => clearInterval(intervalId);
-    
+
   // }, [])
-   
+
   return (
     <>
       <div className={styles.wrap} id="wr">
         <div className={`row alt  ${styles.content_wrap}`}>
           <div className="col-lg-4 col-md-6 col-12">
-            <h6>LOREM</h6>
+            <h6>Saheen</h6>
             <p className={styles.conten}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est,
-              rerum ex, minima corrupti quae labore ducimus quam dolor minus hic
-              totam modi quod expedita eaque cum quibusdam eos natus delectus?
+              Dept. of History <br></br>Batch 2020-25
             </p>
             <div className={styles.ic_wr}>
-              <Image src={mail} alt="" className={styles.icc} style={{marginLeft: "-2px"}}></Image>
+              <Image
+                src={mail}
+                alt=""
+                className={styles.icc}
+                style={{ marginLeft: "-2px" }}
+              ></Image>
               <Image src={insta} alt="" className={styles.icc}></Image>
               <Image src={app} alt="" className={styles.icc}></Image>
             </div>
@@ -56,10 +58,9 @@ export default function Card_scrol() {
             <p className={styles.pera}>
               <FontAwesomeIcon icon={faQuoteLeft} className={styles.qute} />
               <br />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id rem
-              rerum reiciendis ipsa iste quae deleniti commodi dignissimos vitae
-              distinctio nulla sapiente adipisci reprehenderit, laborum ad, at
-              nostrum dolorem asperiores?
+              The best thing about the College was being part of a supportive
+              environment, where everyone is focussed, help each other and are
+              encouraged to succeed as individuals.
               <br />
               <FontAwesomeIcon icon={faQuoteRight} className={styles.qute2} />
             </p>
@@ -70,9 +71,7 @@ export default function Card_scrol() {
           <div className="col-lg-4 col-md-12 col-12">
             <h6>LOREM</h6>
             <p className={styles.conten}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est,
-              rerum ex, minima corrupti quae labore ducimus quam dolor minus hic
-              totam modi quod expedita eaque cum quibusdam eos natus delectus?
+              Dept. of History <br></br> Batch 2020-25
             </p>
             <div></div>
           </div>
@@ -96,13 +95,7 @@ export default function Card_scrol() {
           <div className="col-lg-4 col-md-12 col-12">
             <h6>LOREM</h6>
             <p className={styles.conten}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est,
-              rerum ex, minima corrupti quae labore ducimus quam dolor minus hic
-              totam modi quod expedita eaque cum quibusdam eos natus delectus?
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Cupiditate neque mollitia molestiae nihil, natus soluta. Ad
-              molestiae sed dicta dolorum expedita cum labore assumenda nobis.
-              Minima earum deserunt quis voluptates?
+              Dept. of History <br></br> Batch 2020-25
             </p>
             <div></div>
           </div>

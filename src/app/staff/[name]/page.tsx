@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./staff.module.css";
-import im from "../../../../public/man.png";
+import im from "../../../../public/cabg.jpg.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import ic1 from "../../../../public/icons grey/mail.png";
@@ -18,10 +18,8 @@ export default function Staff() {
               style={{ position: "relative" }}
             >
               <div className={styles.wrap}>
-                <h2>LOREM IPSUM</h2>
-                <p className={styles.pera1}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-                </p>
+                <h2>Dr. C.A. Anaz</h2>
+                <p className={styles.pera1}>Assistant Professor and Head</p>
                 <div className={styles.icim}>
                   <Image src={ic1} alt=""></Image>
                   <Image src={ic2} alt=""></Image>
@@ -36,9 +34,7 @@ export default function Staff() {
                     style={{ marginLeft: "-19px", marginBottom: "10px" }}
                   />
                   <br />
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                  quasi, minima voluptas nam eaque nostrum reiciendis
-                  perspiciatis
+                  A good teacher is like a candle—it consumes itself to light the way for others.
                   <br></br>
                   <FontAwesomeIcon
                     icon={faQuoteRight}
@@ -71,30 +67,29 @@ export default function Staff() {
               <Image src={im} alt="" className={styles.imm}></Image>
               <div className={styles.bannerm}>
                 <p>
-                <FontAwesomeIcon
+                  <FontAwesomeIcon
                     icon={faQuoteLeft}
                     className={styles.icm}
-                    style={{marginLeft:"-15px",marginBottom:"10px"}}
+                    style={{ marginLeft: "-15px", marginBottom: "10px" }}
                   />
-                  <br/>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Praesentium inventore et obcaecati rerum vel voluptatum
-                 
+                  <br />
+                  A good teacher is like a candle—it consumes itself to light the way for others.
                   <br></br>
                   <FontAwesomeIcon
                     icon={faQuoteRight}
                     className={styles.icm}
                     style={{
-                     display:"block",
-                     float:"right",marginTop:"5px",
-                     marginBottom:"5px"
+                      display: "block",
+                      float: "right",
+                      marginTop: "5px",
+                      marginBottom: "5px",
                     }}
                   />
                 </p>
               </div>
             </div>
             <div className="col-12">
-            <div className={styles.wrapm}>
+              <div className={styles.wrapm}>
                 <h2>LOREM IPSUM</h2>
                 <p className={styles.pera1}>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
@@ -125,15 +120,15 @@ export default function Staff() {
             <div className={`col-lg-12 col-12 ${styles.out}`}>
               <h2>QUALIFICATION</h2>
               <ul className={"list-disc list-inside"}>
-                <li>hai</li>
-                <li>hwllo</li>
+                <li>M.A.</li>
+                <li>M.Phil</li>
+                <li>Ph.D.</li>
               </ul>
             </div>
             <div className={`col-lg-12 col-12 ${styles.out}`}>
               <h2>SPECIALIZATION</h2>
               <ul className={"list-disc list-inside"}>
-                <li>hai</li>
-                <li>hwllo</li>
+                <li>Intellectual Movements in Kerala</li>
               </ul>
             </div>
           </div>

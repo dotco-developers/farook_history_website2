@@ -1,18 +1,14 @@
-"use client";
 import Image from "next/image";
 import styles from "./histosa.module.css";
 import { useState } from "react";
 import Histosacard from "@/component/histosacards/histosacard";
 import Commttee from "@/component/executive committe/Committe";
-import Report from "../../component/report/Report"
+import Report from "../../../component/report/Report"
 import Activitygallery from "@/component/histosaactivitygallery/Activitygallery";
 import Activity from "@/component/Activity/page";
-import im from "../../../public/icons grey/caplarge.png"
-export default function Histosa() {
-  const [content, setcontent] = useState<string>("card1");
-  const handler = (v: string) => {
-    setcontent(v);
-  };
+import im from "../../../../public/icons grey/caplarge.png"
+export default function Histosa({params}:any) {
+
   return (
     <>
     <section className={styles.sec}>
@@ -29,7 +25,7 @@ export default function Histosa() {
             </p>
           </div>
         </div>
-        <Histosacard handler={handler} content={content}></Histosacard>
+        <Histosacard url={params.name}></Histosacard>
         <div className={`${styles.r_out2} row`}>
           <h2>ABOUT</h2>
           <p>
@@ -49,10 +45,10 @@ export default function Histosa() {
       </div>
     </section>
     {
-      content==='card1'  ? (<Commttee></Commttee>):
-      content==='card2' ? (<Report></Report>) :
-      content==='card3' ? (<Activity></Activity>):
-      content==='card4' ?  (<Activitygallery></Activitygallery>): "" 
+      params.name==='executive-member'  ? (<Commttee  ></Commttee>):
+      params.name==='reports' ? (<Report></Report>) :
+      params.name==='activities' ? (<Activity></Activity>):
+      params.name==='gallery' ?  (<Activitygallery></Activitygallery>): "" 
     }
     </>
   );

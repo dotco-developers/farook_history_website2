@@ -59,7 +59,7 @@ export default function Scholar() {
                 data.map((x:any)=>(
                   <div className={`row ${styles.sub}`} key={x.id}>
                   <div className="col-lg-1 col-1">
-                    <p>1</p>
+                    <p>{x.id}</p>
                   </div>
                   <div className="col-lg-2 col-2 ">
                     <p>{x.name}</p>

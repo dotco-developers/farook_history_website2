@@ -3,11 +3,9 @@
 
 .sec{
     width: 100%;
-    min-height: 100vh;
+    min-height: 70vh;
     overflow-x: hidden;
     padding-top: 14px;
-
-
 }
 
 .glob{
@@ -120,7 +118,7 @@ background-color: white;
     align-items: center;
 }
 .gg{
-    height: 85vh;
+    height: 65vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -163,7 +161,7 @@ justify-content: center;
     display: inline-block;
     animation: marquee 10s linear infinite;
   }
-
+ 
   @keyframes marquee {
     0% {
       transform: translateX(100%);
@@ -172,6 +170,9 @@ justify-content: center;
       transform: translateX(-100%);
     }
   }
+  .n_wr:hover p {
+    animation-play-state: paused;
+}
   .ic3{
     width: 10px;
     height: 10px;
@@ -179,6 +180,7 @@ justify-content: center;
   }
 
   @media(max-width:991px){
+    
     .wrapp{
         display: none;
     }
@@ -193,7 +195,7 @@ justify-content: center;
         width: 100%;
     }
     .gg{
-        height: 79vh;
+        height: 50vh;
     }
 
   }

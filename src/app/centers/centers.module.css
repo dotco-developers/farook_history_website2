@@ -1,0 +1,96 @@
+.sec{
+    padding-top: 100px;
+}
+
+.card{
+    width: 85%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: block;
+    margin: auto;
+    padding: 20px 20px;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.im{
+    width: 100%;
+    height: 298px;
+    border-radius: 30px;
+
+}
+.card h2{
+    color: #982B35;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 16px 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+}
+.card P{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 3; 
+    color: black;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+
+
+.wr{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 40px;
+    padding: 80px 70px;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    z-index: 99;
+}
+.blackout{
+    position: relative;
+}
+.blackout::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .7; 
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+.auth{
+    display: flex;
+}
+.auth p{
+    font-family: "Poppins";
+    font-size: 14px;
+}
+.a_ic{
+    width: 13px;
+    height: 13px;
+    color: #982B35;
+    margin: 0px 5px;
+}
+.arr{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.im_out{
+    position: relative;
+}

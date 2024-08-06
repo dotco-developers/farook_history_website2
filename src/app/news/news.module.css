@@ -120,6 +120,11 @@
     font-weight: 600;
     margin-top: 16px;
     margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines to show */
+    -webkit-box-orient: vertical;
 }
 .card P{
     display: -webkit-box;

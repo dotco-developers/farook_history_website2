@@ -80,6 +80,11 @@ margin-left: 20px;
     font-size: 32px;
     font-weight: 600;
     margin: 16px 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines to show */
+    -webkit-box-orient: vertical;
 }
 .card P{
     display: -webkit-box;
@@ -146,6 +151,7 @@ margin-left: 20px;
 .im_out{
     position: relative;
 }
+
 @media(max-width:767px){
     .wr{
         width: 90%;

@@ -4,14 +4,14 @@ import styles from "./research.module.css";
 import Scholar from "@/component/scholar/page";
 import Phd from "@/component/phd_produced/phd_produced";
 import Image from "next/image";
-import cap from "../../../public/icons grey/cap.png";
-import book from "../../../public/icons grey/book.png";
-import tick from "../../../public/icons grey/tick.png";
+import cap from "../../../../public/icons grey/cap.png";
+import book from "../../../../public/icons grey/book.png";
+import tick from "../../../../public/icons grey/tick.png";
 import { useState } from "react";
 import { document } from "postcss";
-import wrld from "../../../public/icons grey/world.png";
+import wrld from "../../../../public/icons grey/world.png";
 
-export default function Research() {
+export default function Research({params}:any) {
   const [content, setcontent] = useState<string>("card1"); // Ensure content is initialized as a string
 
   const handler = (v: string) => {
@@ -95,11 +95,11 @@ export default function Research() {
           </div>
         </div>
       </section>
-      {content === "card1" ? (
+      {params.name === "guide" ? (
         <Guide />
-      ) : content === "card2" ? (
+      ) : params.name === "scholars" ? (
         <Scholar />
-      ) : content === "card3" ? (
+      ) : params.name === "produced" ? (
         <Phd />
       ) : (
         ""

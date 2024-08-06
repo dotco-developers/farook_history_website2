@@ -73,7 +73,7 @@ export default function Event() {
               <div className={styles.card}>
                 <div className={styles.im_out}>
                   <Image src={arr} alt="" className={styles.arr}></Image>
-                  <Image src={x.image} alt="" className={styles.im}></Image>
+                  <Image src="https://farook-college-backend.vercel.app/media/news/News_1.jpg" alt="" className={styles.im} width={200} height={200} ></Image>
                 </div>
                 <h2>{x.name}</h2>
                 <div className={styles.auth}></div>

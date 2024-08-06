@@ -7,14 +7,16 @@ import gl from "../../../public/icons grey/gallery.png"
 
 import Image from "next/image"
 import { useState } from "react";
+import Link from "next/link"
 
-export default function Histosacard({handler,content}:{handler:any,content:any}){
+export default function Histosacard({url}:any){
 
 
     return(
         <div className={`${styles.r_out} row`}>
         <div className="col-lg-3 col-md-6 col-12">
-        <div className={`${styles.card} ${ content=='card1' ? styles.click:""} `} onClick={()=>{handler('card1')}}>
+          <Link href={"/histosa/executive-member"}>
+        <div className={`${styles.card} ${ url=='/executive-member' ? styles.click:""} `} >
             <div className={styles.lg}>
             <Image src={commi} alt="" className={styles.mainic} style={{marginLeft:"10px"}}></Image>
             </div>
@@ -25,9 +27,11 @@ export default function Histosacard({handler,content}:{handler:any,content:any})
               
             </p>
           </div>
+          </Link>
         </div>
         <div className="col-lg-3 col-md-6 col-12">
-        <div className={`${styles.card} ${ content=='card2' ? styles.click:""} `} onClick={()=>{handler('card2')}}>
+          <Link href={"/histosa/reports"}>
+          <div className={`${styles.card} ${ url=='/reports' ? styles.click:""} `} >
             <div className={styles.lg}>
             <Image src={rep} alt="" className={styles.mainic} style={{marginLeft:"10px"}}></Image>
             </div>
@@ -38,10 +42,13 @@ export default function Histosacard({handler,content}:{handler:any,content:any})
               
             </p>
           </div>
+          </Link>
+     
 
         </div>
         <div className="col-lg-3 col-md-6 col-12">
-        <div className={`${styles.card} ${ content=='card3' ? styles.click:""} `} onClick={()=>{handler('card3')}}>
+          <Link href={"/histosa/activities"}>  
+        <div className={`${styles.card} ${ url=='activities' ? styles.click:""} `} >
             <div className={styles.lg}>
             <Image src={activity} alt="" className={styles.mainic} style={{marginLeft:"10px"}}></Image>
             </div>
@@ -52,10 +59,14 @@ export default function Histosacard({handler,content}:{handler:any,content:any})
               
             </p>
           </div>
+          </Link>
+
 
         </div>
         <div className="col-lg-3 col-md-6 col-12">
-        <div className={`${styles.card} ${ content=='card4' ? styles.click:""} `} onClick={()=>{handler('card4')}}>
+          <Link href={"/histosa/gallery"}>
+          
+        <div className={`${styles.card} ${ url=='gallery' ? styles.click:""} `}>
             <div className={styles.lg}>
             <Image src={gl} alt="" className={styles.mainic} style={{marginLeft:"10px"}}></Image>
             </div>
@@ -66,7 +77,7 @@ export default function Histosacard({handler,content}:{handler:any,content:any})
               
             </p>
           </div>
-
+          </Link>
         </div>
       </div>
     )

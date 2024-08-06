@@ -30,7 +30,6 @@ margin-bottom: 10px;
    border-radius: 30px;
    margin-top: -10px;
    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  
 }
 
 .card::before {
@@ -48,12 +47,19 @@ margin-bottom: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   }
-  .card p{
-    text-align: center;
+  .card .p1{
     margin-top: 15px;
     margin-bottom: 0px;
     font-size: 17px;
     font-family: "Poppins";
+  }
+  .p4{
+    overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  font-size: 15px;
   }
 
   .head{
@@ -89,6 +95,25 @@ margin-top: 72px;
     opacity: .2;
     z-index: -2;
 }
+.v_out{
+    display: flex;
+    justify-content: center;
+  }
+  .view{
+    border-radius: 20px;
+    background-color: #982B35;
+    color: white;
+    border: none;
+    padding: 3px 20px;
+    margin-top:54px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    background-color:#982B35 ;
+    margin-top: 20px;
+   
+  }
 @media(max-width:1199px){
     .gl{
         height: 73%;

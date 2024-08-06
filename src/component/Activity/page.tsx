@@ -6,7 +6,7 @@ import { faClock, faLocationPin } from "@fortawesome/free-solid-svg-icons";
 import im from "../../../public/news.jpg";
 export default function Activity() {
   return (
-    <section>
+    <section style={{overflowX:"hidden"}}>
       <div className="row">
         <div className="col-lg-12 col-12">
         <h2 className={styles.head}>ACTIVITIES</h2>

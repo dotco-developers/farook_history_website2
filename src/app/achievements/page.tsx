@@ -222,12 +222,12 @@ export default function about() {
                       <h1>LOREM IPSUM</h1>
                       <h4>
                         {" "}
-                        <FontAwesomeIcon icon={faClock} /> 12 January 2024 |
+                        <FontAwesomeIcon icon={faClock} className="size-[15px]"/> 12 January 2024 |
                         12:30 pm
                       </h4>
                       <h4>
                         {" "}
-                        <FontAwesomeIcon icon={faLocationPin} /> Lorem ipsum,
+                        <FontAwesomeIcon icon={faLocationPin} className="size-[15px]" /> Lorem ipsum,
                         India
                       </h4>
                       <br />

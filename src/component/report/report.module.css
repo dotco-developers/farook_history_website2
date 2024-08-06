@@ -1,0 +1,91 @@
+
+
+
+.head{
+    color: #982B35;
+    font-size: 32px;
+    font-weight: 500;
+    font-family: "Madimi One";
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    margin-bottom: 100px;
+}
+
+.main{
+    padding: 30px 20px;
+    background-color: #DFDFDF;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.main p{
+    font-weight: 400;
+    color: #982B35;
+    font-family: "Madimi One";
+}
+.sub{
+    padding: 30px 20px;
+    background-color: #DFDFDF;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.sub p{
+    font-family: "poppins";
+    font-size: 16px;
+    font-weight: 500;
+
+}
+.sub:hover{
+    background-color: #982B35;
+}
+.sub:hover .pdf{
+    color: #DFDFDF;
+}
+.sub:hover p{
+    color: #DFDFDF;
+}
+
+.wrap{
+    background: #DFDFDF;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    border-radius: 20px;
+    padding: 15px 9px;
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+   
+
+}
+.t_head p{
+    color: #982B35;
+    font-size: 20px;
+    font-family: "Madimi One";
+    font-weight: 600;  
+}
+.pdf{
+    width: 40px;
+    height: 40px;
+    color: #982B35;
+}
+@media (max-width:991px){
+    .outerdiv{
+        width: 90%;
+        overflow-x: scroll;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .main{
+        width: 1000px;
+        padding: 13px 10px;
+    }
+    .sub{
+        width: 1000px;
+        padding: 13px 10px;
+    }
+}

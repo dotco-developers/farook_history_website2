@@ -1,9 +1,10 @@
 /* components/Carousel.module.css */
 
 .im{
-  width: 243px;
-  height: 200px;
-  border-radius: 46px;
+  width: auto;
+  height: 215px;
+  border-radius: 30px;
+  object-fit: cover;
  
 }
 .c_out{
@@ -13,32 +14,89 @@
   
 }
 .outer{
-  padding: 40px 20px;
+  padding: 40px 15px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 30px;
   display: flex;
-  width:600px;
+  width:680px;
   background-color: white;
   cursor: pointer;
   opacity: 1;
-  
+  position: absolute;
 }
 .head{
-  margin-bottom: 30px;
-  font-size: 34px;
+  margin-bottom: 27px;
+  font-size: 28px;
   color:#982B35 ;
-  font-weight: 700;
-  margin-left: 20px;
-}
-.pera{
-  margin-left: 20px;
+  font-weight: 600;
+  
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2; 
   font-family: "Poppins";
 }
+.pera{
+ 
+  font-family: "Poppins";
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 5; 
 
+}
 
+.outer::after{
+  content: "";
+  width: 10px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: #982B35;
+ 
+  transform: translateY(-50%);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.outer::before{
+  content: "";
+  width: 10px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  background-color: #982B35;
+ 
+  transform: translateY(-50%);
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
 
-@media(max-width:767px){
+@media(max-width:1199px){
   .outer{
+    width: 590px;
+  }
+  .im{
+    height: 190px;
+    height: auto;
+  }
+}
+@media(max-width:991px){
+  .outer{
+    width:310px ;
+  }
+  .head{
+    margin-bottom: 15px;
+    margin-top: 6px;
+  }
+  
+  
+}
+
+
+@media(max-width:685px){
+  /* .outer{
     display: flex;
     flex-direction: column;
     width: 200px;
@@ -62,6 +120,18 @@
     margin-bottom: 10px;
     font-size: 20px;
     margin-left: 0px;
+  } */
+  .im{
+    height: 160px;
+    width: auto;
   }
-
+  .outer{
+    width: 254px;
+  }
+  .pera{
+     display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3; 
+  }
 }

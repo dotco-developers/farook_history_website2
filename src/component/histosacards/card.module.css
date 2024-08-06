@@ -1,0 +1,98 @@
+.card:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #CF9CA1;
+}
+.click{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #CF9CA1;
+}
+.card{
+    width: 90%;
+    display: block;
+    margin: auto;
+    padding: 30px 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    background: transparent;
+}
+.card p{
+   text-align: center;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   -webkit-line-clamp: 4; 
+}
+.card h3{
+    font-family: "Madimi One";
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
+.mainic{
+    width: 60px;
+    height: 60px;
+}
+.lg{
+    width: max-content;
+    display: block;
+    margin: 20px auto;
+}
+.r_out{
+    padding: 70px 0px;
+    padding-top: 200px;
+}
+.click{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #CF9CA1;
+}
+@media(max-width:1400px){
+    .card h3{
+        font-size: 23px;
+    }
+    .card{
+        padding: 20px 40px;
+    }
+    
+}
+@media(max-width:991px){
+    .card p{
+        display: none;
+    }
+    .wr{
+        height: 80%;
+        width: 80%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .card{
+       margin: 20px auto;
+       padding: 10px 10px;
+       display: flex;
+       align-items: center;
+    }
+    .card img{
+            width: 40px;
+            height: 40px;
+            margin-left: auto;
+            margin-right: auto;
+    }
+    .card h3{
+        font-size: 20px;
+    }
+    .r_out{
+        padding-top: 50px;
+    }
+    .lg{
+        margin-left: 1px;
+    }
+
+}
+@media(max-width:660px){
+    .wr{
+        display: none;
+    }
+
+}

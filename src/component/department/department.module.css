@@ -7,9 +7,11 @@
     font-family: "Madimi One";
 }
 .department{
-    min-height: 100vh;
+    min-height: 60vh;
     padding: 55px 0px;
     overflow-x: hidden;
+    display: flex;
+    align-items: center;
 
 }
 .content{   
@@ -36,8 +38,6 @@
     height: 100%;
     border-radius: 40px;
     object-fit: fill;
-    
-    
 }
 
 
@@ -48,13 +48,9 @@
 }
 
 .im{
-    width: 90%;
-    height: 56%;
+    width: 80%;
     position: relative;
     margin-top: 70px;
-    
-
-  
   
 }
 
@@ -65,22 +61,20 @@
     width: 100%;
     height:100%;
     background-color: #982B35;
-    top: 20px;
+    top: 19px;
     z-index: -1;
     border-radius: 40px;
-   left: 18px;
+   left: 15px;
 
 }
 @media(max-width:992px){
     .im{
-        height: 100%;
+        height: 80%;
+        width: 80%;
+    }
+    .algn{
+        padding: 40px 0px;
     }
    
 }
 
-@media(max-width:767px){
-    .im{
-        height: 100%;
-    }
-   
-}

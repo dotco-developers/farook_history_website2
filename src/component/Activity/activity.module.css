@@ -1,0 +1,153 @@
+.card{
+    background-color: #bc2a393a;
+    border-radius: 30px;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  padding-left: 0px;
+    padding-right:0px;
+    justify-content: left;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.cardimg{
+
+margin-left: 0;
+}
+
+.card h1{
+    font-family: "poppins";
+    font-weight: 500;
+    color: #982B35;
+    font-size: 24px;
+    margin-bottom: 14px;
+
+}
+.card h4{
+    color: #6d6d6d;
+    font-size: 17px;
+    font-weight: 400;
+    margin: 10px 0px;
+}
+.card h5{
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.btncv{
+    background-color: #982B35;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    padding-bottom: 6px;
+    border-radius: 10px;
+   
+}
+.btncv h3{
+    color: #edededd2;
+    font-family: "poppins";
+    font-size: 1.5rem;
+}
+.imgcard{
+    width: 80%;
+    height: 20vw;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: block;
+    margin-left: 20px;
+    margin-right: 0;
+    
+}
+
+.cardcont{
+    padding-left: 30px;
+    
+    
+
+}
+.cardcont p{
+    font-family: "poppins";
+    font-weight: 400;
+    font-size: 16px;
+}
+/* ends here */
+.icc{
+    
+    width: 15px;
+    height: 15px;
+}
+.icondiv{
+    margin-top: 16px;
+}
+.btn{
+    background-color: #982B35;
+    padding: 9px 22px;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 20px;
+    margin-right: 20px;
+
+}
+.head{
+    font-size: 40px;
+    color: #982B35;
+    font-family: "Madimi One";
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    font-weight: 600;
+}
+@media(max-width:991px){
+    .im{
+        height: 40vw;
+    }
+    .cardcont h1{
+        margin-top: 16px;
+    }
+}
+
+
+
+
+
+@media (max-width:768px) {
+    
+    .fca{
+    
+        width: 70%;
+        height: auto;
+        margin-top: 200px;
+      margin-right: 70px;
+       
+      
+       
+}
+.imgcard{
+    width: 90%;
+    height:40vh;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-top: 0px;
+    margin-bottom:20px;
+    display: block;
+    /* margin-left: 20px; */
+    margin-right: 0;
+
+    
+}
+}

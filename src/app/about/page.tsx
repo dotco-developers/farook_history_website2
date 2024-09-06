@@ -1,4 +1,3 @@
-"use client";
 import { Component, useEffect, useRef, useState } from "react";
 
 import styles from "./about.module.css";
@@ -24,69 +23,70 @@ import About from "@/component/Aboutcomponent/About";
 import Mission from "@/component/Aboutcomponent/Mission";
 import Faculty from "@/component/Aboutcomponent/faculty";
 import Programme from "@/component/Aboutcomponent/programme";
+import { faculty_datafetcher } from "../api/route";
 
-export default function about() {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-  const [data, setdata] = useState([]);
+export default async function about() {
+  // const ref = useRef(null);
+  // const isInView = useInView(ref);
+  // const [data, setdata] = useState([]);
 
-  const [load, setload] = useState(true);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          "https://farook-college-backend.vercel.app/api/countup/"
-        );
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const responseData = await response.json();
-        setdata(responseData);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    fetchData();
-  }, []);
+  // const [load, setload] = useState(true);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch(
+  //         "https://farook-college-backend.vercel.app/api/countup/"
+  //       );
+  //       if (!response.ok) {
+  //         throw new Error("Network response was not ok");
+  //       }
+  //       const responseData = await response.json();
+  //       setdata(responseData);
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
 
-  const [first, setfirst] = useState(true);
+  // const [first, setfirst] = useState(true);
 
-  function handle() {
-    setfirst(!first);
-    setload(!load);
-  }
+  // function handle() {
+  //   setfirst(!first);
+  //   setload(!load);
+  // }
 
-  useEffect(() => {
-    const interval = setInterval(handle, 5000); // Change cards every 5 seconds
-    return () => clearInterval(interval); // Cleanup function to clear interval on unmount
-  }, [first]);
+  // useEffect(() => {
+  //   const interval = setInterval(handle, 5000); // Change cards every 5 seconds
+  //   return () => clearInterval(interval); // Cleanup function to clear interval on unmount
+  // }, [first]);
 
-  const facultydata = [
-    {
-      name: "Dr. C.A. Anaz",
-      designation: "Assistant Professor and Head",
-      mail: "anaz@farookcollege.ac.in",
-      img: "/caanaz.jpg",
-    },
-    {
-      name: "Dr. Abdul Nisar ",
-      designation: "Assistant Professor",
-      mail: "dr.mnisar@farookcollege.ac.in",
-      img: "/niza.jpg",
-    },
-    {
-      name: " Dr. Shumais U",
-      designation: "Assistant Professor",
-      mail: "shumais.u@farookcollege.ac.in",
-      img: "/shumu.jpg",
-    },
-  ];
-
+  // const facultydata = [
+  //   {
+  //     name: "Dr. C.A. Anaz",
+  //     designation: "Assistant Professor and Head",
+  //     mail: "anaz@farookcollege.ac.in",
+  //     img: "/caanaz.jpg",
+  //   },
+  //   {
+  //     name: "Dr. Abdul Nisar ",
+  //     designation: "Assistant Professor",
+  //     mail: "dr.mnisar@farookcollege.ac.in",
+  //     img: "/niza.jpg",
+  //   },
+  //   {
+  //     name: " Dr. Shumais U",
+  //     designation: "Assistant Professor",
+  //     mail: "shumais.u@farookcollege.ac.in",
+  //     img: "/shumu.jpg",
+  //   },
+  // ];
+  const facdata=await faculty_datafetcher()
   return (
     <section id={styles.about}>
       <About></About>
       <Mission></Mission>
-      <Faculty></Faculty>
+      <Faculty  data={facdata}></Faculty>
       <Programme></Programme>
     </section>
   );

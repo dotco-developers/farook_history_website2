@@ -9,8 +9,14 @@ import Gallery from "@/component/eventgallery/Eventgallery";
 import insta from "../../../../public/icons grey/instared.png"
 import mail from "../../../../public/icons grey/mailred.png"
 import lin from "../../../../public/icons grey/inred.png"
+import { event_innner_datafetcher, eventhost_datafetcher, eventimages_datafetcher, eventvideo_datafetcher } from "@/app/api/route";
+import Link from "next/link";
 
-export default function Eventinner() {
+export default async function Eventinner({params}:any) {
+  const data=await event_innner_datafetcher(params.slug)
+  const eventhost=await eventhost_datafetcher()
+  const image =await eventimages_datafetcher()
+  const video =await eventvideo_datafetcher()
   return (
     <section className={styles.sec}>
       <div className={`row ${styles.r_out}`}>
@@ -20,79 +26,72 @@ export default function Eventinner() {
           </div>
         </div>
       </div>
-      <div className={styles.popup}>
-        <div className={`row ${styles.row1}`}>
-          <div className="col-lg-6 col-12">
-            <h2>LOREM IPSUM EVENT</h2>
-            <p style={{marginTop:"20px"}}>
-              <FontAwesomeIcon icon={faClock} className={styles.icc} /> 12
-              january | <span>12:00</span>
-            </p>
-            <p style={{marginBottom:"20px"}}>
-            <FontAwesomeIcon icon={faLocationDot} className={styles.icc} />
-              Location
-            </p>
-            <div>
-              <label>education</label>
-              <label>education</label>
-              <label>education</label>
+      {
+        data.map((x:any,i:number)=>(
+          <div className={styles.popup} key={i}>
+          <div className={`row ${styles.row1}`}>
+            <div className="col-lg-6 col-12">
+              <h2>{x.title}</h2>
+              <p style={{marginTop:"20px"}}>
+                <FontAwesomeIcon icon={faClock} className={styles.icc} /> 12
+                {x.date}
+              </p>
+              <p style={{marginBottom:"20px"}}>
+              <FontAwesomeIcon icon={faLocationDot} className={styles.icc} />
+                {x.venue}
+              </p>
+              <div>
+                <label>education</label>
+                <label>education</label>
+                <label>education</label>
+              </div>
+            </div>
+            <div className="col-lg-6 col-12">
+              <button className={styles.btn}>{x.status}</button>
             </div>
           </div>
-          <div className="col-lg-6 col-12">
-            <button className={styles.btn}>upcoming</button>
+          <div className={`row ${styles.row2}`}>
+            <h2>SYNOPSIS</h2>
+            <div dangerouslySetInnerHTML={{__html:x.description}}>
+              
+            </div>
           </div>
-        </div>
-        <div className={`row ${styles.row2}`}>
-          <h2>SYNOPSIS</h2>
-          <p>
-            To popular belief, Lorem Ipsum is not simply random text. It has
-            roots in a piece of classical Latin literature Lorem Ipsum is not
-            simply random text. It has roots To popular belief, Lorem Ipsum is
-            not simply random text. It has roots in a piece of classical Latin
-            literature Lorem Ipsum is not simply random text. It has roots in a
-            piece To popular belief, Lorem Ipsum is not simply random text. It
-            has roots in a piece of classical Latin literature Lorem Ipsum is
-            not simply random text. It has roots To popular belief, Lorem Ipsum
-            is not simply random text. It has roots in a piece of classical
-            Latin literature Lorem Ipsum is not simply random text. It has roots
-            in a piece To popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature Lorem Ipsum is
-            not simply random text. It has roots To popular belief, Lorem Ipsum
-            is not simply random text. It has roots in a piece of classical
-            Latin literature Lorem Ipsum is not simply random text. It has roots
-            in a piece To popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature Lorem Ipsum is
-            not simply random text. It has roots To popular belief, Lorem Ipsum
-            is not simply random text. It has roots in a piece of classical
-            Latin literature Lorem Ipsum is not simply random text. It has roots
-            in a piece
-          </p>
-        </div>
-        <div className={`${styles.row3} row`}>
-            <h2>EVENT HOST</h2>
-            <div className={`col-lg-4 ${styles.card}`}>
-                <div className={styles.faccard}>
-                  <div className={styles.facimgdiv}>
-                    <Image className={styles.facimg1} src={fac1} alt="" />
-                  </div>
-                  <div className={styles.facdata}>
-                    <h4>Full Name</h4>
-                    <h6>Designation</h6>
-                  </div>
-                  <div className={styles.facicons}>
-                  <Image src={insta} alt="" className={styles.iconimg}></Image>
-                   <Image src={mail} alt="" className={styles.iconimg}></Image>
-                   <Image src={lin} alt="" className={styles.iconimg}></Image>
-                  </div>
-                  <div className={styles.readmore}>
-                    <a href="http://">More Info</a>{" "}
+          <div className={`${styles.row3} row`}>
+              <h2>EVENT HOST</h2>
+              {
+                eventhost.map((item:any,index:number)=>(
+                  <div className={`col-lg-4 ${styles.card}`} key={index}>
+                  <div className={styles.faccard}>
+                    <div className={styles.facimgdiv}>
+                      <Image className={styles.facimg1} width={200} height={200} src={x.image} alt="" />
+                    </div>
+                    <div className={styles.facdata}>
+                      <h4>{item.name}</h4>
+                      <h6>{item.designation}</h6>
+                    </div>
+                    <div className={styles.facicons}>
+                      <Link href={x.instagram==null ? "" :x.instagram}>
+                      <Image src={insta} alt="" className={styles.iconimg}></Image>
+                      </Link>
+                      <Link href={x.email==null ? "" : `mailto:${x.email}`}>
+                      <Image src={mail} alt="" className={styles.iconimg}></Image>
+                      </Link>
+                      <Link href={x.linkedin==null ? "" : x.linkedin}> 
+                      <Image src={lin} alt="" className={styles.iconimg}></Image>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
+                ))
+              }
+          
+          </div>
+          <Gallery image={image} video={video}></Gallery>
+  
         </div>
-        <Gallery></Gallery>
-
-      </div>
+        ))
+      }
+     
     </section>
   );
 }

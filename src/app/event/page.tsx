@@ -11,30 +11,11 @@ import im from "../../../public/book.jpg";
 import Image from "next/image";
 import arr from "../../../public/icons grey/arr.png";
 import { useEffect, useState } from "react";
+import { event_datafetcher } from "../api/route";
+import Link from "next/link";
 
-export default function Event() {
-  const [data, setdata] = useState([]);
-  useEffect(() => {
-    const datafetcher = async () => {
-      try {
-        const response = await fetch(
-          "https://farook-college-backend.vercel.app/api/event/",
-          {
-            method: "GET",
-          }
-        );
-        if (!response.ok) {
-          throw new Error("server request not ok");
-        }
-        const res = await response.json();
-        setdata(res);
-      } catch (error) {
-        console.log("error in fetching events data" + error);
-      }
-    };
-    datafetcher();
-  }, []);
-
+export default async function Event() {
+  const data =await event_datafetcher()  
   return (
     <section className={styles.sec}>
       <div className="container">
@@ -68,18 +49,20 @@ export default function Event() {
           </div>
         </div>
         <div className={`row ${styles.r_sec}`}>
-          {data.map((x: any) => (
-            <div className="col-lg-4 col-md-6 col-12">
+          {data.map((x: any,i:number) => (
+            <div className="col-lg-4 col-md-6 col-12" key={i}>
               <div className={styles.card}>
                 <div className={styles.im_out}>
+                  <Link href={`/event/${x.id}`}>
                   <Image src={arr} alt="" className={styles.arr}></Image>
-                  <Image src="https://farook-college-backend.vercel.app/media/news/News_1.jpg" alt="" className={styles.im} width={200} height={200} ></Image>
+                  </Link>
+                  <Image src={x.image} alt="" className={styles.im} width={300} height={400} ></Image>
                 </div>
-                <h2>{x.name}</h2>
+                <h2>{x.title}</h2>
                 <div className={styles.auth}></div>
-                <p>
-                 {x.description}
-                </p>
+                <div className={styles.content_in} dangerouslySetInnerHTML={{__html:x.description}}>
+
+                </div>
                 <label className={styles.wr_ic}>
                   <FontAwesomeIcon
                     icon={faCalendarDays}

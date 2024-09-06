@@ -10,15 +10,17 @@ import { useParams, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import path from "path";
 import { Url } from "url";
-export default function Inner() {
+import { news_inner_datafetcher } from "@/app/api/route";
+export default async function Inner({params}:any) {
+  const data=news_inner_datafetcher(params.news)
+  // const [baseurl, setbaseurl] = useState("http://localhost:3000")
+  // const [url, setUrl] = useState("");
+  // const param = usePathname();
 
-  const [baseurl, setbaseurl] = useState("http://localhost:3000")
-  const [url, setUrl] = useState("");
-  const param = usePathname();
-
-  useEffect(() => {
-    setUrl(param);
-  }, [param]);
+  // useEffect(() => {
+  //   setUrl(param);
+  // }, [param]);
+  var urlmain="http://localhost:3000";
   return (
     <section className={styles.sec}>
       <div className="container">
@@ -47,8 +49,8 @@ export default function Inner() {
           </div>
     
           <div className="col-lg-12 col-12">
-            <a  href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
-                "Department of history" + baseurl + url
+            <a target="blank" href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
+                "Department of history : " + urlmain+"/news/"+params.news
               )}`} >
             <Image src={share} alt="" className={styles.sh}></Image>
           </a>

@@ -2,7 +2,7 @@
 
 .sec{
    height: max-content;
-    padding-top: 110px;
+    padding-top: 0px;
     padding-bottom: 120px;
     overflow-x: hidden;
     position: relative;
@@ -26,7 +26,7 @@
     background-color: white;
     z-index: 99;
     border-radius: 60px;
-    margin-top: -255px;
+    margin-top: -310px;
 }
 .row1 h2{
     color: #982B35;
@@ -102,6 +102,7 @@
     border-radius: 500px 500px 500px 500px;
     position: relative;
     transition: 2s ease-in-out;
+    max-width: 210px;
 }
 .readmore{
     opacity: 0;

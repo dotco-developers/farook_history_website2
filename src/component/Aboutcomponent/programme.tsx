@@ -1,4 +1,4 @@
-
+"use client"
 
 import { FaRegFilePdf } from "react-icons/fa6"
 import styles from "./Aboutcomponent.module.css"

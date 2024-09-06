@@ -48,7 +48,7 @@ function NavBar() {
                   </Link>
                 </li>
                 <li className="mx-1 font-semibold text-[Madimi One]	 pb-6 text-xl text-black py-2 md:px-6 text-center   hover:text-[#982B35] list  ">
-                  <Link href="/research" onClick={() => setNavbar(!navbar)} className='text-black hover:text-[#982B35] no-underline w-max'>
+                  <Link href="/research/guide" onClick={() => setNavbar(!navbar)} className='text-black hover:text-[#982B35] no-underline w-max'>
                    <p className='hover:text-[#982B35] block m-auto w-max'>Research</p> 
                   </Link>
                 </li>

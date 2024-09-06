@@ -17,7 +17,7 @@ export default function About(){
                 influence on contemporary societies worldwide. Students develop
                 analytical skills and research proficiency through engaging
                 lectures, interactive seminars, and immersive fieldwork
-                experiences. The program's esteemed faculty members guide
+                experiences. The program&apos;s esteemed faculty members guide
                 students to traverse the assortment of Islamic civilization,
                 drawing profound insights into the interplay of faith, politics,
                 and culture. The course has the conventional form of terminal

@@ -7,8 +7,12 @@ import Report from "../../../component/report/Report"
 import Activitygallery from "@/component/histosaactivitygallery/Activitygallery";
 import Activity from "@/component/Activity/page";
 import im from "../../../../public/icons grey/caplarge.png"
-export default function Histosa({params}:any) {
-
+import { histosa_activity_datafetcher, histosa_execome_datafetcher, histosa_gallery_datafetcher, histosa_reports_datafetcher } from "@/app/api/route";
+export default async function Histosa({params}:any) {
+   const execome=await histosa_execome_datafetcher()
+   const activity=await histosa_activity_datafetcher()
+   const reports=await histosa_reports_datafetcher()
+   const gallery=await histosa_gallery_datafetcher()
   return (
     <>
     <section className={styles.sec}>
@@ -45,10 +49,10 @@ export default function Histosa({params}:any) {
       </div>
     </section>
     {
-      params.name==='executive-member'  ? (<Commttee  ></Commttee>):
-      params.name==='reports' ? (<Report></Report>) :
-      params.name==='activities' ? (<Activity></Activity>):
-      params.name==='gallery' ?  (<Activitygallery></Activitygallery>): "" 
+      params.name==='executive-member'  ? (<Commttee  data={execome} ></Commttee>):
+      params.name==='reports' ? (<Report data={reports}></Report>) :
+      params.name==='activities' ? (<Activity data={activity}></Activity>):
+      params.name==='gallery' ?  (<Activitygallery data={gallery}></Activitygallery>): "" 
     }
     </>
   );

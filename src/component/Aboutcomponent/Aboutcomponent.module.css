@@ -15,7 +15,7 @@
 
 
 .headsub{
-    padding-top: 12rem;
+    padding-top: 4rem;
 }
 .headsub h1{
     font-family: "Madimi One", sans-serif;
@@ -220,7 +220,7 @@ transition-duration: 2s;
 .headingfac{
     width: 100%;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 1rem;
     margin-bottom: 3rem;
     padding: 3rem 0rem;
 
@@ -229,7 +229,7 @@ transition-duration: 2s;
 .headingfac h1{
     color: #982B35;
     font-family: "Madimi One", sans-serif;
-
+    
 }
 
 .facultywrap{
@@ -366,6 +366,9 @@ transition-duration: 2s;
 }
 .prgdata{
  padding: 0px 20px;
+}
+.facicons img{
+    cursor: pointer;
 }
 
 

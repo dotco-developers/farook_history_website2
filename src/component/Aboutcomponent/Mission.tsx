@@ -1,5 +1,4 @@
-
-
+"use client"
 import { useEffect, useRef, useState } from "react";
 import styles from "./Aboutcomponent.module.css"
 import { useInView } from "framer-motion";

@@ -15,6 +15,7 @@
     border-radius: 500px 500px 500px 500px;
     position: relative;
     transition: 2s ease-in-out;
+    max-width: 210px;
 }
 .readmore{
     opacity: 0;
@@ -42,8 +43,9 @@
    
 }
 
-
 .facimg1{
+    display: block;
+    margin: auto;
     width: 150px;
     height: 150px;
     object-fit: cover;
@@ -67,6 +69,7 @@
     color: #982B35;
     font-family:"poppins";
     font-weight: 500;
+    font-size: 18px;
 }
 .facdata h6{
     color: black;
@@ -83,5 +86,5 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 140px;
+    margin-bottom: 80px;
 }

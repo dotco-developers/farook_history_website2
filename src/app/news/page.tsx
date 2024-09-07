@@ -1,5 +1,5 @@
 import News_sub from "@/component/news_sub/News_sub.page";
-import { all_news_datafetcher } from "../api/route";
+import { all_news_datafetcher } from "../../component/api/route";
 
 
 export default async function NEWS_MAIN({searchParams}:any){

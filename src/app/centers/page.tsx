@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarDays, faUser } from "@fortawesome/free-solid-svg-icons";
 import arr from "../../../public/icons grey/arr.png";
 import blog from "../../../public/blog.jpg";
-import { center_datafetcher, center_for_navbar_datafetcher } from "../api/route";
+import { center_datafetcher, center_for_navbar_datafetcher } from "../../component/api/route";
 import Link from "next/link";
 export default async function Centers() {
   const data = await center_datafetcher();

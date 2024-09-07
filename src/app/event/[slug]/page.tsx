@@ -9,8 +9,8 @@ import Gallery from "@/component/eventgallery/Eventgallery";
 import insta from "../../../../public/icons grey/instared.png"
 import mail from "../../../../public/icons grey/mailred.png"
 import lin from "../../../../public/icons grey/inred.png"
-import { event_innner_datafetcher, eventhost_datafetcher, eventimages_datafetcher, eventvideo_datafetcher } from "@/app/api/route";
 import Link from "next/link";
+import { event_innner_datafetcher, eventhost_datafetcher, eventimages_datafetcher, eventvideo_datafetcher } from "@/component/api/route";
 
 export default async function Eventinner({params}:any) {
   const data=await event_innner_datafetcher(params.slug)

@@ -10,7 +10,7 @@ import im from "../../../public/book.jpg";
 import Image from "next/image";
 import arr from "../../../public/icons grey/arr.png";
 import { useEffect, useRef, useState } from "react";
-import { event_datafetcher } from "../api/route";
+import { event_datafetcher } from "../../component/api/route";
 import Link from "next/link";
 
 export default async function Event({searchParams}:any) {

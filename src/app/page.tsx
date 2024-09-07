@@ -8,7 +8,7 @@ import Students from "../component/students/Student"
 import Image from "next/image";
 import immap from "../../public/icons grey/rightmap.png"
 import styles from "./home.module.css"
-import {achivement_home_datafetcher, event_home_datafetcher, news_home_datafetcher} from "./api/route"
+import {achivement_home_datafetcher, event_home_datafetcher, news_home_datafetcher} from "../component/api/route"
 export default async function Home() {
   const data =await event_home_datafetcher()
   const newsdata=await news_home_datafetcher()

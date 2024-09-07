@@ -6,7 +6,6 @@ import mail from "../../../public/icons grey/mailred.png";
 import lin from "../../../public/icons grey/inred.png";
 import right from "../../../public/icons grey/rightmap2.png";
 import left from "../../../public/icons grey/leftmap22.png";
-import { faculty_datafetcher } from "@/app/api/route";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 export default  function Faculty({data}:any) {

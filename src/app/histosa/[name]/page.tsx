@@ -7,7 +7,7 @@ import Report from "../../../component/report/Report"
 import Activitygallery from "@/component/histosaactivitygallery/Activitygallery";
 import Activity from "@/component/Activity/page";
 import im from "../../../../public/icons grey/caplarge.png"
-import { histosa_activity_datafetcher, histosa_datafetcher, histosa_execome_datafetcher, histosa_gallery_datafetcher, histosa_reports_datafetcher } from "@/app/api/route";
+import { histosa_activity_datafetcher, histosa_datafetcher, histosa_execome_datafetcher, histosa_gallery_datafetcher, histosa_reports_datafetcher } from "@/component/api/route";
 export default async function Histosa({params}:any) {
    const histosa=await histosa_datafetcher()
    const execome=await histosa_execome_datafetcher()

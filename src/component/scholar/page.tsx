@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./scholar.module.css";
-import { Research_guide_datafetcher, Research_scholar_datafetcher } from "@/app/api/route";
+import { Research_guide_datafetcher, Research_scholar_datafetcher } from "../api/route";
 
 export default async function Scholar() {
  const data=await Research_scholar_datafetcher()

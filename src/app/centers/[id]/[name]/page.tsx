@@ -1,12 +1,8 @@
 import Image from "next/image";
 import styles from "./inner_center.module.css";
 import Sidemenu from "../../../../component/sidemenu/Sidemenu";
-import {
-  center_datafetcher,
-  center_head_datafetcher,
-  center_inner_datafetcher,
-  center_sidebar_datafetcher,
-} from "@/app/api/route";
+import { center_head_datafetcher, center_inner_datafetcher, center_sidebar_datafetcher } from "@/component/api/route";
+
 export default async function Management_in({ params }: any) {
   const sidebardata = await center_sidebar_datafetcher(params.id);
   const head = await center_head_datafetcher(params.id);

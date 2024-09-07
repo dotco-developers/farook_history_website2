@@ -1,7 +1,7 @@
 import styles from "./Student.module.css";
 import Card from "../../component/studentcard/card"
 import Image from "next/image";
-import { testimonials_home_datafetcher } from "@/app/api/route";
+import { testimonials_home_datafetcher } from "../api/route";
 export default async function Students() {
   const testimonials=await testimonials_home_datafetcher()
   return (

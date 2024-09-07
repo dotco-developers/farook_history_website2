@@ -3,7 +3,7 @@ import im from "../../../../public/blog.jpg";
 import styles from "./bloginner.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarDays } from "@fortawesome/free-solid-svg-icons";
-import { blog_inner_datafetcher } from "@/app/api/route";
+import { blog_inner_datafetcher } from "@/component/api/route";
 
 export default async function Bloginner({params}:any) {
   const data=await blog_inner_datafetcher(params.name)

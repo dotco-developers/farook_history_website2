@@ -1,30 +1,10 @@
-"use client"
 import { useEffect, useState } from "react";
 import styles from "./scholar.module.css";
+import { Research_guide_datafetcher, Research_scholar_datafetcher } from "@/app/api/route";
 
-export default function Scholar() {
-  const [data, setdata] = useState([]);
-  useEffect(() => {
-    const datafetcher = async () => {
-      try {
-        const response = await fetch(
-         "https://farook-college-backend.vercel.app/api/researchscholars/",
-          {
-            method: "GET",
-          }
-        );
-        if (!response.ok) {
-          throw new Error("server request not ok");
-        }
-        const res = await response.json();
-        setdata(res);
-      } catch (error) {
-        console.log("error in fetching scholor data" + error);
-      }
-    };
-    datafetcher();
-  }, []);
-
+export default async function Scholar() {
+ const data=await Research_scholar_datafetcher()
+ const guidedata=await Research_guide_datafetcher()
   return (
     <>
       <section className={styles.sec}>
@@ -56,8 +36,8 @@ export default function Scholar() {
               </div>
               {/* 2nd */}
               {
-                data.map((x:any)=>(
-                  <div className={`row ${styles.sub}`} key={x.id}>
+                data.map((x:any,i:number)=>(
+                  <div className={`row ${styles.sub}`} key={i}>
                   <div className="col-lg-1 col-1">
                     <p>{x.id}</p>
                   </div>
@@ -70,7 +50,11 @@ export default function Scholar() {
                     </p>
                   </div>
                   <div className="col-lg-2 col-2">
-                    <p>{x.guide}</p>
+                    {
+                      guidedata.map((item:any,index:number)=>(
+                        item.id == x.guide && <p key={index}>{item.name}</p>
+                      ))
+                    }
                   </div>
                   <div className="col-lg-2 col-2 ">
                     <p>{x.mode}</p>

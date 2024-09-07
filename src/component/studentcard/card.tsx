@@ -8,7 +8,8 @@ import { useEffect, useState } from "react";
 import insta from "../../../public/icons grey/insta.png";
 import app from "../../../public/icons grey/app.png";
 import mail from "../../../public/icons grey/mail.png";
-export default function Card_scrol() {
+import Link from "next/link";
+export default function Card_scrol({ data }: any) {
   // const [value, setvalue] = useState(0)
 
   // useEffect(() => {
@@ -34,87 +35,51 @@ export default function Card_scrol() {
   return (
     <>
       <div className={styles.wrap} id="wr">
-        <div className={`row alt  ${styles.content_wrap}`}>
-          <div className="col-lg-4 col-md-6 col-12">
-            <h6>Saheen</h6>
-            <p className={styles.conten}>
-              Dept. of History <br></br>Batch 2020-25
-            </p>
-            <div className={styles.ic_wr}>
+        {data.map((x: any, i: number) => (
+          <div className={`row alt  ${styles.content_wrap}`} key={i}>
+            <div className="col-lg-4 col-md-6 col-12">
+              <h6>{x.name}</h6>
+              <p className={styles.conten}>{x.designation}</p>
+              <div className={styles.ic_wr}>
+                <Link target="_blank" href={x.email==null?"":`mailto${x.email}`}>
+                  <Image
+                    src={mail}
+                    alt=""
+                    className={styles.icc}
+                    style={{ marginLeft: "-2px" }}
+                  ></Image>
+                </Link>
+                <Link target="_blank" href={x.instagram==null?"":x.instagram}>
+                <Image src={insta} alt="" className={styles.icc}></Image>
+                </Link>
+                <Link target="_blank" href={x.linkedin==null?"":x.linkedin}>
+                <Image src={app} alt="" className={styles.icc}></Image>
+                </Link>
+              </div>
+            </div>
+            <div className={`col-lg-3 col-md-6 col-12 ${styles.imalg}`}>
               <Image
-                src={mail}
+                src={x.image}
+                width={200}
+                height={300}
                 alt=""
-                className={styles.icc}
-                style={{ marginLeft: "-2px" }}
+                className={styles.im}
               ></Image>
-              <Image src={insta} alt="" className={styles.icc}></Image>
-              <Image src={app} alt="" className={styles.icc}></Image>
+            </div>
+            <div className={`col-lg-5 col-md-12 col-12 ${styles.col_out}`}>
+              <div className={styles.pera}>
+                <FontAwesomeIcon icon={faQuoteLeft} className={styles.qute} />
+                <br />
+                <div
+                  className={styles.pera_2}
+                  dangerouslySetInnerHTML={{ __html: x.description }}
+                ></div>
+                <br />
+                <FontAwesomeIcon icon={faQuoteRight} className={styles.qute2} />
+              </div>
             </div>
           </div>
-          <div className={`col-lg-3 col-md-6 col-12 ${styles.imalg}`}>
-            <Image src={im} alt="" className={styles.im}></Image>
-          </div>
-          <div className={`col-lg-5 col-md-12 col-12 ${styles.col_out}`}>
-            <p className={styles.pera}>
-              <FontAwesomeIcon icon={faQuoteLeft} className={styles.qute} />
-              <br />
-              The best thing about the College was being part of a supportive
-              environment, where everyone is focussed, help each other and are
-              encouraged to succeed as individuals.
-              <br />
-              <FontAwesomeIcon icon={faQuoteRight} className={styles.qute2} />
-            </p>
-          </div>
-        </div>
-
-        <div className={`row alt  ${styles.content_wrap}`}>
-          <div className="col-lg-4 col-md-12 col-12">
-            <h6>LOREM</h6>
-            <p className={styles.conten}>
-              Dept. of History <br></br> Batch 2020-25
-            </p>
-            <div></div>
-          </div>
-          <div className="col-lg-3 col-md-12 col-12">
-            <Image src={im} alt="" className={styles.im}></Image>
-          </div>
-          <div className={`col-lg-5 col-md-12 col-12 ${styles.col_out}`}>
-            <p className={styles.pera}>
-              <FontAwesomeIcon icon={faQuoteLeft} className={styles.qute} />
-              <br />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id rem
-              rerum reiciendis ipsa iste quae deleniti commodi dignissimos vitae
-              distinctio nulla sapiente adipisci reprehenderit, laborum ad, at
-              nostrum dolorem asperiores?
-              <br />
-              <FontAwesomeIcon icon={faQuoteRight} className={styles.qute2} />
-            </p>
-          </div>
-        </div>
-        <div className={`row alt ${styles.content_wrap}`}>
-          <div className="col-lg-4 col-md-12 col-12">
-            <h6>LOREM</h6>
-            <p className={styles.conten}>
-              Dept. of History <br></br> Batch 2020-25
-            </p>
-            <div></div>
-          </div>
-          <div className="col-lg-3 col-md-12 col-12">
-            <Image src={im} alt="" className={styles.im}></Image>
-          </div>
-          <div className={`col-lg-5 col-md-12 col-12 ${styles.col_out}`}>
-            <p className={styles.pera}>
-              <FontAwesomeIcon icon={faQuoteLeft} className={styles.qute} />
-              <br />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id rem
-              rerum reiciendis ipsa iste quae deleniti commodi dignissimos vitae
-              distinctio nulla sapiente adipisci reprehenderit, laborum ad, at
-              nostrum dolorem asperiores?
-              <br />
-              <FontAwesomeIcon icon={faQuoteRight} className={styles.qute2} />
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
     </>
   );

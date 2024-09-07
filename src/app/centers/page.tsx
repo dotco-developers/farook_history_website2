@@ -4,42 +4,34 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarDays, faUser } from "@fortawesome/free-solid-svg-icons";
 import arr from "../../../public/icons grey/arr.png";
 import blog from "../../../public/blog.jpg";
-export default function Centers() {
+import { center_datafetcher, center_for_navbar_datafetcher } from "../api/route";
+import Link from "next/link";
+export default async function Centers() {
+  const data = await center_datafetcher();
+  const head=await center_for_navbar_datafetcher()
   return (
     <section className={styles.sec}>
       <div className="container">
         <div className="row">
-          <div className="col-lg-4 col-md-6 col-12">
-            <div className={styles.card}>
-              <div className={styles.im_out}>
-                <Image src={arr} alt="" className={styles.arr}></Image>
-                <Image
-                  src={blog}
-                  alt=""
-                  className={styles.im}
-                  width={200}
-                  height={200}
-                ></Image>
+          {data.map((x: any, i: number) => (
+            <div className="col-lg-4 col-md-6 col-12" key={i}>
+              <div className={styles.card} >
+                <div className={styles.im_out}>
+                  <Link href={`/centers/${x.id}/${head}`}>
+                  <Image src={arr} alt="" className={styles.arr}></Image>
+                  </Link>
+                  <Image
+                    src={x.image}
+                    alt=""
+                    className={styles.im}
+                    width={200}
+                    height={300}
+                  ></Image>
+                </div>
+                <h2>{x.title}</h2>
               </div>
-              <h2>xmaskx</h2>
-             
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6 col-12">
-            <div className={styles.card}>
-              <div className={styles.im_out}>
-                <Image src={arr} alt="" className={styles.arr}></Image>
-                <Image
-                  src={blog}
-                  alt=""
-                  className={styles.im}
-                  width={200}
-                  height={200}
-                ></Image>
-              </div>
-              <h2>xmaskx</h2>
-                    </div>
-          </div>
+          ))}
         </div>
       </div>{" "}
     </section>

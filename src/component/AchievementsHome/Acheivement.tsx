@@ -31,17 +31,16 @@ export default function News({achivementdata}:{achivementdata:achivementprop[]})
           <h6 className={styles.head}>Achievements</h6>
           {
             achivementdata?.map((item:any,i:number)=>(
-              <div className="col-lg-4 col-md-6 col-12">
+              <div className="col-lg-4 col-md-6 col-12" key={i}>
               <div className={styles.card}>
-                <Image src={im} alt="" className={styles.im}></Image>
+                <Image src={item.image} width={300} height={400} alt="" className={styles.im}></Image>
                 <div className="px-4 mt-1">
-                  <p className=" text-black font-medium ">Shamil</p>
-                  <p className="text-[13px] mt-2">Dept. of History</p>
+                  <p className=" text-black font-medium ">{item.name}</p>
+                  <p className="text-[13px] mt-2">{item.designation}</p>
                   <p className="text-[13px] mb-2">Batch 2020-25 (Integrated)</p>
-                  <p className={styles.p4}>
-                    Got selected for Summer Internship Programme 2024 at Indian
-                    Institute of Space and Technology (IIST), Thiruvananthapuram.
-                  </p>
+                  <div className={styles.p4} dangerouslySetInnerHTML={{__html:item.description}}>
+                   
+                  </div>
                 </div>
               </div>
             </div>
@@ -49,7 +48,7 @@ export default function News({achivementdata}:{achivementdata:achivementprop[]})
             ))
           }
       
-          <div className="col-lg-4 col-md-6 col-12">
+          {/* <div className="col-lg-4 col-md-6 col-12">
             <div className={styles.card}>
               <Image src={im1} alt="" className={styles.im}></Image>
               <div className="px-4 mt-1">
@@ -76,7 +75,7 @@ export default function News({achivementdata}:{achivementdata:achivementprop[]})
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
          
         </div>
         <div className="row mt-4">

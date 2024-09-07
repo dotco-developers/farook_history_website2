@@ -16,7 +16,7 @@ export default function Histosacard({url}:any){
         <div className={`${styles.r_out} row`}>
         <div className="col-lg-3 col-md-6 col-12">
           <Link href={"/histosa/executive-member"}>
-        <div className={`${styles.card} ${ url=='/executive-member' ? styles.click:""} `} >
+        <div className={`${styles.card} ${ url=='executive-member' ? styles.click:""} `} >
             <div className={styles.lg}>
             <Image src={commi} alt="" className={styles.mainic} style={{marginLeft:"10px"}}></Image>
             </div>
@@ -31,7 +31,7 @@ export default function Histosacard({url}:any){
         </div>
         <div className="col-lg-3 col-md-6 col-12">
           <Link href={"/histosa/reports"}>
-          <div className={`${styles.card} ${ url=='/reports' ? styles.click:""} `} >
+          <div className={`${styles.card} ${ url=='reports' ? styles.click:""} `} >
             <div className={styles.lg}>
             <Image src={rep} alt="" className={styles.mainic} style={{marginLeft:"10px"}}></Image>
             </div>

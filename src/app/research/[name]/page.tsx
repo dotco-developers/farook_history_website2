@@ -1,4 +1,3 @@
-"use client";
 import Guide from "@/component/Guide/Guide";
 import styles from "./research.module.css";
 import Scholar from "@/component/scholar/page";
@@ -10,13 +9,14 @@ import tick from "../../../../public/icons grey/tick.png";
 import { useState } from "react";
 import { document } from "postcss";
 import wrld from "../../../../public/icons grey/world.png";
+import Link from "next/link";
 
 export default function Research({params}:any) {
-  const [content, setcontent] = useState<string>("card1"); // Ensure content is initialized as a string
+  // const [content, setcontent] = useState<string>("card1"); // Ensure content is initialized as a string
 
-  const handler = (v: string) => {
-    setcontent(v);
-  };
+  // const handler = (v: string) => {
+  //   setcontent(v);
+  // };
 
   return (
     <>
@@ -28,13 +28,13 @@ export default function Research({params}:any) {
               <h2 className={styles.head}>Research</h2>
             </div>
             <div className="col-lg-4 col-md-12 col-12">
+              <Link href={"/research/guide"}>
+              
               <div
                 className={`${styles.card} ${
-                  content == "card1" ? styles.click : ""
+                  params.name == "guide" ? styles.click : ""
                 } `}
-                onClick={() => {
-                  handler("card1");
-                }}
+             
               >
                 <div className={styles.lg}>
                   <Image src={book} alt="" className={styles.mainic}></Image>
@@ -46,15 +46,16 @@ export default function Research({params}:any) {
                   veniam.
                 </p>
               </div>
+              </Link>
+
             </div>
             <div className="col-lg-4 col-md-12 col-12">
+              <Link href={"/research/scholars"}>
               <div
                 className={`${styles.card} ${
-                  content == "card2" ? styles.click : ""
+                  params.name == "scholars" ? styles.click : ""
                 } `}
-                onClick={() => {
-                  handler("card2");
-                }}
+              
               >
                 <div className={styles.lg}>
                   <Image
@@ -71,15 +72,15 @@ export default function Research({params}:any) {
                   veniam.
                 </p>
               </div>
+              </Link>
             </div>
             <div className="col-lg-4  col-md-12  col-12">
+              <Link href={"/research/produced"}>
               <div
                 className={`${styles.card} ${
-                  content == "card3" ? styles.click : ""
+                  params.name == "produced" ? styles.click : ""
                 } `}
-                onClick={() => {
-                  handler("card3");
-                }}
+               
               >
                 <div className={styles.lg}>
                   <Image src={tick} alt="" className={styles.mainic}></Image>
@@ -91,6 +92,7 @@ export default function Research({params}:any) {
                   veniam.
                 </p>
               </div>
+              </Link>
             </div>
           </div>
         </div>

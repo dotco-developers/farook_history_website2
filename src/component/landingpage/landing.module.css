@@ -179,6 +179,50 @@ justify-content: center;
     color: white;
   }
 
+
+  /* $$$$$$new custom */
+  .n_wr {
+    display: flex;
+    overflow: hidden; /* Hide overflow to make the text disappear off-screen */
+    white-space: nowrap; /* Prevent the text from breaking to the next line */
+    position: relative;
+    width: 100%;
+    align-items: center; /* Center-align the items vertically */
+  }
+  
+  .news_div {
+    display: inline-block; /* Display as an inline block for continuous flow */
+    padding: 0 20px; /* Add padding between news items */
+    animation: scroll 15s linear infinite; /* Animation for scrolling effect */
+    white-space: nowrap; /* Ensure text stays in one line */
+    cursor: pointer; /* Cursor pointer on hover */
+  }
+  
+  .news_div:nth-child(odd) {
+    animation-delay: 0s; /* No delay for odd items */
+  }
+  
+  .news_div:nth-child(even) {
+    animation-delay: 7.5s; /* Delay for even items to avoid overlap */
+  }
+  
+  .news_div:hover {
+    animation-play-state: paused; /* Pause animation on hover */
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%); /* Start from right to left */
+    }
+    100% {
+      transform: translateX(-100%); /* End on the left */
+    }
+  }
+  
+  /* $$$$$$new custom end */
+
+
+  
   @media(max-width:991px){
     
     .wrapp{

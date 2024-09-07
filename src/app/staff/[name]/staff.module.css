@@ -2,7 +2,7 @@
 .sec{
     overflow-x: hidden;
     min-height: 90vh;
-    padding-top: 140px;
+    padding-top: 30px;
     padding-bottom: 50px;
 }
 .wrap h2{
@@ -147,7 +147,7 @@ padding-bottom: 20px;
     .secmob{
         overflow-x: hidden;
         min-height: 90vh;
-        padding-top: 140px;
+        padding-top: 40px;
         padding-bottom: 20px;
     }
     .imm{

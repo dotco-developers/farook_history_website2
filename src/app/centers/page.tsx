@@ -14,8 +14,8 @@ export default async function Centers() {
       <div className="container">
         <div className="row">
           {data.map((x: any, i: number) => (
-            <div className="col-lg-4 col-md-6 col-12">
-              <div className={styles.card} key={i}>
+            <div className="col-lg-4 col-md-6 col-12" key={i}>
+              <div className={styles.card} >
                 <div className={styles.im_out}>
                   <Link href={`/centers/${x.id}/${head}`}>
                   <Image src={arr} alt="" className={styles.arr}></Image>

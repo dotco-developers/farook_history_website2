@@ -60,8 +60,8 @@ export default function Achivement() {
           `${process.env.NEXT_PUBLIC_BASE_URL}/achivementmember`
         );
         const achivementdata=await response3.json()
-        const studentdatatemp=achivementdata.filter((x:any)=>{x.is_student==true})
-        const facultydatatemp=achivementdata.filter((x:any)=>{x.is_student==false})
+        const studentdatatemp=achivementdata.filter((x:any,i:number)=>{x.is_student==true})
+        const facultydatatemp=achivementdata.filter((x:any,i:number)=>{x.is_student==false})
         setstudentdata(studentdatatemp)
         setfacultydata(facultydatatemp)
 
@@ -86,7 +86,7 @@ export default function Achivement() {
               <br />
               <br />
               {description_achievement?.map((x: any, i: number) => (
-                <div key={i} dangerouslySetInnerHTML={{__html:x.description}}>
+                <div dangerouslySetInnerHTML={{__html:x.description}} key={i}>
                 </div>
               ))}
             </div>
@@ -167,7 +167,7 @@ export default function Achivement() {
               <div className="row">
                 {
                   studentdata.map((x:any,i:number)=>(
-                    <div className={styles.card}>
+                    <div className={styles.card} key={i}>
                     <div className="row">
                       <Link href={"/faculties"}>
                         <div className={styles.btncv}>

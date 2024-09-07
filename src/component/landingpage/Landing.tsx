@@ -63,8 +63,8 @@ export default function Landing({ newsdata }: LandingProps) {
                   </Link>      
                   <div className={styles.n_wr}>
                     {newsdata?.map((item: any, i: number) => (
-                      <Link href={`/news/${item.id}`}>
-                        <p key={i} className={styles.news_div}>
+                      <Link href={`/news/${item.id}`} key={i}>
+                        <p  className={styles.news_div}>
                           <FontAwesomeIcon
                             icon={faCircle}
                             className={styles.ic3}

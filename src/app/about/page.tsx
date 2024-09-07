@@ -88,7 +88,7 @@ export default async function about() {
       <About data={abouutusdata}></About>
       <Mission data={abouutusdata}></Mission>
       <Faculty  data={facdata}></Faculty>
-      <Programme></Programme>
+      <Programme ></Programme>
     </section>
   );
 }

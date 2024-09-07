@@ -1,7 +1,5 @@
-import {
-  phdproduced_datafetcher,
-  Research_guide_datafetcher,
-} from "@/app/api/route";
+
+import { phdproduced_datafetcher, Research_guide_datafetcher } from "../api/route";
 import styles from "./phd.module.css";
 export default async function Scholar() {
   const data = await phdproduced_datafetcher();

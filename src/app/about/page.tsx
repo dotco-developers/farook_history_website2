@@ -23,7 +23,7 @@ import About from "@/component/Aboutcomponent/About";
 import Mission from "@/component/Aboutcomponent/Mission";
 import Faculty from "@/component/Aboutcomponent/faculty";
 import Programme from "@/component/Aboutcomponent/programme";
-import { aboutus_datafetcher, faculty_datafetcher } from "../api/route";
+import { aboutus_datafetcher, faculty_datafetcher } from "../../component/api/route";
 
 export default async function about() {
   // const ref = useRef(null);

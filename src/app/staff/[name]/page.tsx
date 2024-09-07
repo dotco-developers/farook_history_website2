@@ -6,11 +6,9 @@ import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import ic1 from "../../../../public/icons grey/mail.png";
 import ic2 from "../../../../public/icons grey/insta.png";
 import ic3 from "../../../../public/icons grey/app.png";
-import {
-  faculty_datafetcher,
-  faculty_inner_datafetcher,
-} from "@/app/api/route";
+
 import Link from "next/link";
+import { faculty_inner_datafetcher } from "@/component/api/route";
 
 export default async function Staff({ params }: any) {
   const data = await faculty_inner_datafetcher(params.name);

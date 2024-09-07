@@ -10,7 +10,7 @@ import { useParams, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import path from "path";
 import { Url } from "url";
-import { news_inner_datafetcher } from "@/app/api/route";
+import { news_inner_datafetcher } from "@/component/api/route";
 export default async function Inner({ params }: any) {
   const data = await news_inner_datafetcher(params.news);
   // const [baseurl, setbaseurl] = useState("http://localhost:3000")

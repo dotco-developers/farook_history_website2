@@ -1,5 +1,5 @@
 import Blogs from "@/component/bog_sub/Blog_sub";
-import { blog__datafetcher, blog_inner_datafetcher } from "../api/route";
+import { blog__datafetcher, blog_inner_datafetcher } from "../../component/api/route";
 
 
 

@@ -7,7 +7,7 @@ import Link from "next/link";
 import insta from "../../../public/icons grey/instared.png";
 import mail from "../../../public/icons grey/mailred.png";
 import lin from "../../../public/icons grey/inred.png";
-import { Research_guide_datafetcher } from "@/app/api/route";
+import { Research_guide_datafetcher } from "../api/route";
 export default async function Guide() {
   const data=await Research_guide_datafetcher()
   return (

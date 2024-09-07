@@ -7,7 +7,9 @@ import Link from "next/link";
 import insta from "../../../public/icons grey/instared.png";
 import mail from "../../../public/icons grey/mailred.png";
 import lin from "../../../public/icons grey/inred.png";
-export default function Guide() {
+import { Research_guide_datafetcher } from "@/app/api/route";
+export default async function Guide() {
+  const data=await Research_guide_datafetcher()
   return (
     <>
       <section className={styles.sec1}>
@@ -16,71 +18,36 @@ export default function Guide() {
             <div className="col-lg-12 col-12">
               <h2 className={styles.head2}>RESEARCH GUIDES</h2>
             </div>
-            <div className={`col-lg-4 col-12 ${styles.card}`}>
-              <div className={styles.faccard}>
-                <div className={styles.facimgdiv}>
-                  <Image className={styles.facimg1} src={fac1} alt="" />
-                </div>
-                <div className={styles.facdata}>
-                  <h4>Dr T Mohammed Ali</h4>
-                  <h6>Former HOD</h6>
-                </div>
-                <div className={styles.facicons}>
-                  <Image src={insta} alt="" className={styles.iconimg}></Image>
-                  <Link href={""}>
-                    <Image src={mail} alt="" className={styles.iconimg}></Image>
-                  </Link>
-                  <Image src={lin} alt="" className={styles.iconimg}></Image>
-                </div>
-                <div className={styles.readmore}>
-                  <a href="http://">More Info</a>{" "}
-                </div>
-              </div>
-            </div>
-
-            <div className={`col-lg-4 col-12 ${styles.card}`}>
-              <div className={styles.faccard}>
-                <div className={styles.facimgdiv}>
-                  <Image className={styles.facimg1} src={fac1} alt="" />
-                </div>
-                <div className={styles.facdata}>
-                  <h4>Dr. C.A. Anaz</h4>
-                  <h6>Assistant Professor and Head</h6>
-                </div>
-                <div className={styles.facicons}>
-                  <Image src={insta} alt="" className={styles.iconimg}></Image>
-                  <Link href={""}>
-                    <Image src={mail} alt="" className={styles.iconimg}></Image>
-                  </Link>
-                  <Image src={lin} alt="" className={styles.iconimg}></Image>
-                </div>
-                <div className={styles.readmore}>
-                  <a href="http://">More Info</a>{" "}
+            {
+              data?.map((x:any,i:number)=>(
+                <div className={`col-lg-4 col-12 ${styles.card}`} key={i}>
+                <div className={styles.faccard}>
+                  <div className={styles.facimgdiv}>
+                    <Image className={styles.facimg1} src={x.image} width={150} height={150} alt="" />
+                  </div>
+                  <div className={styles.facdata}>
+                    <h4>{x.name}</h4>
+                    <h6>{x.designation}</h6>
+                  </div>
+                  <div className={styles.facicons}>
+                    <Link href={x.instagram==null ? "" : x.instagram}>
+                    <Image src={insta} alt="" className={styles.iconimg}></Image>
+                    </Link>
+                    <Link href={x.email==null ? "" : x.email}>
+                      <Image src={mail} alt="" className={styles.iconimg}></Image>
+                    </Link>
+                    <Link href={x.linkedin==null ? "" : x.linkedin}>
+                    <Image src={lin} alt="" className={styles.iconimg}></Image>
+                    </Link>
+                  </div>
+                  <div className={styles.readmore}>
+                    <a href={`/staff/${x.id}`}>More Info</a>{" "}
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className={`col-lg-4 col-12 ${styles.card}`}>
-              <div className={styles.faccard}>
-                <div className={styles.facimgdiv}>
-                  <Image className={styles.facimg1} src={fac1} alt="" />
-                </div>
-                <div className={styles.facdata}>
-                  <h4>Full Name</h4>
-                  <h6>Designation</h6>
-                </div>
-                <div className={styles.facicons}>
-                  <Image src={insta} alt="" className={styles.iconimg}></Image>
-                  <Link href={""}>
-                    <Image src={mail} alt="" className={styles.iconimg}></Image>
-                  </Link>
-                  <Image src={lin} alt="" className={styles.iconimg}></Image>
-                </div>
-                <div className={styles.readmore}>
-                  <a href="http://">More Info</a>{" "}
-                </div>
-              </div>
-            </div>
+              ))
+            }
+         
           </div>
         </div>
       </section>

@@ -24,7 +24,7 @@
 }
 
 .headsub{
-    padding-top: 12rem;
+    padding-top: 1rem;
 }
 .headsub h1{
     font-family: "Madimi One", sans-serif;
@@ -57,7 +57,7 @@
     width: auto;
     align-items: center;
     padding-top: 4rem;
-    padding-bottom: 8rem;
+    padding-bottom: 3rem;
 }
 .countersub{
     text-align: center;

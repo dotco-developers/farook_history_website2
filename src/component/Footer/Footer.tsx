@@ -9,6 +9,7 @@ import app from "../../../public/icons grey/f-app.png"
 import mail from "../../../public/icons grey/f-mail.png"
 
 import insta from "../../../public/icons grey/fi-nsta.png"
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -93,6 +94,10 @@ export default function Footer() {
               <Image src={insta} alt="" className={styles.l_ic}></Image>
               </div>
             </div>
+          </div>
+          <div className="col-lg-12 col-md-12 col-12">
+          <p className={styles.dotco}>developed by team <Link href={"https://www.teamdotco.com/"}><span>dotco</span></Link></p>
+          <p className={styles.dotco}>© {new Date().getFullYear()} Sullamussalam Science College</p>
           </div>
         </div>
       </div>

@@ -7,6 +7,12 @@
   object-fit: cover;
  
 }
+.container1 p{
+  margin: 0px;
+}
+.pera p{
+  margin-left: 0pt;
+}
 .c_out{
   display: flex;
   align-items: center;
@@ -71,6 +77,20 @@
   transform: translateY(-50%);
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
+}
+.pera p{
+  margin-left: 0px;
+}
+.pera{
+  margin-left: 0px;
+}
+.inner_view{
+  background-color: #982B35;
+  color: white;
+  border-radius: 10px;
+  padding: 3px 12px;
+  font-size: 12px;
+  margin-top: 4px;
 }
 
 @media(max-width:1199px){

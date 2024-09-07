@@ -6,8 +6,10 @@
     background-color: #262428;
     position: relative;
     overflow-x: hidden;
+    padding-bottom: 0px;
 
 }
+
 .ftr p{
     font-size: 19px;
     color: white;
@@ -57,6 +59,15 @@
     
     margin-bottom: -30px;
   
+}
+
+.dotco{
+    text-align: center;
+    font-size: 12px;
+}
+.dotco span{
+    color: #982B35;
+    cursor: pointer;
 }
 @media (max-width:1399px){
     .ftr p{

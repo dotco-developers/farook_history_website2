@@ -20,7 +20,7 @@
 }
 .card h2{
     color: #982B35;
-    font-size: 32px;
+    font-size: 26px;
     font-weight: 600;
     margin: 16px 0px;
     overflow: hidden;
@@ -28,6 +28,7 @@
     display: -webkit-box;
     -webkit-line-clamp: 3; /* Number of lines to show */
     -webkit-box-orient: vertical;
+    height: 90px;
 }
 .card P{
     display: -webkit-box;

@@ -7,63 +7,31 @@ import "../../app/globals.css";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 
-export default function Management_sidmenu(props: any) {
+export default function Management_sidmenu({ data, params, head }: any) {
   const pathname = usePathname();
   return (
     <>
       <ul className={styles.wrap}>
-      <h6 className={styles.itms_head}>Management</h6>
-       
-      
-        <li>
-          <Link
-            className={
-              pathname == "/chairman"
-                ? styles.active
-                : styles.li_item
-            }
-            href="/chairman"
-          >
-            <label>Chairman</label>
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={
-              pathname == "/manager"
-                ? styles.active
-                : styles.li_item
-            }
-            href="/manager"
-          >
-            <label>Manager</label>
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={
-              pathname == "/principal"
-                ? styles.active
-                : styles.li_item
-            }
-            href="/principal"
-          >
-            <label>Principal</label>
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={
-              pathname == "/director-board"
-                ? styles.active
-                : styles.li_item
-            }
-            href="/director-board"
-          >
-            <label>Director Board</label>
-          </Link>
-        </li>
-       
+        {head.map((x: any, i: number) => (
+          <h6 className={styles.itms_head} key={i}>
+            {x.title}
+          </h6>
+        ))}
+        {data.map((x: any, i: number) => (
+          <li key={i}>
+            <Link
+              className={
+                pathname == `/centers/${params.id}/${x.id}`
+                  ? styles.active
+                  : styles.li_item
+              }
+              href={`/centers/${params.id}/${x.id}`}
+            >
+              <label>{x.name}</label>
+            </Link>
+          </li>
+        ))}
+
         {/* remaining maps */}
       </ul>
       {/* *****mobile menu***** */}
@@ -77,7 +45,11 @@ export default function Management_sidmenu(props: any) {
             data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar"
             aria-label="Toggle navigation"
-            style={{border:"none",backgroundColor:"#982B35",outline:"none"}}
+            style={{
+              border: "none",
+              backgroundColor: "#982B35",
+              outline: "none",
+            }}
           >
             <FontAwesomeIcon icon={faEllipsis} className={styles.toggle} />
           </button>
@@ -86,77 +58,41 @@ export default function Management_sidmenu(props: any) {
             tabIndex={-1}
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
-            style={{width:"60%",marginTop:"109px"}}
-
+            style={{ width: "60%", marginTop: "109px" }}
           >
             <div className="offcanvas-header">
-              <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
-                Management
-              </h5>
-              <FontAwesomeIcon icon={faX} 
-               style={{color:"black"}}
+              {head.map((x: any, i: number) => (
+                <h5 className="offcanvas-title" id="offcanvasNavbarLabel" key={i}>{x.title}</h5>
+              ))}
+
+              <FontAwesomeIcon
+                icon={faX}
+                style={{ color: "black" }}
                 type="button"
                 className="btn-close"
                 data-bs-dismiss="offcanvas"
-                aria-label="Close" />
+                aria-label="Close"
+              />
             </div>
             <div className="offcanvas-body">
               <ul
                 className={`navbar-nav justify-content-end flex-grow-1 pe-3 ${styles.wrap2}`}
               >
-              
-                
-                <li aria-label="Close" data-bs-dismiss="offcanvas">
-                  <Link
-                    className={
-                      pathname == "/chairman"
-                        ? styles.active
-                        : styles.li_item
-                    }
-                    href="/chairman"
-                  >
-                    <label className="">Chairman</label>
-                  </Link>
-                </li>
-                <li aria-label="Close" data-bs-dismiss="offcanvas">
-                  <Link
-                    className={
-                      pathname == "/manager"
-                        ? styles.active
-                        : styles.li_item
-                    }
-                    href="/manager"
-                  >
-                    <label className="">Manager</label>
-                  </Link>
-                </li>
-                <li aria-label="Close" data-bs-dismiss="offcanvas">
-                  <Link
-                    className={
-                      pathname == "/principal"
-                        ? styles.active
-                        : styles.li_item
-                    }
-                    href="/principal"
-                  >
-                    <label className="">Principal</label>
-                  </Link>
-                </li>
-                <li aria-label="Close" data-bs-dismiss="offcanvas">
-                  <Link
-                    className={
-                      pathname == "/director-board"
-                        ? styles.active
-                        : styles.li_item
-                    }
-                    href="/director-board"
-                  >
-                    <label className="">Director Board</label>
-                  </Link>
-                </li>
-
+                {data.map((x: any, i: number) => (
+                  <li aria-label="Close" data-bs-dismiss="offcanvas" key={i}>
+                    <Link
+                      className={
+                        pathname == `/centers/${params.id}/${x.id}`
+                          ? styles.active
+                          : styles.li_item
+                      }
+                      href={`/centers/${params.id}/${x.id}`}
+                    >
+                      <label className="">{x.name}</label>
+                    </Link>
+                  </li>
+                ))}
               </ul>
-              
             </div>
           </div>
         </div>

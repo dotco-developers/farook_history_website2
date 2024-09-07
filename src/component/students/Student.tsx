@@ -1,7 +1,9 @@
 import styles from "./Student.module.css";
 import Card from "../../component/studentcard/card"
 import Image from "next/image";
-export default function Students() {
+import { testimonials_home_datafetcher } from "@/app/api/route";
+export default async function Students() {
+  const testimonials=await testimonials_home_datafetcher()
   return (
     <section className={styles.sec}>
       <div className={styles.rbn} ></div>
@@ -20,7 +22,7 @@ export default function Students() {
             </div>
           </div>
           <div className={`col-lg-12 col-md-12 col-12 ${styles.r_out}`}>
-            <Card></Card>
+            <Card data={testimonials}></Card>
           </div>
         </div>
       </div>

@@ -1,9 +1,20 @@
 
 .sec{
-    padding-top: 140px;
+    padding-top: 30px;
     padding-bottom: 50px;
 }
 
+.content_in {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    height: 63px;
+}
+.content_in p{
+    margin-left: 0px;
+}
 .wr_course{
     background-color: #D19FA4;
     border-radius: 40px;

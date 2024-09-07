@@ -1,4 +1,4 @@
-
+"use client"
 
 import { FaRegFilePdf } from "react-icons/fa6"
 import styles from "./Aboutcomponent.module.css"
@@ -45,7 +45,7 @@ export default function Programme(){
 
 
     return(
-        <div id={` ${styles.programme}`} className="relative">
+        <div className="relative"  id={` ${styles.programme}`}>
         <Image src={world} alt="" className={styles.wrld}></Image>
         <div className={styles.headingfac} >
           <h1 id="programme">PROGRAMME</h1>
@@ -132,7 +132,7 @@ export default function Programme(){
                 </div>
               </div>
             )}
-            <div className={styles.btnwrap}>
+            <div className={styles.btnwrap} >
               <button
                 className={styles.btn1}
                 onClick={handle}

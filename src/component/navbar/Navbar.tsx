@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import im from "../../../public/fc-logo.svg";
 import "../../app/globals.css"
-function NavBar() {
+function NavBar({id}:any) {
   if (typeof window !== "undefined") {
     require("bootstrap/dist/js/bootstrap");
   }
@@ -48,7 +48,7 @@ function NavBar() {
                   </Link>
                 </li>
                 <li className="mx-1 font-semibold text-[Madimi One]	 pb-6 text-xl text-black py-2 md:px-6 text-center   hover:text-[#982B35] list  ">
-                  <Link href="/research" onClick={() => setNavbar(!navbar)} className='text-black hover:text-[#982B35] no-underline w-max'>
+                  <Link href="/research/guide" onClick={() => setNavbar(!navbar)} className='text-black hover:text-[#982B35] no-underline w-max'>
                    <p className='hover:text-[#982B35] block m-auto w-max'>Research</p> 
                   </Link>
                 </li>
@@ -58,7 +58,7 @@ function NavBar() {
                   </Link>
                 </li>
                 <li className="mx-1 font-semibold text-[Madimi One]	 pb-6 text-xl text-black py-2 md:px-6 text-center   hover:text-[#982B35] list  ">
-                  <Link href="#about" onClick={() => setNavbar(!navbar)} className='text-black hover:text-[#982B35] no-underline w-max'>
+                  <Link href={`/centers`} onClick={() => setNavbar(!navbar)} className='text-black hover:text-[#982B35] no-underline w-max'>
                    <p className='hover:text-[#982B35] block m-auto w-max'>Centres</p> 
                   </Link>
                 </li>

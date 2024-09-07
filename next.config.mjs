@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['farook-college-backend.vercel.app'],
+        domains: ['94.136.185.170'],
       },
 };
 

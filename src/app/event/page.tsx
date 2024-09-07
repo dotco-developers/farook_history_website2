@@ -1,4 +1,3 @@
-"use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./event.module.css";
 import {
@@ -10,12 +9,18 @@ import {
 import im from "../../../public/book.jpg";
 import Image from "next/image";
 import arr from "../../../public/icons grey/arr.png";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { event_datafetcher } from "../api/route";
 import Link from "next/link";
 
-export default async function Event() {
+export default async function Event({searchParams}:any) {
   const data =await event_datafetcher()  
+  const searchQuery = searchParams?.search || "";
+  const filteredData = searchQuery
+  ? data.filter((x:any) =>
+      x.title.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  : data;
   return (
     <section className={styles.sec}>
       <div className="container">
@@ -26,6 +31,7 @@ export default async function Event() {
           </div>
 
           <div className="col-lg-12 col-12">
+          <form>
             <div className={styles.wr_course}>
               <input
                 type="text"
@@ -33,23 +39,22 @@ export default async function Event() {
                 name="search"
                 className={styles.in}
                 style={{ paddingLeft: "12px" }}
-              />
+                defaultValue={searchQuery}
+                              />
               <div className={styles.ic_wr}>
-                <div className={styles.bg}>
-                  <FontAwesomeIcon icon={faFilter} className={styles.ic} />
-                </div>
-                <div className={styles.bg}>
+                <button className={styles.bg} type="submit">
                   <FontAwesomeIcon
                     icon={faMagnifyingGlass}
                     className={styles.ic}
                   />
-                </div>
+                </button>
               </div>
             </div>
+            </form>
           </div>
         </div>
         <div className={`row ${styles.r_sec}`}>
-          {data.map((x: any,i:number) => (
+          {filteredData?.map((x: any,i:number) => (
             <div className="col-lg-4 col-md-6 col-12" key={i}>
               <div className={styles.card}>
                 <div className={styles.im_out}>

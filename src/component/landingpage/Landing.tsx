@@ -28,7 +28,10 @@ export default function Landing({ newsdata }: LandingProps) {
   return (
     <section className={styles.sec}>
       <div className="container">
-        <div className={`row`} style={{overflow:"hidden",paddingBottom:"30px"}}>
+        <div
+          className={`row`}
+          style={{ overflow: "hidden", paddingBottom: "30px" }}
+        >
           <div className={`col-lg-12 col-12 ${styles.gg} `}>
             <div className={styles.bg}>
               <Image src={im} alt=""></Image>
@@ -38,28 +41,38 @@ export default function Landing({ newsdata }: LandingProps) {
               <span>HISTORY</span>
             </div>
           </div>
-          <div className={`col-lg-12 col-12 ${styles.lower}`} style={{zIndex:"99"}}>
+          <div
+            className={`col-lg-12 col-12 ${styles.lower}`}
+            style={{ zIndex: "99" }}
+          >
             <div className="row">
               <div className="col-lg-3">
                 <Link href={"/histosa/executive-member"}>
-                   <button style={{cursor:"pointer"}} className={styles.btn}>Histosa Alumni</button>
+                  <button style={{ cursor: "pointer" }} className={styles.btn}>
+                    Histosa Alumni
+                  </button>
                 </Link>
               </div>
               <div className="col-lg-6">
                 <div className={styles.news}>
+                  <Link href={"/news"}>
                   <button>
                     <FontAwesomeIcon icon={faNewspaper} className={styles.ic} />
                     NEWS
                   </button>
+                  </Link>      
                   <div className={styles.n_wr}>
-                    {newsdata?.map((item: any,i:number) => (
-                      <p key={i} className={styles.news_div}>
-                        <FontAwesomeIcon
-                          icon={faCircle}
-                          className={styles.ic3}
-                        />
-                        {item.title}{" "}
-                      </p>
+                    {newsdata?.map((item: any, i: number) => (
+                      <Link href={`/news/${item.id}`}>
+                        <p key={i} className={styles.news_div}>
+                          <FontAwesomeIcon
+                            icon={faCircle}
+                            className={styles.ic3}
+                            style={{ marginRight: "5px" }}
+                          />
+                          {item.title}{" "}
+                        </p>
+                      </Link>
                     ))}
                   </div>
                 </div>

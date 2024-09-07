@@ -1,7 +1,7 @@
 
 import styles from "./Aboutcomponent.module.css"
 import CountUp from "react-countup";
-export default function About(){
+export default function About({data}:any){
     return(
         <div className={styles.headmain}>
         <div className="container">
@@ -10,21 +10,13 @@ export default function About(){
               <h1>ABOUT US</h1>
               <br />
               <br />
-              <p>
-                The Department of History at Farooq College offers a
-                post-graduate program in Islamic History. The program provides a
-                panoramic view of Islamic history, covering its inception to its
-                influence on contemporary societies worldwide. Students develop
-                analytical skills and research proficiency through engaging
-                lectures, interactive seminars, and immersive fieldwork
-                experiences. The program&apos;s esteemed faculty members guide
-                students to traverse the assortment of Islamic civilization,
-                drawing profound insights into the interplay of faith, politics,
-                and culture. The course has the conventional form of terminal
-                examination and internal evaluations in addition to the
-                submission of the dissertation by the candidate for the
-                fulfilment of the requirements of the University of Calicut.
-              </p>
+              {
+                data?.map((x:any,i:number)=>(
+                  <div dangerouslySetInnerHTML={{__html:x.description}} key={i}>
+                  
+                </div>
+                ))
+              }
             </div>
             <div className={styles.counter}>
               {/* {data.map((x: any) => (

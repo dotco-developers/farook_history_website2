@@ -11,15 +11,13 @@ interface PopupProps {
 
 export default function Popup({ handle }: PopupProps) {
 
-
-
   const [show, setShow] = useState(true);
   const [name, setName] = useState<string | undefined>();
   const [showTxt, setShowTxt] = useState(false);
   const [file, setFile] = useState<File | null>(null);
   const [catdata, setcatdata] = useState([])
   const [categoryselected, setcategoryselected] = useState<string|undefined>(undefined)
-
+  const [cred, setcred] = useState([])
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
@@ -78,14 +76,34 @@ export default function Popup({ handle }: PopupProps) {
         method:"GET",
 
       })
+      const cred=await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/blog_passwords`,{
+        method:"GET",
+
+      })
       const categorydata=await category.json()
+      const creddata=await cred.json()
+      setcred(creddata)
       setcatdata(categorydata)
     }
     fetchcategory()  
   }, [])
   
-  
+  const handlefirstsubmit=(e:any)=>{
+    const formdata = new FormData(e.currentTarget);  
 
+    const inputUsername = formdata.get("username") as string;
+    const inputPassword = formdata.get("password") as string;
+  
+    const matchingUser = cred.find((user: any) => 
+      user.username === inputUsername && user.password === inputPassword
+    );
+  
+    if (matchingUser) {
+      toggleShow()
+    } else {
+      alert("Invalid username or password");
+    }
+  }
   return (
     <>
       {show ? (
@@ -95,17 +113,20 @@ export default function Popup({ handle }: PopupProps) {
           </div>
           <div className={styles.content}>
             <h2>LOGIN</h2>
-            <input type="text" className={styles.txt} placeholder="Name" />
+            <form onSubmit={handlefirstsubmit}>
+            <input name="username" type="text" className={styles.txt} placeholder="Name" />
             <input
+              name="password"
               type="password"
               className={styles.ps}
               placeholder="Password"
             />
             <div className={styles.bt_wr}>
-              <button className={styles.btn} onClick={toggleShow}>
+              <button type="submit" className={styles.btn} >
                 Submit
               </button>
             </div>
+            </form>
           </div>
         </div>
       ) : (

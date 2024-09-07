@@ -15,7 +15,7 @@ import Link from "next/link";
 export default async function Eventinner({params}:any) {
   const data=await event_innner_datafetcher(params.slug)
   const eventhost=await eventhost_datafetcher()
-  const image =await eventimages_datafetcher()
+  const image =await eventimages_datafetcher(params.slug)
   const video =await eventvideo_datafetcher()
   return (
     <section className={styles.sec}>

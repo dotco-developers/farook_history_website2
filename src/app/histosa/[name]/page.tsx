@@ -7,8 +7,9 @@ import Report from "../../../component/report/Report"
 import Activitygallery from "@/component/histosaactivitygallery/Activitygallery";
 import Activity from "@/component/Activity/page";
 import im from "../../../../public/icons grey/caplarge.png"
-import { histosa_activity_datafetcher, histosa_execome_datafetcher, histosa_gallery_datafetcher, histosa_reports_datafetcher } from "@/app/api/route";
+import { histosa_activity_datafetcher, histosa_datafetcher, histosa_execome_datafetcher, histosa_gallery_datafetcher, histosa_reports_datafetcher } from "@/app/api/route";
 export default async function Histosa({params}:any) {
+   const histosa=await histosa_datafetcher()
    const execome=await histosa_execome_datafetcher()
    const activity=await histosa_activity_datafetcher()
    const reports=await histosa_reports_datafetcher()
@@ -21,12 +22,13 @@ export default async function Histosa({params}:any) {
           <Image  src={im}  alt="" className={styles.im}></Image>
           <div className="col-lg-6 col-12">
             <h2 className={styles.head}>HISTOSA</h2>
-            <p className={styles.pera}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-              doloribus aliquid facilis. Veniam magnam ipsam ea accusamus quia
-              ad accusantium, quos culpa enim odit laboriosam ducimus
-              consectetur incidunt officiis rem?
-            </p>
+            {
+              histosa.map((x:any,i:number)=>(
+                <div className={styles.pera} key={i} dangerouslySetInnerHTML={{__html:x.description}}>
+               
+              </div>
+              ))
+            }
           </div>
         </div>
         <Histosacard url={params.name}></Histosacard>

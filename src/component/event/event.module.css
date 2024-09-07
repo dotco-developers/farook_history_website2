@@ -84,6 +84,14 @@
 .pera{
   margin-left: 0px;
 }
+.inner_view{
+  background-color: #982B35;
+  color: white;
+  border-radius: 10px;
+  padding: 3px 12px;
+  font-size: 12px;
+  margin-top: 4px;
+}
 
 @media(max-width:1199px){
   .outer{

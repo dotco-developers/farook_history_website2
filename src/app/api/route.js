@@ -21,7 +21,8 @@ export async function  event_datafetcher(){
             method:"GET",
             cache:"no-store"
         })
-        const data=await response.json()
+        const temp=await response.json()
+        const data = temp.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
         return data
     } catch (error) {
        console.log("error in fetching event  data");
@@ -41,9 +42,9 @@ export async function  eventhost_datafetcher(){
     }
 }
 
-export async function  eventimages_datafetcher(){
+export async function  eventimages_datafetcher(id){
     try {
-        const response=await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/eventimages/`,{
+        const response=await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/eventimages/?event=${id}`,{
             method:"GET",
             cache:"no-store"
         })
@@ -99,7 +100,8 @@ export async function  all_news_datafetcher(){
             method:"get",
             cache:"no-cache"
         })
-        const data=await response.json()
+        const temp=await response.json()
+        const data = temp.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
         return data
     } catch (error) {
        console.log("error in fetching news  data");
@@ -180,8 +182,7 @@ export async function  aboutus_datafetcher(){
             method:"get",
             cache:"no-cache"
         })
-        const temp=await response.json()
-        const data=temp.slice(0,6).reverse()
+        const data=await response.json()
         return data
     } catch (error) {
        console.log("error in fetching aboutus  data");
@@ -270,6 +271,19 @@ export async function  blog_inner_datafetcher(id){
     }
 }
 
+export async function  blog__datafetcher(id){
+    try {
+        const response=await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/blog`,{
+            method:"GET",
+            cache:"no-cache"
+        })
+        const temp=await response.json()
+        const data=temp.filter((x)=>(x.is_accepted==true))
+        return data
+    } catch (error) {
+       console.log("error in fetching blog  data");
+    }
+}
 
 
 
@@ -327,6 +341,77 @@ export async function  programme_datafetcher(){
        console.log("error in fetching programme data");
     }
 }
+
+export async function  center_datafetcher(){
+    try {
+        const response=await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/center/`,{
+            method:"get",
+            cache:"no-cache"
+        })
+        const data=await response.json()
+        return data
+    } catch (error) {
+       console.log("error in fetching center data");
+    }
+}
+
+export async function  center_sidebar_datafetcher(id){
+    try {
+        const response=await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/centersidebar/?center=${id}`,{
+            method:"get",
+            cache:"no-cache"
+        })
+        const data=await response.json()
+        return data
+    } catch (error) {
+       console.log("error in fetching centersidebar data");
+    }
+}
+export async function  center_head_datafetcher(id){
+    try {
+        const response=await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/center/?id=${id}`,{
+            method:"get",
+            cache:"no-cache"
+        })
+        const data=await response.json()
+        return data
+    } catch (error) {
+       console.log("error in fetching centerhead data");
+    }
+}
+
+
+export async function  center_inner_datafetcher(id){
+    try {
+        const response=await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/centersidebaritem/?sidebar=${id}`,{
+            method:"get",
+            cache:"no-cache"
+        })
+        const data=await response.json()
+        return data
+    } catch (error) {
+       console.log("error in fetching center inner data");
+    }
+}
+
+
+export async function  center_for_navbar_datafetcher(){
+    try {
+      
+        const response2=await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/centersidebar/`,{
+            method:"get",
+            cache:"no-cache"
+        })
+        const data2=await response2.json()
+        const id_2=data2[0]?.id
+        return id_2
+    } catch (error) {
+       console.log("error in fetching center inner data");
+    }
+}
+
+
+
 
 
 

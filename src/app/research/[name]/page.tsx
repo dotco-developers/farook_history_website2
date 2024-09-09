@@ -28,7 +28,7 @@ export default function Research({params}:any) {
               <h2 className={styles.head}>Research</h2>
             </div>
             <div className="col-lg-4 col-md-12 col-12">
-              <Link href={"/research/guide"}>
+              <Link href={"/research/guide"} style={{textDecoration:"none"}}>
               
               <div
                 className={`${styles.card} ${
@@ -50,7 +50,7 @@ export default function Research({params}:any) {
 
             </div>
             <div className="col-lg-4 col-md-12 col-12">
-              <Link href={"/research/scholars"}>
+              <Link href={"/research/scholars"} style={{textDecoration:"none"}}>
               <div
                 className={`${styles.card} ${
                   params.name == "scholars" ? styles.click : ""
@@ -75,7 +75,7 @@ export default function Research({params}:any) {
               </Link>
             </div>
             <div className="col-lg-4  col-md-12  col-12">
-              <Link href={"/research/produced"}>
+              <Link href={"/research/produced"} style={{textDecoration:"none"}}>
               <div
                 className={`${styles.card} ${
                   params.name == "produced" ? styles.click : ""

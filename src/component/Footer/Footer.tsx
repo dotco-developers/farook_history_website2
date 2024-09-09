@@ -96,7 +96,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="col-lg-12 col-md-12 col-12">
-          <p className={styles.dotco}>developed by team <Link href={"https://www.teamdotco.com/"}><span>dotco</span></Link></p>
+          <p className={styles.dotco}>developed by team <Link href={"https://www.teamdotco.com/"} style={{textDecoration:"none"}}><span>dotco</span></Link></p>
           <p className={styles.dotco}>© {new Date().getFullYear()} Sullamussalam Science College</p>
           </div>
         </div>

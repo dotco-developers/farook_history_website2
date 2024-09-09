@@ -372,6 +372,16 @@ transition-duration: 2s;
 }
 
 
+@media(max-width:750px){
+    .headingfac{
+        margin-bottom: 8rem;
+        padding-top: 0px;
+    }
+    .headsub{
+        padding-top: 0px;
+    }
+    
+}
 
 
 /* slide animation */

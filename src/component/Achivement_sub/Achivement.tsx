@@ -39,7 +39,6 @@ export default function Achivement({data}:any) {
     return () => clearInterval(interval);
   }, [first]);
  
-  console.log("the data",data);
   
 
   return (

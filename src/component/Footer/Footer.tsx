@@ -63,11 +63,11 @@ export default function Footer() {
                 </span>
                 +91 8523697456
               </p>
-              <p>
+              <p >
                 <span>
                   <FontAwesomeIcon icon={faEnvelope} className={styles.ic} />
                 </span>
-                mailfarookcollege.ac.in
+                mailfarookcollege .ac.in
               </p>
             </div>
           </div>
@@ -97,7 +97,7 @@ export default function Footer() {
           </div>
           <div className="col-lg-12 col-md-12 col-12">
           <p className={styles.dotco}>developed by team <Link href={"https://www.teamdotco.com/"} style={{textDecoration:"none"}}><span>dotco</span></Link></p>
-          <p className={styles.dotco}>© {new Date().getFullYear()} Sullamussalam Science College</p>
+          <p className={styles.dotco}>© {new Date().getFullYear()} Farook college</p>
           </div>
         </div>
       </div>

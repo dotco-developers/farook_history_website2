@@ -1,7 +1,6 @@
 
 
 .sec{
-    padding-top: 20px;
     padding-bottom: 40px;
     overflow-x: hidden;
 }
@@ -10,7 +9,6 @@
     font-weight: 500;
     color: #982B35;
     font-family: "Madimi One";
-    margin-top: 80px;
 }
 .pera{
     margin-top: 40px;
@@ -48,7 +46,7 @@
         padding: 0px 0px;
     }
     .sec{
-        padding-top: 65px;
+        padding-top: 10px;
     }
     .im{
 display: none; 

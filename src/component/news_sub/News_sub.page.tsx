@@ -35,13 +35,21 @@ export default function News_sub({ searchParams, data }: any) {
     e.preventDefault();
     const query = e.currentTarget.search.value;
     setSearchQuery(query);
-    window.history.replaceState(null, "", `/news/?search=${query}&date=${selectedDate}`);
+    window.history.replaceState(
+      null,
+      "",
+      `/news/?search=${query}&date=${selectedDate}`
+    );
   };
 
   const handleDateChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const date = e.target.value;
     setSelectedDate(date);
-    window.history.replaceState(null, "", `/news/?search=${searchQuery}&date=${date}`);
+    window.history.replaceState(
+      null,
+      "",
+      `/news/?search=${searchQuery}&date=${date}`
+    );
   };
 
   return (
@@ -52,14 +60,17 @@ export default function News_sub({ searchParams, data }: any) {
             <div className={styles.n_wrap}>
               <h2 className={styles.head}>NEWS</h2>
               <p className={styles.pera}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-                necessitatibus placeat perspiciatis quisquam odio voluptatum.
+                Stay updated with the latest developments and announcements from
+                the History Department at Farook College.
               </p>
               <form onSubmit={handleSearchSubmit}>
                 <div className={styles.search}>
                   <input type="text" name="search" defaultValue={searchQuery} />
                   <button className={styles.ic_wr} type="submit">
-                    <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.ic} />
+                    <FontAwesomeIcon
+                      icon={faMagnifyingGlass}
+                      className={styles.ic}
+                    />
                   </button>
                 </div>
               </form>
@@ -87,7 +98,12 @@ export default function News_sub({ searchParams, data }: any) {
         <div className={`${styles.row_wr} row`}>
           {filteredData?.map(
             (
-              { image, name, title ,id}: { image: string; name: string; title: string ,id:string},
+              {
+                image,
+                name,
+                title,
+                id,
+              }: { image: string; name: string; title: string; id: string },
               i: number
             ) => {
               return (
@@ -95,7 +111,7 @@ export default function News_sub({ searchParams, data }: any) {
                   <div className={styles.card}>
                     <div className={styles.im_out}>
                       <Link href={`/news/${id}`}>
-                      <Image src={arr} alt="" className={styles.arr} />
+                        <Image src={arr} alt="" className={styles.arr} />
                       </Link>
                       <img
                         src={image}

@@ -486,3 +486,46 @@ export async function center_for_navbar_datafetcher() {
     console.log("error in fetching center inner data");
   }
 }
+
+
+
+
+
+export async function achivement_datafetcher() {
+  try {
+    const response1 = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/achivement/`,
+      {
+        method: "get",
+        cache: "no-cache",
+      }
+    );
+    const response2 = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/achivementcountup/`,
+      {
+        method: "get",
+        cache: "no-cache",
+      }
+    );
+    const response3 = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/achivementmember/`,
+      {
+        method: "get",
+        cache: "no-cache",
+      }
+    );
+    const data = await response1.json();
+    const countup=await response2.json()
+    const achivement=await response3.json()
+    const studentdata = achivement.filter((x) => 
+      x.is_student === true
+    );
+    const facultydata = achivement.filter((x) => 
+      x.is_student === false
+    );
+    return{data,countup,studentdata,facultydata,achivement}
+  } catch (error) {
+    console.log("error in fetching achivement  data");
+  }
+}
+

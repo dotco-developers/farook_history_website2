@@ -47,7 +47,7 @@ export default function Landing({ newsdata }: LandingProps) {
           >
             <div className="row">
               <div className="col-lg-3">
-                <Link href={"/histosa/executive-member"}>
+                <Link href={"/histosa/executive-member"} style={{textDecoration:"none"}}>
                   <button style={{ cursor: "pointer" }} className={styles.btn}>
                     Histosa Alumni
                   </button>
@@ -55,7 +55,7 @@ export default function Landing({ newsdata }: LandingProps) {
               </div>
               <div className="col-lg-6">
                 <div className={styles.news}>
-                  <Link href={"/news"}>
+                  <Link href={"/news"} style={{textDecoration:"none"}}>
                   <button>
                     <FontAwesomeIcon icon={faNewspaper} className={styles.ic} />
                     NEWS

@@ -63,16 +63,18 @@ export default function Footer() {
                 </span>
                 +91 8523697456
               </p>
-              <p>
+              <p >
                 <span>
                   <FontAwesomeIcon icon={faEnvelope} className={styles.ic} />
                 </span>
-                mailfarookcollege.ac.in
+                mailfarookcollege<br></br>.ac.in
               </p>
             </div>
           </div>
           <div className="col-lg-3 col-md-6 col-12">
+            <Link target="_blank" href={"https://maps.app.goo.gl/qHwh1AF5WVcp8H998"} style={{textDecoration:"none"}}>
             <Image src={im} alt="" className={styles.im}></Image>
+            </Link>
           </div>
         </div>
 
@@ -97,7 +99,7 @@ export default function Footer() {
           </div>
           <div className="col-lg-12 col-md-12 col-12">
           <p className={styles.dotco}>developed by team <Link href={"https://www.teamdotco.com/"} style={{textDecoration:"none"}}><span>dotco</span></Link></p>
-          <p className={styles.dotco}>© {new Date().getFullYear()} Sullamussalam Science College</p>
+          <p className={styles.dotco}>© {new Date().getFullYear()} Farook college</p>
           </div>
         </div>
       </div>

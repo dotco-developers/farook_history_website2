@@ -10,36 +10,41 @@ export default function Archieves() {
           <div className="col-lg-6 col-md-6 col-12">
             <h6 className={styles.head}>MALABAR ARCHIVES</h6>
             <p className={styles.content}>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              possimus exercitationem deserunt accusantium at repudiandae
-              corrupti aut illum unde facilis officiis non itaque nulla quia
-              voluptate sint, obcaecati quo suscipit. Lorem ipsum dolor sit
-              amet, consectetur adipisicing elit. Ipsa, quasi laborum officiis
-              cum quos, alias eaque error expedita
+              The Malabar Archives is a dedicated repository at the Centre for
+              Social History of Malabar, established by the Department of
+              History, Farook College. It houses an extensive collection of
+              historical documents, manuscripts, and records related to the
+              social, cultural, and political history of Malabar. This archive
+              preserves and makes accessible invaluable primary sources,
+              offering researchers the opportunity to engage directly with
+              original materials. The archives aim to safeguard Malabar&apos;s
+              historical legacy for future generations.
             </p>
-            <button className={styles.btn}>
-              More
-              <span>
-                <KeyboardDoubleArrowRightIcon className={styles.ic} />
-              </span>{" "}
-            </button>
+            <Link href={"/centers"}>
+              <button className={styles.btn}>
+                More
+                <span>
+                  <KeyboardDoubleArrowRightIcon className={styles.ic} />
+                </span>{" "}
+              </button>
+            </Link>
           </div>
           <div className={`col-lg-6 col-md-6 col-12 ${styles.algn}`}>
             <div className={styles.wrap}>
-              <Link href={"/center"} style={{textDecoration:"none"}}>
-              <div className={styles.item}>
-                <p>CENTRES</p>
-              </div>
+              <Link href={"/center"} style={{ textDecoration: "none" }}>
+                <div className={styles.item}>
+                  <p>CENTRES</p>
+                </div>
               </Link>
-              <Link href={"centers/1/13"} style={{textDecoration:"none"}}>
-              <div className={styles.item}>
-                <p>LIBRARY</p>
-              </div>
+              <Link href={"centers/1/13"} style={{ textDecoration: "none" }}>
+                <div className={styles.item}>
+                  <p>LIBRARY</p>
+                </div>
               </Link>
-              <Link href={"centers/1/16"} style={{textDecoration:"none"}}>
-              <div className={styles.item}>
-                <p>PDF</p>
-              </div>
+              <Link href={"centers/1/16"} style={{ textDecoration: "none" }}>
+                <div className={styles.item}>
+                  <p>PUBLICATIONS</p>
+                </div>
               </Link>
             </div>
           </div>

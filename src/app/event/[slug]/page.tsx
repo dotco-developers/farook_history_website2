@@ -17,6 +17,16 @@ export default async function Eventinner({params}:any) {
   const eventhost=await eventhost_datafetcher()
   const image =await eventimages_datafetcher(params.slug)
   const video =await eventvideo_datafetcher()
+
+  const dateoptions: Intl.DateTimeFormatOptions = {
+    year: "numeric",  
+    month: "long",    
+    day: "numeric",   
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  };
+
   return (
     <section className={styles.sec}>
       <div className={`row ${styles.r_out}`}>
@@ -33,9 +43,9 @@ export default async function Eventinner({params}:any) {
             <div className="col-lg-6 col-12">
               <h2>{x.title}</h2>
               <p style={{marginTop:"20px"}}>
-                <FontAwesomeIcon icon={faClock} className={styles.icc} /> 12
-                {x.date}
-              </p>
+                <FontAwesomeIcon icon={faClock} className={styles.icc} /> 
+                {new Date(x.date).toLocaleString("en-US",dateoptions)}
+                </p>
               <p style={{marginBottom:"20px"}}>
               <FontAwesomeIcon icon={faLocationDot} className={styles.icc} />
                 {x.venue}

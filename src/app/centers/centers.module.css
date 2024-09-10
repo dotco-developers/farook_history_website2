@@ -1,5 +1,15 @@
 .sec{
-    padding-top: 100px;
+    padding-top: 0px;
+}
+
+.head{
+    width: max-content;
+    margin: 0px auto;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: "Madimi One";
+    padding: 10px 0px;
+    color: #982B35;
 }
 
 .card{

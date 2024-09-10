@@ -11,7 +11,7 @@ import { document } from "postcss";
 import wrld from "../../../../public/icons grey/world.png";
 import Link from "next/link";
 
-export default function Research({params}:any) {
+export default function Research({ params }: any) {
   // const [content, setcontent] = useState<string>("card1"); // Ensure content is initialized as a string
 
   // const handler = (v: string) => {
@@ -28,70 +28,70 @@ export default function Research({params}:any) {
               <h2 className={styles.head}>Research</h2>
             </div>
             <div className="col-lg-4 col-md-12 col-12">
-              <Link href={"/research/guide"} style={{textDecoration:"none"}}>
-              
-              <div
-                className={`${styles.card} ${
-                  params.name == "guide" ? styles.click : ""
-                } `}
-             
-              >
-                <div className={styles.lg}>
-                  <Image src={book} alt="" className={styles.mainic}></Image>
+              <Link href={"/research/guide"} style={{ textDecoration: "none" }}>
+                <div
+                  className={`${styles.card} ${
+                    params.name == "guide" ? styles.click : ""
+                  } `}
+                >
+                  <div className={styles.lg}>
+                    <Image src={book} alt="" className={styles.mainic}></Image>
+                  </div>
+                  <h3>RESEARCH GUIDES</h3>
+                  <p>
+                    Our dedicated research guides mentor students, providing
+                    expert direction in their scholarly pursuits and academic
+                    growth.
+                  </p>
                 </div>
-                <h3>RESEARCH GUIDES</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-                  provident debitis, ut minima voluptate deleniti adipisci
-                  veniam.
-                </p>
-              </div>
               </Link>
-
             </div>
             <div className="col-lg-4 col-md-12 col-12">
-              <Link href={"/research/scholars"} style={{textDecoration:"none"}}>
-              <div
-                className={`${styles.card} ${
-                  params.name == "scholars" ? styles.click : ""
-                } `}
-              
+              <Link
+                href={"/research/scholars"}
+                style={{ textDecoration: "none" }}
               >
-                <div className={styles.lg}>
-                  <Image
-                    src={cap}
-                    alt=""
-                    className={styles.mainic}
-                    style={{ marginLeft: "10px" }}
-                  ></Image>
+                <div
+                  className={`${styles.card} ${
+                    params.name == "scholars" ? styles.click : ""
+                  } `}
+                >
+                  <div className={styles.lg}>
+                    <Image
+                      src={cap}
+                      alt=""
+                      className={styles.mainic}
+                      style={{ marginLeft: "10px" }}
+                    ></Image>
+                  </div>
+                  <h3>RESEARCH SCHOLARS</h3>
+                  <p>
+                    Our research scholars engage in groundbreaking studies,
+                    contributing valuable insights to historical knowledge and
+                    understanding.
+                  </p>
                 </div>
-                <h3>RESEARCH SCHOLARS</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-                  provident debitis, ut minima voluptate deleniti adipisci
-                  veniam.
-                </p>
-              </div>
               </Link>
             </div>
             <div className="col-lg-4  col-md-12  col-12">
-              <Link href={"/research/produced"} style={{textDecoration:"none"}}>
-              <div
-                className={`${styles.card} ${
-                  params.name == "produced" ? styles.click : ""
-                } `}
-               
+              <Link
+                href={"/research/produced"}
+                style={{ textDecoration: "none" }}
               >
-                <div className={styles.lg}>
-                  <Image src={tick} alt="" className={styles.mainic}></Image>
+                <div
+                  className={`${styles.card} ${
+                    params.name == "produced" ? styles.click : ""
+                  } `}
+                >
+                  <div className={styles.lg}>
+                    <Image src={tick} alt="" className={styles.mainic}></Image>
+                  </div>
+                  <h3>PHDS PRODUCED</h3>
+                  <p>
+                    We proudly celebrate our accomplished PhD graduates, who
+                    have significantly advanced research in historical studies.
+                  </p>
                 </div>
-                <h3>PHDS PRODUCED</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-                  provident debitis, ut minima voluptate deleniti adipisci
-                  veniam.
-                </p>
-              </div>
               </Link>
             </div>
           </div>

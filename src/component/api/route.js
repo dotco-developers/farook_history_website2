@@ -470,10 +470,10 @@ export async function center_inner_datafetcher(id) {
   }
 }
 
-export async function center_for_navbar_datafetcher() {
+export async function center_for_navbar_datafetcher(id) {
   try {
     const response2 = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/centersidebar/`,
+      `${process.env.NEXT_PUBLIC_BASE_URL}/centersidebar/?center=${id}`,
       {
         method: "get",
         cache: "no-cache",
@@ -529,3 +529,19 @@ export async function achivement_datafetcher() {
   }
 }
 
+
+export async function About_countup_datafetcher() {
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/countup/`,
+      {
+        method: "get",
+        cache: "no-cache",
+      }
+    );
+    const countup = await response.json();
+    return countup;
+  } catch (error) {
+    console.log("error in fetching abot counter  data");
+  }
+}

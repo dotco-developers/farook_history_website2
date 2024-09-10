@@ -33,15 +33,7 @@
     color: #982B35;
 }
 
-.faccard:hover{
-    padding-bottom: 5rem;
-    transition: .5s ease-in-out;
-}
-.faccard:hover .readmore{
-    opacity: 1;
-   
-   
-}
+
 
 .facimg1{
     display: block;
@@ -77,14 +69,19 @@
     font-weight: 300;
 }
 .head3{
-    font-size: 42px;
+    font-size: 36px;
     font-weight: 500;
     color: #982B35;
     font-family: "Madimi One";
-    margin-top: 80px;
     width: max-content;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 80px;
+}
+
+@media(max-width:991px){
+  .head3{
+    font-size: 30px;
+  }
 }

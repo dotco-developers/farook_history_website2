@@ -48,7 +48,7 @@ export default function Landing({ newsdata }: LandingProps) {
             <div className="row">
               <div className="col-lg-3">
                 <Link
-                  href={"/histosa/executive-member"}
+                  href={"/histosa"}
                   style={{ textDecoration: "none" }}
                 >
                   <button style={{ cursor: "pointer" }} className={styles.btn}>

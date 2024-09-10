@@ -20,12 +20,14 @@ export default function Archieves() {
               original materials. The archives aim to safeguard Malabar's
               historical legacy for future generations.
             </p>
+            <Link href={"/centers"}>
             <button className={styles.btn}>
               More
               <span>
                 <KeyboardDoubleArrowRightIcon className={styles.ic} />
               </span>{" "}
-            </button>
+            </button>  
+            </Link>
           </div>
           <div className={`col-lg-6 col-md-6 col-12 ${styles.algn}`}>
             <div className={styles.wrap}>
@@ -41,7 +43,7 @@ export default function Archieves() {
               </Link>
               <Link href={"centers/1/16"} style={{ textDecoration: "none" }}>
                 <div className={styles.item}>
-                  <p>PDF</p>
+                  <p>PUBLICATIONS</p>
                 </div>
               </Link>
             </div>

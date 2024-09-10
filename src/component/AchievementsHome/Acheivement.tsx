@@ -6,7 +6,6 @@ import glob from "../../../public/icons grey/globfour.png";
 import Link from "next/link";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 
-
 interface achivementprop {
   id: number;
   name: string;
@@ -20,8 +19,11 @@ interface achivementprop {
   linkedin: string;
 }
 
-
-export default function News({achivementdata}:{achivementdata:achivementprop[]}) {
+export default function News({
+  achivementdata,
+}: {
+  achivementdata: achivementprop[];
+}) {
   return (
     <section className={styles.sec}>
       <div className={styles.rbn}></div>
@@ -29,25 +31,28 @@ export default function News({achivementdata}:{achivementdata:achivementprop[]})
         <div className={`row ${styles.rowe}`}>
           <Image src={glob} alt="" className={styles.gl}></Image>
           <h6 className={styles.head}>Achievements</h6>
-          {
-            achivementdata?.map((item:any,i:number)=>(
-              <div className="col-lg-4 col-md-6 col-12" key={i}>
+          {achivementdata?.map((item: any, i: number) => (
+            <div className="col-lg-4 col-md-6 col-12" key={i}>
               <div className={styles.card}>
-                <Image src={item.image} width={300} height={400} alt="" className={styles.im}></Image>
+                <Image
+                  src={item.image}
+                  width={300}
+                  height={400}
+                  alt=""
+                  className={styles.im}
+                ></Image>
                 <div className="px-4 mt-1">
                   <p className=" text-black font-medium ">{item.name}</p>
                   <p className="text-[13px] mt-2">{item.designation}</p>
-                  <p className="text-[13px] mb-2">Batch 2020-25 (Integrated)</p>
-                  <div className={styles.p4} dangerouslySetInnerHTML={{__html:item.description}}>
-                   
-                  </div>
+                  <div
+                    className={styles.p4}
+                    dangerouslySetInnerHTML={{ __html: item.description }}
+                  ></div>
                 </div>
               </div>
             </div>
+          ))}
 
-            ))
-          }
-      
           {/* <div className="col-lg-4 col-md-6 col-12">
             <div className={styles.card}>
               <Image src={im1} alt="" className={styles.im}></Image>
@@ -76,20 +81,17 @@ export default function News({achivementdata}:{achivementdata:achivementprop[]})
               </div>
             </div>
           </div> */}
-         
         </div>
         <div className="row mt-4">
-            <Link href="/achievements">
-              <button className={styles.view}>
-                View all
-                <span>
-                  <KeyboardDoubleArrowRightIcon className={styles.ic} />
-                </span>{" "}
-              </button>
-            </Link>
-          </div>
-
-
+          <Link href="/achievements">
+            <button className={styles.view}>
+              View all
+              <span>
+                <KeyboardDoubleArrowRightIcon className={styles.ic} />
+              </span>{" "}
+            </button>
+          </Link>
+        </div>
       </div>
     </section>
   );

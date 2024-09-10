@@ -15,25 +15,25 @@ import { useRef } from "react";
 import arr from "../../../public/icons grey/arr.png";
 import { Linefont } from "next/font/google";
 import Link from "next/link";
-export default function Blogs({ data ,searchParams}: any) {
+export default function Blogs({ data, searchParams }: any) {
   const [show, setshow] = useState(false);
-  const [finaldata, setfinaldata] = useState([])
+  const [finaldata, setfinaldata] = useState([]);
   const bref = useRef(document.body);
   const handle = () => {
     setshow(!show);
   };
-  
+
   const searchQuery = searchParams?.search || "";
 
   useEffect(() => {
     const filteredData = searchQuery
-  ? data.filter((x:any) =>
-      x.topic.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  : data;
-  setfinaldata(filteredData)
-  }, [searchParams])
-  
+      ? data.filter((x: any) =>
+          x.topic.toLowerCase().includes(searchQuery.toLowerCase())
+        )
+      : data;
+    setfinaldata(filteredData);
+  }, [searchParams]);
+
   useEffect(() => {
     if (show) {
       const popupElement = document.getElementById("popup");
@@ -70,7 +70,7 @@ export default function Blogs({ data ,searchParams}: any) {
           </div>
           <div className="col-lg-6 col-12 ">
             <h2 className={styles.head}>
-              Lorem ipsum dolor sit amet consectetur
+              Explore, Submit, and Discover History Blogs
             </h2>
             <form>
               <div className={styles.wr_course}>
@@ -94,8 +94,8 @@ export default function Blogs({ data ,searchParams}: any) {
             </form>
 
             <p className={styles.pera}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Molestias quibusdam quasi illum tempora itaque velit reprehenderit
+              Explore our blogs for insightful articles, research highlights,
+              and perspectives from the History Department.
             </p>
           </div>
         </div>

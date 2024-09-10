@@ -1,7 +1,7 @@
-
+"use client"
 import styles from "./Aboutcomponent.module.css"
 import CountUp from "react-countup";
-export default function About({data}:any){
+export default function About({data,countup}:any){
     return(
         <div className={styles.headmain}>
         <div className="container">
@@ -19,7 +19,7 @@ export default function About({data}:any){
               }
             </div>
             <div className={styles.counter}>
-              {/* {data.map((x: any) => (
+              {countup?.map((x: any) => (
                 <div
                   className={`col-lg-3 col-12 ${styles.countersub} `}
                   key={x.id}
@@ -41,7 +41,7 @@ export default function About({data}:any){
                   </h3>
                   <h5>{x.name}</h5>
                 </div>
-              ))} */}
+              ))}
             </div>
           </div>
         </div>

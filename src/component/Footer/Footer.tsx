@@ -67,12 +67,14 @@ export default function Footer() {
                 <span>
                   <FontAwesomeIcon icon={faEnvelope} className={styles.ic} />
                 </span>
-                mailfarookcollege .ac.in
+                mailfarookcollege<br></br>.ac.in
               </p>
             </div>
           </div>
           <div className="col-lg-3 col-md-6 col-12">
+            <Link target="_blank" href={"https://maps.app.goo.gl/qHwh1AF5WVcp8H998"} style={{textDecoration:"none"}}>
             <Image src={im} alt="" className={styles.im}></Image>
+            </Link>
           </div>
         </div>
 

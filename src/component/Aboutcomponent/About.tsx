@@ -19,10 +19,10 @@ export default function About({data,countup}:any){
               }
             </div>
             <div className={styles.counter}>
-              {countup?.map((x: any) => (
+              {countup?.map((x: any,i:number) => (
                 <div
                   className={`col-lg-3 col-12 ${styles.countersub} `}
-                  key={x.id}
+                  key={i}
                 >
                   <h3>
                     <CountUp

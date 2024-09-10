@@ -17,16 +17,16 @@ export default function Archieves() {
               social, cultural, and political history of Malabar. This archive
               preserves and makes accessible invaluable primary sources,
               offering researchers the opportunity to engage directly with
-              original materials. The archives aim to safeguard Malabar's
-              historical legacy for future generations.
+              original materials. The archives aim to safeguard Malabar&apos;s
+              historical legacy for future generations.
             </p>
             <Link href={"/centers"}>
-            <button className={styles.btn}>
-              More
-              <span>
-                <KeyboardDoubleArrowRightIcon className={styles.ic} />
-              </span>{" "}
-            </button>  
+              <button className={styles.btn}>
+                More
+                <span>
+                  <KeyboardDoubleArrowRightIcon className={styles.ic} />
+                </span>{" "}
+              </button>
             </Link>
           </div>
           <div className={`col-lg-6 col-md-6 col-12 ${styles.algn}`}>

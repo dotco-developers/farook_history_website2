@@ -36,9 +36,7 @@ export default function Commttee({data}:any) {
                 <Image src={lin} alt="" className={styles.iconimg}></Image>
                 </Link>
               </div>
-              <div className={styles.readmore}>
-                <Link href={`/staff/${x.id}`}>More Info</Link>{" "}
-              </div>
+      
             </div>
           </div>
             

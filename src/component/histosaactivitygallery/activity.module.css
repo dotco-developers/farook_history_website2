@@ -11,15 +11,14 @@
    
 }
 .row4{
-    padding-top: 30px;
+    padding-top: 0px;
 }
 .row4 h2{
-    font-size: 30px;
+    font-size: 40px;
     color: #982B35;
     font-weight: 500;
     font-family: "Madimi One";
     width: max-content;
-   
     display: block;
     margin-bottom: 40px;
     margin-left: auto;

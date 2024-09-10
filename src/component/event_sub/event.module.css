@@ -4,6 +4,38 @@
     padding-bottom: 50px;
 }
 
+.out{
+    height: 20vh;
+    position: relative;
+}
+.fl{
+    position: absolute;
+    top: 40%;
+    display: flex; 
+    align-items: center;
+}
+.fl p{
+    font-size: 20px;
+    font-family: "Poppins";
+    color: rgb(169, 169, 169);
+    
+}
+.fl select{
+    color: #982B35;
+    background-color: #D19FA4;
+    padding: 10px 20px;
+    margin: 0px 30px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+
+}
+.fl select option {
+    background-color: #D19FA4;
+    color: #982B35;
+    padding: 10px;
+}
+
 .content_in {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -142,7 +174,7 @@
 }
 .r_sec{
     padding: 40px 0px;
-    padding-top: 100px;
+    padding-top: 30px;
 }
 @media(max-width:991px){
     .wr_course{

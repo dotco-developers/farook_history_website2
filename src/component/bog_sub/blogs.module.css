@@ -157,9 +157,11 @@ margin-left: 20px;
 @media(max-width:767px){
     .wr{
         width: 90%;
+        padding: 20px;
     }
     .btn{
         margin-right: 10px;
     }
+ 
     
 }

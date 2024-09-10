@@ -48,7 +48,7 @@ export default function Landing({ newsdata }: LandingProps) {
             <div className="row">
               <div className="col-lg-3">
                 <Link
-                  href={"/histosa/executive-member"}
+                  href={"/histosa"}
                   style={{ textDecoration: "none" }}
                 >
                   <button style={{ cursor: "pointer" }} className={styles.btn}>
@@ -59,10 +59,11 @@ export default function Landing({ newsdata }: LandingProps) {
               <div className="col-lg-6">
                 <div className={styles.news}>
                   <Link href={"/news"} style={{ textDecoration: "none" }}>
-                    <button>
+                    <button style={{color:"black"}}>
                       <FontAwesomeIcon
                         icon={faNewspaper}
                         className={styles.ic}
+                        style={{color:"black"}}
                       />
                       NEWS
                     </button>
@@ -75,7 +76,8 @@ export default function Landing({ newsdata }: LandingProps) {
                             <FontAwesomeIcon
                               icon={faCircle}
                               className={styles.ic3}
-                              style={{ marginRight: "5px", marginTop: "10px" }}
+                              style={{ marginRight: "5px", marginTop: "10px" ,textDecoration:"none"}}
+
                             />
                             {item.title}{" "}
                           </p>

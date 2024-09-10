@@ -15,7 +15,7 @@ export default function Activity({ data }: any) {
           <div className="col-lg-12 col-12" key={i}>
             <div className={styles.card}>
               <div className="row">
-                <Link href={`${x.pdf}`}>
+                <Link href={`${x.pdf}`} target="_blank">
                   <button className={styles.btn}>REPORT</button>
                 </Link>
                 <div className={`col-lg-12 col-12 ${styles.cardcont}`}>

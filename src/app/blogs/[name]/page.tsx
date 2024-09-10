@@ -29,9 +29,8 @@ export default async function Bloginner({params}:any) {
               <Image src={item.image} width={1200} height={900} alt="" className={styles.im}></Image>
             </div>
             <div className="col-lg-12 col-12">
-              <p className={styles.pera}>
-               {item.content}
-              </p>
+              <div className={styles.pera} dangerouslySetInnerHTML={{__html:item.content}}>
+              </div>
             </div>
             <div className="col-lg-12 col-12">
               <h3 className={styles.name}>{item.author}</h3>

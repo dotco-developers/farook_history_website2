@@ -16,9 +16,7 @@ import CountUp from "react-countup";
 
 export default function Achivement({data}:any) {
   const [counterdata, setcounterdata] = useState([]);
-  const [description_achievement, setdescription_achievement] = useState([]);
-  const [studentdata, setstudentdata] = useState([]);
-  const [facultydata, setfacultydata] = useState([]);
+
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
@@ -39,6 +37,11 @@ export default function Achivement({data}:any) {
     return () => clearInterval(interval);
   }, [first]);
  
+
+  useEffect(() => {
+     setcounterdata(data?.countup)
+  }, [counterdata])
+  
   
 
   return (
@@ -65,7 +68,7 @@ export default function Achivement({data}:any) {
         </div>
       </div>
       <div className={styles.counter}>
-        {data?.countup?.map((x: any, i: number) => (
+        {counterdata?.map((x: any, i: number) => (
           <div className={`col-lg-3 col-12 ${styles.countersub} `} key={i}>
             <h3>
               <CountUp

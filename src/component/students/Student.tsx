@@ -1,12 +1,12 @@
 import styles from "./Student.module.css";
-import Card from "../../component/studentcard/card"
+import Card from "../../component/studentcard/card";
 import Image from "next/image";
 import { testimonials_home_datafetcher } from "../api/route";
 export default async function Students() {
-  const testimonials=await testimonials_home_datafetcher()
+  const testimonials = await testimonials_home_datafetcher();
   return (
     <section className={styles.sec}>
-      <div className={styles.rbn} ></div>
+      <div className={styles.rbn}></div>
       <div className="container">
         <div className="row">
           <div className="col-lg-12 col-md-12 col-12">
@@ -15,9 +15,8 @@ export default async function Students() {
                 WHAT OUR <br /> STUDENTS SAYS
               </h6>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
-                fugit ratione officiis corrupti 
-                
+                Hear from our students about their enriching experiences and
+                growth at the History Department, Farook College
               </p>
             </div>
           </div>

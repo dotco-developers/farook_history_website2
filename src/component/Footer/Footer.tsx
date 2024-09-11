@@ -67,7 +67,7 @@ export default function Footer() {
                 <span>
                   <FontAwesomeIcon icon={faEnvelope} className={styles.ic} />
                 </span>
-                mailfarookcollege<br></br>.ac.in
+                hodhistory@<br></br>farookcollege.ac.in 
               </p>
             </div>
           </div>
@@ -86,15 +86,19 @@ export default function Footer() {
           </div>
           <div className="col-lg-6 col-md-6 col-12">
             <div className={styles.wrap_ic}>
+              <Link href={"mailto: hodhistory@farookcollege.ac.in "} >
               <div className={styles.outer}>
                 <Image src={mail} alt="" className={styles.l_ic}></Image>
               </div>
+              </Link>
               <div className={styles.outer}>
               <Image src={app} alt="" className={styles.l_ic}></Image>
               </div>
+              <Link href={"https://www.facebook.com/history.farookcollege/"}>
               <div className={styles.outer}>
               <Image src={insta} alt="" className={styles.l_ic}></Image>
               </div>
+              </Link>
             </div>
           </div>
           <div className="col-lg-12 col-md-12 col-12">

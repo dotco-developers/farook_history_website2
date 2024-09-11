@@ -21,7 +21,7 @@
 .pera{
 
     font-family: "Poppins";
-    margin: 90px 0px;
+    margin: 80px 0px;
     font-size: 25px;
     width: 90%;
     display: block;
@@ -57,13 +57,35 @@
     flex-direction: row;
     align-items: center;
 }
-
-@media(max-width:767px){
+.pera{
+    text-align: justify;
+}
+@media(max-width:991px){
     .pera{
         margin: 40px 0px;
         font-size: 20px;
     }
     .im{
         margin-left: 1px;
+    }
+    .head{
+     font-size: 40px;
+     margin-left: 0px;
+    }
+    .date{
+        margin-left: 0px;
+    }
+    .im{
+        width: 100%;
+        height: auto;
+    }
+    .name{
+        font-size: 20px;
+    }
+    .pera{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
     }
 }

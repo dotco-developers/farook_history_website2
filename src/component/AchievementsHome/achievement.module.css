@@ -130,6 +130,14 @@ margin-top: 72px;
     .gl{
         display: none;
     }
+    .head{
+        font-size: 40px;
+        margin: 10px 0px;
+        margin-bottom: 15px;
+    }
+    .sec{
+        padding-top: 0px;
+    }
     
 }
 @media(max-width:767px){

@@ -66,7 +66,7 @@
     height: 28px;
 }
 .out{
-    height: 40vh;
+    height: 20vh;
     position: relative;
 }
 .fl{
@@ -162,6 +162,9 @@
 }
 
 @media(max-width:991px){
+    .out{
+        padding-bottom: 40px;
+    }
     .n_wrap{
         width: 90%;
     }
@@ -179,6 +182,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    top: 0;
   }
   .fl p{
     margin-bottom: 14px;

@@ -74,5 +74,12 @@
     .item{
         padding: 10px 50px;
     }
+    .head{
+        font-size: 50px;
+    }
+    .content{
+        font-size: 18px;
+        margin-top: 10px;
+    }
    
 }

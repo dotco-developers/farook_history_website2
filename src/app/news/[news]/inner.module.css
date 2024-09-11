@@ -69,6 +69,16 @@ padding-bottom: 40px;
         justify-content: flex-start;
 
     }
+    .n_head{
+        font-size: 40px;
+    }
+    .pera{
+        margin-top: 5px;
+        font-size: 16px;
+    }
+    .sh{
+        margin-top: 20px;
+    }
 
 }
 @media(max-width:350px){

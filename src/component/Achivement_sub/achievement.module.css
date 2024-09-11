@@ -395,9 +395,7 @@ transition-duration: 2s;
     cursor: pointer;
    
 }
-.row4{
-    padding-top: 60px;
-}
+
 .row4 h2{
     font-size: 30px;
     color: #982B35;
@@ -569,7 +567,7 @@ margin-left: 0;
         height: auto;
     }
     .btncv{
-        top: 55%;
+        top: 66%;
     }
 }
 

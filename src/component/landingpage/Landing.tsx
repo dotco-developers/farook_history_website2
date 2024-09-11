@@ -71,7 +71,7 @@ export default function Landing({ newsdata }: LandingProps) {
                   <div className={styles.n_wr}>
                     <div className={styles.news_out_animate}>
                       {newsdata?.map((item: any, i: number) => (
-                        <Link href={`/news/${item.id}`} key={i}>
+                        <Link href={`/news/${item.id}`} key={i} style={{textDecoration:"none"}}>
                           <p className={styles.news_div}>
                             <FontAwesomeIcon
                               icon={faCircle}

@@ -1,7 +1,15 @@
 "use client"
+import { useEffect, useState } from "react";
 import styles from "./Aboutcomponent.module.css"
 import CountUp from "react-countup";
 export default function About({data,countup}:any){
+  
+  const [countupdata, setcountupdata] = useState([])
+  useEffect(() => {
+    setcountupdata(countup)
+  }, [countup])
+  
+
     return(
         <div className={styles.headmain}>
         <div className="container">
@@ -19,7 +27,7 @@ export default function About({data,countup}:any){
               }
             </div>
             <div className={styles.counter}>
-              {countup?.map((x: any,i:number) => (
+              {countupdata?.map((x: any,i:number) => (
                 <div
                   className={`col-lg-3 col-12 ${styles.countersub} `}
                   key={i}

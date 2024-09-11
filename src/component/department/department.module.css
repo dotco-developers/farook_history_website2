@@ -67,13 +67,20 @@
    left: 15px;
 
 }
-@media(max-width:992px){
+@media(max-width:991px){
     .im{
         height: 80%;
         width: 80%;
     }
     .algn{
         padding: 40px 0px;
+    }
+    .head{
+     font-size: 40px;
+    }
+    .content{
+        margin-top: 20px;
+        font-size: 18px;
     }
    
 }

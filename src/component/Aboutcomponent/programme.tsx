@@ -1,40 +1,70 @@
-"use client"
+"use client";
 
-import { FaRegFilePdf } from "react-icons/fa6"
-import styles from "./Aboutcomponent.module.css"
+import { FaRegFilePdf } from "react-icons/fa6";
+import styles from "./Aboutcomponent.module.css";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import world from "../../../public/icons grey/world.png"
+import world from "../../../public/icons grey/world.png";
 import { useInView } from "framer-motion";
 
-export default function Programme(){
-    const ref = useRef(null);
+export default function Programme() {
+  type ProgrammeData = {
+    id: number;
+    title: string;
+    syllabus: string;
+    syllabusIcon: string;
+    description: string;
+    details: {
+      duration: string;
+      eligibility: string;
+      intake: string;
+    };
+  };
+
+  const jsondatate: ProgrammeData[] = [
+    {
+      id: 0,
+      title: "MA HISTORY",
+      syllabus: "SYLLABUS",
+      syllabusIcon: "FaRegFilePdf",
+      description:
+        "The curriculum of the P.G. course carries specialization in Islamic History enabling the students to enjoy the benefits that go along with History and Islamic History programme structure.",
+      details: {
+        duration: "4 Semesters",
+        eligibility: "Any degree with 45% of marks for part III of CGPA 2",
+        intake: "20",
+      },
+    },
+    {
+      id: 1,
+      title: "Ph. D",
+      syllabus: "SYLLABUS",
+      syllabusIcon: "FaRegFilePdf",
+      description:
+        "Admission to Ph.D programme is done as per the guidelines of the University of Calicut. Ph.D.Pprogramme shall be for a minimum duration of three years, including course work and a maximum of six years.",
+      details: {
+        duration: "3-5 years",
+        eligibility: "M.A. History",
+        intake: "Subject to Availability",
+      },
+    },
+  ];
+
+  const ref = useRef(null);
   const isInView = useInView(ref);
-  const [data, setdata] = useState([]);
 
   const [load, setload] = useState(true);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          "https://farook-college-backend.vercel.app/api/countup/"
-        );
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const responseData = await response.json();
-        setdata(responseData);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    fetchData();
-  }, []);
 
   const [first, setfirst] = useState(true);
+  const [data, setData] = useState<ProgrammeData | null>(jsondatate[0]);
+  const [jsondata, setJsonData] = useState<ProgrammeData[]>(jsondatate);
+  const [id, setid] = useState(jsondatate[0].id)
 
-  function handle() {
-    setfirst(!first);
+  function handle(id_: number) {
+    const temp = jsondata.find((x) => x.id === id_);
+    if (temp) {
+      setData(temp);
+    }
     setload(!load);
   }
 
@@ -43,109 +73,58 @@ export default function Programme(){
     return () => clearInterval(interval); // Cleanup function to clear interval on unmount
   }, [first]);
 
-
-    return(
-        <div className="relative"  id={` ${styles.programme}`}>
-        <Image src={world} alt="" className={styles.wrld}></Image>
-        <div className={styles.headingfac} >
-          <h1 id="programme">PROGRAMME</h1>
-        </div>
-        <div className={styles.div3}>
-          <div className={styles.shape1}></div>
-
-          <div className={styles.content}>
-            {first ? (
-              <div className={styles.car1}>
-                <div className="cotainer">
-                  <div className={styles.headwrap}>
-                    <div className={styles.title}>
-                      <h1>MA HISTORY</h1>
-                    </div>
-                    <div className={styles.icon}>
-                      <button className="flex">
-                        SYLLABUS <FaRegFilePdf className="ml-3 mt-[4px]"/>
-                      </button>
-                    </div>
-                  </div>
-                  <div className={styles.para}>
-                    <p>
-                      The curriculum of the P.G. course carries specialization
-                      in Islamic History enabling the students to enjoy the
-                      benefits that go along with History and Islamic History
-                      programme structure.
-                    </p>
-                  </div>
-                  <div className={styles.prgdatawrap}>
-                    <div className={styles.prgdatawrap1}>
-                      <div className={styles.prgdata}>Duration</div>
-                      <div className={styles.prgdata}>Eligibility</div>
-                      <div className={styles.prgdata}>Intake</div>
-                    </div>
-                    <div className={styles.prgdatawrap2}>
-                      <div className={styles.prgdata}>4 Semesters</div>
-                      <div className={styles.prgdata}>
-                        Any degree with 45% of marks for part III of CGPA 2
-                      </div>
-                      <div className={styles.prgdata}>20</div>
-                    </div>
-                  </div>
+  return (
+    <div className="relative" id={` ${styles.programme}`}>
+      <Image src={world} alt="" className={styles.wrld}></Image>
+      <div className={styles.peogrammehead}>
+        <h1 id="programme">PROGRAMME</h1>
+      </div>
+      <div className={styles.div3}>
+        <div className={styles.shape1}></div>
+        <div className={styles.content}>
+          <div className={styles.car1}>
+            <div className="container">
+              <div className={styles.headwrap}>
+                <div className={styles.title}>
+                  <h1>{data?.title}</h1>
+                </div>
+                <div className={styles.icon}>
+                  <button className="flex">
+                    {data?.syllabus} <FaRegFilePdf className="ml-3 mt-[4px]" />
+                  </button>
                 </div>
               </div>
-            ) : (
-              <div className={styles.car1}>
-                <div className="cotainer">
-                  <div className={styles.headwrap}>
-                    <div className={styles.title}>
-                      <h1>Ph. D</h1>
-                    </div>
-                    <div className={styles.icon}>
-                      <button>
-                        SYLLABUS{" "}
-                        <span>
-                          <FaRegFilePdf />
-                        </span>
-                      </button>
-                    </div>
+              <div className={styles.para}>
+                <p>{data?.description}</p>
+              </div>
+              <div className={styles.prgdatawrap}>
+                <div className={styles.prgdatawrap1}>
+                  <div className={styles.prgdata}>Duration</div>
+                  <div className={styles.prgdata}>Eligibility</div>
+                  <div className={styles.prgdata}>Intake</div>
+                </div>
+                <div className={styles.prgdatawrap2}>
+                  <div className={styles.prgdata}>{data?.details.duration}</div>
+                  <div className={styles.prgdata}>
+                    {data?.details.eligibility}
                   </div>
-                  <div className={styles.para}>
-                    <p>
-                      Admission to Ph.D programme is done as per the guidelines
-                      of the University of Calicut. Ph.D.Pprogramme shall be for
-                      a minimum duration of three years, including course work
-                      and a maximum of six years.
-                    </p>
-                  </div>
-                  <div className={styles.prgdatawrap}>
-                    <div className={styles.prgdatawrap1}>
-                      <div className={styles.prgdata}>Duration</div>
-                      <div className={styles.prgdata}>Eligibility</div>
-                      <div className={styles.prgdata}>Intake</div>
-                    </div>
-                    <div className={styles.prgdatawrap2}>
-                      <div className={styles.prgdata}>3-5 years</div>
-                      <div className={styles.prgdata}> M.A. History</div>
-                      <div className={styles.prgdata}>
-                        Subject to Availability
-                      </div>
-                    </div>
-                  </div>
+                  <div className={styles.prgdata}>{data?.details.intake}</div>
                 </div>
               </div>
-            )}
-            <div className={styles.btnwrap} >
-              <button
-                className={styles.btn1}
-                onClick={handle}
-                style={{ backgroundColor: first ? "#982B35" : "#515151" }}
-              ></button>
-              <button
-                className={styles.btn1}
-                onClick={handle}
-                style={{ backgroundColor: first ? "#515151" : "#982B35" }}
-              ></button>
             </div>
+          </div>
+          <div className={styles.btnwrap}>
+            {jsondata.map((x: any, index: number) => (
+              <button
+                key={index}
+                className={styles.btn1}
+                onClick={() => {handle(x.id);setid(x.id)}}
+                style={{ backgroundColor: x.id==id ? "#982B35" : "#515151" }}
+              ></button>
+            ))}
           </div>
         </div>
       </div>
-    )
+    </div>
+  );
 }

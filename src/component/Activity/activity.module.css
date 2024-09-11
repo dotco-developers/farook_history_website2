@@ -119,6 +119,11 @@ margin-left: 0;
     .cardcont h1{
         margin-top: 16px;
     }
+    .card{
+        padding: 20px 15px;
+        width: 90%;
+
+    }
 }
 
 

@@ -106,6 +106,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin-top: 67px;
 }
 
 .content .btnwrap {
@@ -168,20 +169,18 @@
 .peogrammehead{
     width: 100%;
     text-align: center;
-    padding-bottom: 90px;
+    padding-bottom: 40px;
 }
 
 .facultywrap {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 4rem;
 }
 .card {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2rem;
 }
 .faccard {
     text-align: center;
@@ -249,12 +248,15 @@
 }
 
 .div3 {
-    height: 50vh;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-bottom: 5rem;
+}
+.outer_main{
+    padding-top: 111px;
+    position: relative;
 }
 .prgdatawrap {
     width: 100%;
@@ -292,15 +294,71 @@
     color: white;
     font-weight: 600;
 }
-.prgdata {
-    padding: 0px 20px;
-}
+
 .facicons img {
     cursor: pointer;
 }
 
+
+.eligible{
+    overflow-y:scroll ;
+    height: 70px;
+    padding: 0px 20px;
+}
+
+.table{
+    width: 100%;
+}
+.head_tb{
+    background-color: #982B35;
+}
+.table th{
+    color: white;
+}
+
+.headout{
+    display: flex;
+    background-color: #982B35;
+    color: white;
+    margin-bottom: 7px;
+}
+.head1{
+    width: 30%;
+    text-align: center;
+}
+.head2{
+    width: 40%;
+    text-align: center;
+}
+.head3{
+    width: 30%;
+    text-align: center;
+}
+
+
+.ct1 {
+    width: 30%;
+    text-align: center;
+}
+
+.ct2 {
+    width: 40%;
+    text-align: center;
+}
+
+.ct3 {
+    width: 30%;
+    text-align: center;
+}
+.ctnwrap{
+    display: flex;
+}
+
 /* Media Queries */
 @media (max-width: 991px) {
+    .card{
+        margin-bottom: 2rem;
+    }
     .righti {
         width: 60%;
         top: -50px;
@@ -310,13 +368,27 @@
         width: 60%;
     }
     .headingfac{
-        padding-top: 200px;
+        padding-top: 170px;
     }
     .peogrammehead{
-        padding-bottom: 150px;
+        padding-bottom: 50px;
     }
     .facultywrap{
         padding-bottom: 20px;
+    }
+    .ct2{
+        height: 70px;
+        overflow-x: scroll;
+    }
+    .para{    
+        padding: 0px 14px;
+    }
+    .headwrap{
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+    .outer_main{
+        padding-top: 0px;
     }
 }
 

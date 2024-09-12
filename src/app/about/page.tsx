@@ -26,61 +26,7 @@ import Programme from "@/component/Aboutcomponent/programme";
 import { About_countup_datafetcher, aboutus_datafetcher, faculty_datafetcher } from "../../component/api/route";
 
 export default async function about() {
-  // const ref = useRef(null);
-  // const isInView = useInView(ref);
-  // const [data, setdata] = useState([]);
-
-  // const [load, setload] = useState(true);
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch(
-  //         "https://farook-college-backend.vercel.app/api/countup/"
-  //       );
-  //       if (!response.ok) {
-  //         throw new Error("Network response was not ok");
-  //       }
-  //       const responseData = await response.json();
-  //       setdata(responseData);
-  //     } catch (error) {
-  //       console.error("Error fetching data:", error);
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
-
-  // const [first, setfirst] = useState(true);
-
-  // function handle() {
-  //   setfirst(!first);
-  //   setload(!load);
-  // }
-
-  // useEffect(() => {
-  //   const interval = setInterval(handle, 5000); // Change cards every 5 seconds
-  //   return () => clearInterval(interval); // Cleanup function to clear interval on unmount
-  // }, [first]);
-
-  // const facultydata = [
-  //   {
-  //     name: "Dr. C.A. Anaz",
-  //     designation: "Assistant Professor and Head",
-  //     mail: "anaz@farookcollege.ac.in",
-  //     img: "/caanaz.jpg",
-  //   },
-  //   {
-  //     name: "Dr. Abdul Nisar ",
-  //     designation: "Assistant Professor",
-  //     mail: "dr.mnisar@farookcollege.ac.in",
-  //     img: "/niza.jpg",
-  //   },
-  //   {
-  //     name: " Dr. Shumais U",
-  //     designation: "Assistant Professor",
-  //     mail: "shumais.u@farookcollege.ac.in",
-  //     img: "/shumu.jpg",
-  //   },
-  // ];
+  
   const facdata=await faculty_datafetcher()
   const abouutusdata=await aboutus_datafetcher()
   const countup=await About_countup_datafetcher()

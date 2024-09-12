@@ -292,11 +292,64 @@
     color: white;
     font-weight: 600;
 }
-.prgdata {
-    padding: 0px 20px;
-}
+
 .facicons img {
     cursor: pointer;
+}
+
+
+.eligible{
+    overflow-y:scroll ;
+    height: 70px;
+    padding: 0px 20px;
+}
+
+.table{
+    width: 100%;
+}
+.head_tb{
+    background-color: #982B35;
+}
+.table th{
+    color: white;
+}
+
+.headout{
+    display: flex;
+    background-color: #982B35;
+    color: white;
+    margin-bottom: 7px;
+}
+.head1{
+    width: 30%;
+    text-align: center;
+}
+.head2{
+    width: 40%;
+    text-align: center;
+}
+.head3{
+    width: 30%;
+    text-align: center;
+}
+
+
+.ct1 {
+    width: 30%;
+    text-align: center;
+}
+
+.ct2 {
+    width: 40%;
+    text-align: center;
+}
+
+.ct3 {
+    width: 30%;
+    text-align: center;
+}
+.ctnwrap{
+    display: flex;
 }
 
 /* Media Queries */
@@ -317,6 +370,17 @@
     }
     .facultywrap{
         padding-bottom: 20px;
+    }
+    .ct2{
+        height: 70px;
+        overflow-x: scroll;
+    }
+    .para{    
+        padding: 0px 14px;
+    }
+    .headwrap{
+        padding-left: 9px;
+        padding-right: 9px;
     }
 }
 

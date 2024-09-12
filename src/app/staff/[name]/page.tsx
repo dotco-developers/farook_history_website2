@@ -32,6 +32,9 @@ export default async function Staff({ params }: any) {
                     <Link href={x.instagram == null ? "" : x.instagram}>
                       <Image src={ic2} alt=""></Image>
                     </Link>
+                    <Link href={x.linkedin == null ? "" : x.linkedin}>
+                      <Image src={ic3} alt=""></Image>
+                    </Link>
                   </div>
                 </div>
                 <div className={styles.bnr}>
@@ -114,6 +117,9 @@ export default async function Staff({ params }: any) {
                     </Link>
                     <Link href={x.instagram == null ? "" : x.instagram}>
                       <Image src={ic2} alt=""></Image>
+                    </Link>
+                    <Link href={x.linkedin == null ? "" : x.linkedin}>
+                      <Image src={ic3} alt=""></Image>
                     </Link>
                   </div>
                 </div>

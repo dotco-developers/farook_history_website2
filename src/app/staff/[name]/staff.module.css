@@ -3,7 +3,6 @@
     overflow-x: hidden;
     min-height: 90vh;
     padding-top: 30px;
-    padding-bottom: 50px;
 }
 .wrap h2{
     color: #982B35;
@@ -99,7 +98,7 @@ padding-bottom: 20px;
     font-family: "poppins";
 }
 .out{
-   margin-top: 60px;
+   margin-top: 0px;
 }
 .sec2 ul{
     font-size: 17px;
@@ -205,6 +204,9 @@ padding-bottom: 20px;
     }
     .out{
         margin-top: 20px;
+    }
+    .pera1{
+        margin-top: 3px;
     }
 
 }

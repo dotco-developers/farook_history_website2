@@ -106,6 +106,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin-top: 67px;
 }
 
 .content .btnwrap {
@@ -168,20 +169,18 @@
 .peogrammehead{
     width: 100%;
     text-align: center;
-    padding-bottom: 90px;
+    padding-bottom: 40px;
 }
 
 .facultywrap {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 4rem;
 }
 .card {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2rem;
 }
 .faccard {
     text-align: center;
@@ -249,12 +248,15 @@
 }
 
 .div3 {
-    height: 50vh;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-bottom: 5rem;
+}
+.outer_main{
+    padding-top: 111px;
+    position: relative;
 }
 .prgdatawrap {
     width: 100%;
@@ -354,6 +356,9 @@
 
 /* Media Queries */
 @media (max-width: 991px) {
+    .card{
+        margin-bottom: 2rem;
+    }
     .righti {
         width: 60%;
         top: -50px;
@@ -363,10 +368,10 @@
         width: 60%;
     }
     .headingfac{
-        padding-top: 200px;
+        padding-top: 170px;
     }
     .peogrammehead{
-        padding-bottom: 150px;
+        padding-bottom: 50px;
     }
     .facultywrap{
         padding-bottom: 20px;
@@ -381,6 +386,9 @@
     .headwrap{
         padding-left: 9px;
         padding-right: 9px;
+    }
+    .outer_main{
+        padding-top: 0px;
     }
 }
 

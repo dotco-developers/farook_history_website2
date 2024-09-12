@@ -84,10 +84,10 @@ export default function Programme() {
   }, [first]);
 
   return (
-    <div className="relative" id={` ${styles.programme}`}>
+    <div className={styles.outer_main}  id={`programme`}>
       <Image src={world} alt="" className={styles.wrld}></Image>
       <div className={styles.peogrammehead}>
-        <h1 id="programme">PROGRAMME</h1>
+        <h1 >PROGRAMME</h1>
       </div>
       <div className={styles.div3}>
         <div className={styles.shape1}></div>

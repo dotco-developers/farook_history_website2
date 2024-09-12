@@ -10,10 +10,10 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 export default  function Faculty({data}:any) {
   return (
-    <div className="relative ">
+    <div className={styles.outer_main} id="faculty">
       <Image src={left} alt="" className={styles.lefti}></Image>
       <Image src={right} alt="" className={styles.righti}></Image>
-      <div className="container" id="faculty">
+      <div className="container">
         <div className={styles.headingfac}  id={styles.faculty}>
           <h1>OUR FACULTY</h1>
         </div>

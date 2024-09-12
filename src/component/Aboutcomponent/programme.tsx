@@ -43,7 +43,7 @@ export default function Programme() {
       description:
         "Admission to Ph.D programme is done as per the guidelines of the University of Calicut. Ph.D.Pprogramme shall be for a minimum duration of three years, including course work and a maximum of six years.",
       details: {
-        duration: "3-5 years",
+        duration: "    3-5 years  ",
         eligibility: "M.A. History",
         intake: "Subject to Availability",
       },
@@ -58,8 +58,8 @@ export default function Programme() {
   const [first, setfirst] = useState(true);
   const [data, setData] = useState<ProgrammeData | null>(jsondatate[0]);
   const [jsondata, setJsonData] = useState<ProgrammeData[]>(jsondatate);
-  const [id, setid] = useState(jsondatate[0].id)
-
+  const [id, setid] = useState(jsondatate[0].id);
+  const [active, setactive] = useState(false)
   function handle(id_: number) {
     const temp = jsondata.find((x) => x.id === id_);
     if (temp) {
@@ -67,17 +67,27 @@ export default function Programme() {
     }
     setload(!load);
   }
+  let i = 0;
+  const autochange = () => {
+    if (i < jsondata.length) {
+      setData(jsondata[i]);
+      setid(jsondata[i]?.id)
+      i++;
+    } else {
+      i = 0; 
+    }
+  };
 
   useEffect(() => {
-    const interval = setInterval(handle, 5000); // Change cards every 5 seconds
+    const interval = setInterval(autochange, 5000); // Change cards every 5 seconds
     return () => clearInterval(interval); // Cleanup function to clear interval on unmount
   }, [first]);
 
   return (
-    <div className="relative" id={` ${styles.programme}`}>
+    <div className={styles.outer_main}  id={`programme`}>
       <Image src={world} alt="" className={styles.wrld}></Image>
       <div className={styles.peogrammehead}>
-        <h1 id="programme">PROGRAMME</h1>
+        <h1 >PROGRAMME</h1>
       </div>
       <div className={styles.div3}>
         <div className={styles.shape1}></div>
@@ -98,17 +108,16 @@ export default function Programme() {
                 <p>{data?.description}</p>
               </div>
               <div className={styles.prgdatawrap}>
-                <div className={styles.prgdatawrap1}>
-                  <div className={styles.prgdata}>Duration</div>
-                  <div className={styles.prgdata}>Eligibility</div>
-                  <div className={styles.prgdata}>Intake</div>
+                <div className={styles.headout}>
+                  <div className={styles.head1}>Duration</div>
+                  <div className={styles.head2}>Eligibility</div>
+                  <div className={styles.head3}>Intake</div>
                 </div>
-                <div className={styles.prgdatawrap2}>
-                  <div className={styles.prgdata}>{data?.details.duration}</div>
-                  <div className={styles.prgdata}>
-                    {data?.details.eligibility}
-                  </div>
-                  <div className={styles.prgdata}>{data?.details.intake}</div>
+                {/* Content Section */}
+                <div className={styles.ctnwrap}>
+                  <div className={styles.ct1}>{data?.details.duration}</div>
+                  <div className={styles.ct2}>{data?.details.eligibility}</div>
+                  <div className={styles.ct3}>{data?.details.intake}</div>
                 </div>
               </div>
             </div>
@@ -118,8 +127,11 @@ export default function Programme() {
               <button
                 key={index}
                 className={styles.btn1}
-                onClick={() => {handle(x.id);setid(x.id)}}
-                style={{ backgroundColor: x.id==id ? "#982B35" : "#515151" }}
+                onClick={() => {
+                  handle(x.id);
+                  setid(x.id);
+                }}
+                style={{ backgroundColor:id===x.id ?"#982B35" : "#515151" }}
               ></button>
             ))}
           </div>

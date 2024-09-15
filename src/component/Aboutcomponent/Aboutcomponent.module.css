@@ -19,7 +19,7 @@
 
 .counter {
     display: flex;
-    width: auto;
+    width: 100%;
     align-items: center;
     padding-top: 4rem;
     padding-bottom: 8rem;
@@ -125,6 +125,7 @@
 .headwrap .title {
     color: #982B35;
     font-family: "Madimi One", sans-serif;
+    font-size: 27px;
 }
 .icon1 {
     font-size: 2.7rem;
@@ -161,15 +162,18 @@
 .headingfac h1 {
     color: #982B35;
     font-family: "Madimi One", sans-serif;
+    font-size: 35px;
 }
 .peogrammehead h1{
     color: #982B35;
     font-family: "Madimi One", sans-serif;
+    font-size: 35px;
 }
 .peogrammehead{
     width: 100%;
     text-align: center;
     padding-bottom: 40px;
+    padding-top: 10x;
 }
 
 .facultywrap {

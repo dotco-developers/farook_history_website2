@@ -19,7 +19,7 @@ export default async function Centers({params}:any) {
       <div className="container">
         <div className="row">
           <div className="col-lg-12  col-12">
-            <h2 className={styles.head}>Centers</h2>
+            <h2 className={styles.head}>Centres</h2>
           </div>
           {data.map((x: any, i: number) => (
             <div className="col-lg-4 col-md-6 col-12" key={i}>

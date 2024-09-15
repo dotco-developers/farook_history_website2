@@ -28,7 +28,8 @@
     padding: 3px 20px;
     margin-top:54px;
     display: block;
-    float: right;
+    margin-left: auto;
+    margin-right: auto;
 }
 .ic{
     margin-left: 6px;

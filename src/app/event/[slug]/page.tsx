@@ -14,7 +14,7 @@ import { event_innner_datafetcher, eventhost_datafetcher, eventimages_datafetche
 
 export default async function Eventinner({params}:any) {
   const data=await event_innner_datafetcher(params.slug)
-  const eventhost=await eventhost_datafetcher()
+  const eventhost=await eventhost_datafetcher(params.slug)
   const image =await eventimages_datafetcher(params.slug)
   const video =await eventvideo_datafetcher()
 
@@ -73,7 +73,7 @@ export default async function Eventinner({params}:any) {
                   <div className={`col-lg-4 ${styles.card}`} key={index}>
                   <div className={styles.faccard}>
                     <div className={styles.facimgdiv}>
-                      <Image className={styles.facimg1} width={200} height={200} src={x.image} alt="" />
+                      <Image className={styles.facimg1} width={200} height={200} src={item.image} alt="" />
                     </div>
                     <div className={styles.facdata}>
                       <h4>{item.name}</h4>

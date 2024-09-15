@@ -114,6 +114,9 @@ margin-top: 72px;
     margin-top: 20px;
    
   }
+  .p4{
+    margin-top: 8px;
+  }
 @media(max-width:1199px){
     .gl{
         height: 73%;

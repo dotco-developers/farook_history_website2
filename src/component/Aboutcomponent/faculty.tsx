@@ -61,63 +61,6 @@ export default  function Faculty({data}:any) {
               </div>
             ))}
 
-            {/* <div className={`col-lg-4 ${styles.card}`}>
-              <div className={styles.faccard}>
-                <div className={styles.facimgdiv}>
-                  <Image className={styles.facimg1} src={fac1} alt="" />
-                </div>
-                <div className={styles.facdata}>
-                  <h4>Full Name</h4>
-                  <h6>Designation</h6>
-                </div>
-                <div className={styles.facicons}>
-                  <Image src={insta} alt="" className={styles.iconimg}></Image>
-                  <Image src={mail} alt="" className={styles.iconimg}></Image>
-                  <Image src={lin} alt="" className={styles.iconimg}></Image>
-                </div>
-                <div className={styles.readmore}>
-                  <a href="http://">More Info</a>{" "}
-                </div>
-              </div>
-            </div>
-            <div className={`col-lg-4 ${styles.card}`}>
-              <div className={styles.faccard}>
-                <div className={styles.facimgdiv}>
-                  <Image className={styles.facimg1} src={fac1} alt="" />
-                </div>
-                <div className={styles.facdata}>
-                  <h4>Full Name</h4>
-                  <h6>Designation</h6>
-                </div>
-                <div className={styles.facicons}>
-                  <Image src={insta} alt="" className={styles.iconimg}></Image>
-                  <Image src={mail} alt="" className={styles.iconimg}></Image>
-                  <Image src={lin} alt="" className={styles.iconimg}></Image>
-                </div>
-                <div className={styles.readmore}>
-                  <a href="http://">More Info</a>{" "}
-                </div>
-              </div>
-            </div>
-            <div className={`col-lg-4 ${styles.card}`}>
-              <div className={styles.faccard}>
-                <div className={styles.facimgdiv}>
-                  <Image className={styles.facimg1} src={fac1} alt="" />
-                </div>
-                <div className={styles.facdata}>
-                  <h4>Full Name</h4>
-                  <h6>Designation</h6>
-                </div>
-                <div className={styles.facicons}>
-                  <Image src={insta} alt="" className={styles.iconimg}></Image>
-                  <Image src={mail} alt="" className={styles.iconimg}></Image>
-                  <Image src={lin} alt="" className={styles.iconimg}></Image>
-                </div>
-                <div className={styles.readmore}>
-                  <a href="http://">More Info</a>{" "}
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>

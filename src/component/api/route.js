@@ -43,10 +43,10 @@ export async function event_home_datafetcher() {
   }
 }
 
-export async function eventhost_datafetcher() {
+export async function eventhost_datafetcher(id) {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/eventhost/`,
+      `${process.env.NEXT_PUBLIC_BASE_URL}/eventhost/?event=${id}`,
       {
         method: "GET",
         cache: "no-store",
@@ -391,21 +391,7 @@ export async function Research_scholar_datafetcher() {
   }
 }
 
-export async function programme_datafetcher() {
-  try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/program/`,
-      {
-        method: "get",
-        cache: "no-cache",
-      }
-    );
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.log("error in fetching programme data");
-  }
-}
+
 
 export async function center_datafetcher() {
   try {
@@ -543,5 +529,23 @@ export async function About_countup_datafetcher() {
     return countup;
   } catch (error) {
     console.log("error in fetching abot counter  data");
+  }
+}
+
+
+
+export async function programme_datafetcher() {
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/program/`,
+      {
+        method: "get",
+        cache: "no-cache",
+      }
+    );
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log("error in fetching program  data");
   }
 }

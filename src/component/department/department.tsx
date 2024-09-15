@@ -23,6 +23,13 @@ export default function department() {
               of dissertation by the candidate for the fulfillment of the
               requirements of the University of Calicut.
             </p>
+          </div>
+          <div className={`col-lg-6 col-md-12 col-12 ${styles.algn}`}>
+            <div className={styles.im}>
+              <Image src={im} className={styles.im1} alt=""></Image>
+            </div>
+          </div>
+          <div className="col-lg-12 col-md-12 col-12">
             <Link href="/about">
               <button className={styles.btn}>
                 More
@@ -31,11 +38,6 @@ export default function department() {
                 </span>{" "}
               </button>
             </Link>
-          </div>
-          <div className={`col-lg-6 col-md-12 col-12 ${styles.algn}`}>
-            <div className={styles.im}>
-              <Image src={im} className={styles.im1} alt=""></Image>
-            </div>
           </div>
         </div>
       </div>

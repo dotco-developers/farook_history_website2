@@ -87,4 +87,12 @@
     .ftr h6{
         font-size: 22px;
     }
+    .wrap_ic{
+      justify-content: center;
+    }
+    .logo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

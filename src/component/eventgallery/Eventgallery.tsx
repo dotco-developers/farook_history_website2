@@ -37,7 +37,7 @@ export default function Gallery({ image, video }: any) {
           {image.map((x: any, i: number) => (
             <div className="col-lg-4 col-12" key={i}>
               <Link href={x.image} target="_blank">
-                <Image width={300} height={300} src={x.image} alt="" className={styles.im}></Image>
+                <Image width={400} height={400} src={x.image} alt="" className={styles.im}></Image>
               </Link>
             </div>
           ))}

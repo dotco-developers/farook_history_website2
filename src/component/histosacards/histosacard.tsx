@@ -12,7 +12,7 @@ import Link from "next/link";
 export default function Histosacard({ url, handler, item }: any) {
   return (
     <div className={`${styles.r_out} row`}>
-      <div className="col-lg-3 col-md-6 col-12">
+      <div className="col-lg-3 col-md-6 col-6">
         <div
           className={`${styles.card} ${item == "card1" ? styles.click : ""} `}
           onClick={() => {
@@ -24,7 +24,6 @@ export default function Histosacard({ url, handler, item }: any) {
               src={commi}
               alt=""
               className={styles.mainic}
-              style={{ marginLeft: "10px" }}
             ></Image>
           </div>
           <h3>EXECUTIVE COMMITTEE</h3>
@@ -34,7 +33,7 @@ export default function Histosacard({ url, handler, item }: any) {
           </p>
         </div>
       </div>
-      <div className="col-lg-3 col-md-6 col-12">
+      <div className="col-lg-3 col-md-6 col-6">
         <div
           className={`${styles.card} ${item == "card2" ? styles.click : ""} `}
           onClick={() => {
@@ -46,7 +45,6 @@ export default function Histosacard({ url, handler, item }: any) {
               src={rep}
               alt=""
               className={styles.mainic}
-              style={{ marginLeft: "10px" }}
             ></Image>
           </div>
           <h3>REPORTS</h3>
@@ -56,7 +54,7 @@ export default function Histosacard({ url, handler, item }: any) {
           </p>
         </div>
       </div>
-      <div className="col-lg-3 col-md-6 col-12">
+      <div className="col-lg-3 col-md-6 col-6">
         <div
           className={`${styles.card} ${item == "card3" ? styles.click : ""} `}
           onClick={() => {
@@ -68,7 +66,6 @@ export default function Histosacard({ url, handler, item }: any) {
               src={activity}
               alt=""
               className={styles.mainic}
-              style={{ marginLeft: "10px" }}
             ></Image>
           </div>
           <h3>ACTIVITIES</h3>
@@ -78,7 +75,7 @@ export default function Histosacard({ url, handler, item }: any) {
           </p>
         </div>
       </div>
-      <div className="col-lg-3 col-md-6 col-12">
+      <div className="col-lg-3 col-md-6 col-6">
         <div
           className={`${styles.card} ${item == "card4" ? styles.click : ""} `}
           onClick={() => {
@@ -90,7 +87,6 @@ export default function Histosacard({ url, handler, item }: any) {
               src={gl}
               alt=""
               className={styles.mainic}
-              style={{ marginLeft: "10px" }}
             ></Image>
           </div>
           <h3>GALLERY</h3>

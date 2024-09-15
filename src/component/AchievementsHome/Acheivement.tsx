@@ -43,7 +43,7 @@ export default function News({
                 ></Image>
                 <div className="px-4 mt-1">
                   <p className=" text-black font-medium ">{item.name}</p>
-                  <p className="text-[13px] mt-2">{item.designation}</p>
+                  <p className="text-[13px]">{item.designation}</p>
                   <div
                     className={styles.p4}
                     dangerouslySetInnerHTML={{ __html: item.description }}

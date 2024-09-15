@@ -1,33 +1,31 @@
-"use client"
+"use client";
 import { useEffect, useState } from "react";
-import styles from "./Aboutcomponent.module.css"
+import styles from "./Aboutcomponent.module.css";
 import CountUp from "react-countup";
-export default function About({data,countup}:any){
-  
-  const [countupdata, setcountupdata] = useState([])
+export default function About({ data, countup }: any) {
+  const [countupdata, setcountupdata] = useState([]);
   useEffect(() => {
-    setcountupdata(countup)
-  }, [countup])
-  
+    setcountupdata(countup);
+  }, [countup]);
 
-    return(
-        <div className={styles.headmain}>
-        <div className="container">
-          <div className="row">
-            <div className={`col-lg-10 col-12 ${styles.headsub}`}>
-              <h1>ABOUT US</h1>
-              <br />
-              <br />
-              {
-                data?.map((x:any,i:number)=>(
-                  <div dangerouslySetInnerHTML={{__html:x.description}} key={i}>
-                  
-                </div>
-                ))
-              }
-            </div>
+  return (
+    <div className={styles.headmain}>
+      <div className="container">
+        <div className="row">
+          <div className={`col-lg-10 col-12 ${styles.headsub}`}>
+            <h1>ABOUT US</h1>
+            <br />
+            <br />
+            {data?.map((x: any, i: number) => (
+              <div
+                dangerouslySetInnerHTML={{ __html: x.description }}
+                key={i}
+              ></div>
+            ))}
+          </div>
+          {countupdata ? (
             <div className={styles.counter}>
-              {countupdata?.map((x: any,i:number) => (
+              {countupdata?.map((x: any, i: number) => (
                 <div
                   className={`col-lg-3 col-12 ${styles.countersub} `}
                   key={i}
@@ -51,8 +49,11 @@ export default function About({data,countup}:any){
                 </div>
               ))}
             </div>
-          </div>
+          ) : (
+            ""
+          )}
         </div>
       </div>
-    )
+    </div>
+  );
 }

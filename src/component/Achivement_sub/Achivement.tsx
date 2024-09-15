@@ -1,8 +1,6 @@
 "use client";
 import { Component, useEffect, useState } from "react";
 import styles from "./achievement.module.css";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/css/bootstrap.css";
 import im from "../../../public/icons grey/fac1.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faLocationPin } from "@fortawesome/free-solid-svg-icons";
@@ -14,7 +12,7 @@ import Image from "next/image";
 import fca1 from "../../../public/icons grey/fca2.png";
 import CountUp from "react-countup";
 
-export default function Achivement({data}:any) {
+export default function Achivement({ data }: any) {
   const [counterdata, setcounterdata] = useState([]);
 
   useEffect(() => {
@@ -36,13 +34,10 @@ export default function Achivement({data}:any) {
     const interval = setInterval(handle, 5000);
     return () => clearInterval(interval);
   }, [first]);
- 
 
   useEffect(() => {
-     setcounterdata(data?.countup)
-  }, [counterdata])
-  
-  
+    setcounterdata(data?.countup);
+  }, [counterdata]);
 
   return (
     <section id={styles.about}>
@@ -67,28 +62,32 @@ export default function Achivement({data}:any) {
           </div>
         </div>
       </div>
-      <div className={styles.counter}>
-        {counterdata?.map((x: any, i: number) => (
-          <div className={`col-lg-3 col-12 ${styles.countersub} `} key={i}>
-            <h3>
-              <CountUp
-                start={0}
-                end={x.count}
-                duration={4}
-                decimals={0}
-                suffix="+"
-              >
-                {({ countUpRef, start }) => (
-                  <div>
-                    <span ref={countUpRef} />
-                  </div>
-                )}
-              </CountUp>
-            </h3>
-            <h5>{x.name}</h5>
-          </div>
-        ))}
-      </div>
+      {counterdata ? (
+        <div className={styles.counter}>
+          {counterdata?.map((x: any, i: number) => (
+            <div className={`col-lg-3 col-12 ${styles.countersub} `} key={i}>
+              <h3>
+                <CountUp
+                  start={0}
+                  end={x.count}
+                  duration={4}
+                  decimals={0}
+                  suffix="+"
+                >
+                  {({ countUpRef, start }) => (
+                    <div>
+                      <span ref={countUpRef} />
+                    </div>
+                  )}
+                </CountUp>
+              </h3>
+              <h5>{x.name}</h5>
+            </div>
+          ))}
+        </div>
+      ) : (
+        ""
+      )}
 
       {/* <div className={styles.carousel} {...swipeHandlers}>
         <button className={styles.arrow} onClick={prevSlide}>
@@ -143,12 +142,18 @@ export default function Achivement({data}:any) {
             <div className="container">
               <div className="row">
                 {data?.facultydata?.map((x: any, i: number) => (
-                  <div className={styles.card} key={i} style={{width:"90%",marginLeft:'auto',marginRight:"auto"}} >
+                  <div
+                    className={styles.card}
+                    key={i}
+                    style={{
+                      width: "90%",
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                    }}
+                  >
                     <div className="row">
                       <Link href={`${x.cv}`}>
-                      <button className={styles.btncv}>
-                        Download CV
-                      </button>
+                        <button className={styles.btncv}>Download CV</button>
                       </Link>
 
                       <div className={`col-lg-4 col-12 ${styles.cardimg}`}>
@@ -170,7 +175,7 @@ export default function Achivement({data}:any) {
                           />{" "}
                           {x.date}
                         </h4>
-                       
+
                         <br />
                         <h5>{x.designation}</h5>
                         <br />
@@ -188,18 +193,24 @@ export default function Achivement({data}:any) {
             <div className="container">
               <div className="row">
                 {data?.studentdata?.map((x: any, i: number) => (
-                  <div className={styles.card} key={i} style={{width:"90%",marginLeft:'auto',marginRight:"auto"}} >
+                  <div
+                    className={styles.card}
+                    key={i}
+                    style={{
+                      width: "90%",
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                    }}
+                  >
                     <div className="row">
                       <Link href={`${x.cv}`}>
-                      <button className={styles.btncv}>
-                        Download CV
-                      </button>
+                        <button className={styles.btncv}>Download CV</button>
                       </Link>
 
                       <div className={`col-lg-4 col-12 ${styles.cardimg}`}>
                         <Image
-                           width={300}
-                           height={200}
+                          width={300}
+                          height={200}
                           src={x.image}
                           alt=""
                           className={styles.imgcard}
@@ -215,7 +226,7 @@ export default function Achivement({data}:any) {
                           />{" "}
                           {x.date}
                         </h4>
-                       
+
                         <br />
                         <h5>{x.designation}</h5>
                         <br />

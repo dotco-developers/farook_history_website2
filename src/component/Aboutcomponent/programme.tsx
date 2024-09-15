@@ -6,49 +6,48 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import world from "../../../public/icons grey/world.png";
 import { useInView } from "framer-motion";
+import Link from "next/link";
 
-export default function Programme() {
+export default function Programme({programdata}:any) {
   type ProgrammeData = {
     id: number;
-    title: string;
+    course: string;
     syllabus: string;
     syllabusIcon: string;
-    description: string;
-    details: {
-      duration: string;
-      eligibility: string;
-      intake: string;
-    };
+    description: TrustedHTML;
+    duration: string;
+    eligibility: string;
+    intake: string;
   };
 
-  const jsondatate: ProgrammeData[] = [
-    {
-      id: 0,
-      title: "MA HISTORY",
-      syllabus: "SYLLABUS",
-      syllabusIcon: "FaRegFilePdf",
-      description:
-        "The curriculum of the P.G. course carries specialization in Islamic History enabling the students to enjoy the benefits that go along with History and Islamic History programme structure.",
-      details: {
-        duration: "4 Semesters",
-        eligibility: "Any degree with 45% of marks for part III of CGPA 2",
-        intake: "20",
-      },
-    },
-    {
-      id: 1,
-      title: "Ph. D",
-      syllabus: "SYLLABUS",
-      syllabusIcon: "FaRegFilePdf",
-      description:
-        "Admission to Ph.D programme is done as per the guidelines of the University of Calicut. Ph.D.Pprogramme shall be for a minimum duration of three years, including course work and a maximum of six years.",
-      details: {
-        duration: "    3-5 years  ",
-        eligibility: "M.A. History",
-        intake: "Subject to Availability",
-      },
-    },
-  ];
+  // const jsondatate: ProgrammeData[] = [
+  //   {
+  //     id: 0,
+  //     title: "MA HISTORY",
+  //     syllabus: "SYLLABUS",
+  //     syllabusIcon: "FaRegFilePdf",
+  //     description:
+  //       "The curriculum of the P.G. course carries specialization in Islamic History enabling the students to enjoy the benefits that go along with History and Islamic History programme structure.",
+  //     details: {
+  //       duration: "4 Semesters",
+  //       eligibility: "Any degree with 45% of marks for part III of CGPA 2",
+  //       intake: "20",
+  //     },
+  //   },
+  //   {
+  //     id: 1,
+  //     title: "Ph. D",
+  //     syllabus: "SYLLABUS",
+  //     syllabusIcon: "FaRegFilePdf",
+  //     description:
+  //       "Admission to Ph.D programme is done as per the guidelines of the University of Calicut. Ph.D.Pprogramme shall be for a minimum duration of three years, including course work and a maximum of six years.",
+  //     details: {
+  //       duration: "    3-5 years  ",
+  //       eligibility: "M.A. History",
+  //       intake: "Subject to Availability",
+  //     },
+  //   },
+  // ];
 
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -56,9 +55,9 @@ export default function Programme() {
   const [load, setload] = useState(true);
 
   const [first, setfirst] = useState(true);
-  const [data, setData] = useState<ProgrammeData | null>(jsondatate[0]);
-  const [jsondata, setJsonData] = useState<ProgrammeData[]>(jsondatate);
-  const [id, setid] = useState(jsondatate[0].id);
+  const [data, setData] = useState<ProgrammeData | null>(programdata[0]);
+  const [jsondata, setJsonData] = useState<ProgrammeData[]>(programdata);
+  const [id, setid] = useState(programdata[0].id);
   const [active, setactive] = useState(false)
   function handle(id_: number) {
     const temp = jsondata.find((x) => x.id === id_);
@@ -96,16 +95,18 @@ export default function Programme() {
             <div className="container">
               <div className={styles.headwrap}>
                 <div className={styles.title}>
-                  <h1>{data?.title}</h1>
+                  <h1>{data?.course}</h1>
                 </div>
                 <div className={styles.icon}>
-                  <button className="flex">
-                    {data?.syllabus} <FaRegFilePdf className="ml-3 mt-[4px]" />
+                  <Link href={`${data?.syllabus}`} style={{textDecoration:"none"}}>
+                  <button style={{display:"flex"}}>
+                    Syllabus <FaRegFilePdf style={{marginLeft:"8px"}} />
                   </button>
+                  </Link>
                 </div>
               </div>
               <div className={styles.para}>
-                <p>{data?.description}</p>
+                <div dangerouslySetInnerHTML={{__html:data?.description || ""}}></div>
               </div>
               <div className={styles.prgdatawrap}>
                 <div className={styles.headout}>
@@ -115,9 +116,9 @@ export default function Programme() {
                 </div>
                 {/* Content Section */}
                 <div className={styles.ctnwrap}>
-                  <div className={styles.ct1}>{data?.details.duration}</div>
-                  <div className={styles.ct2}>{data?.details.eligibility}</div>
-                  <div className={styles.ct3}>{data?.details.intake}</div>
+                  <div className={styles.ct1}>{data?.duration}</div>
+                  <div className={styles.ct2}>{data?.eligibility}</div>
+                  <div className={styles.ct3}>{data?.intake}</div>
                 </div>
               </div>
             </div>

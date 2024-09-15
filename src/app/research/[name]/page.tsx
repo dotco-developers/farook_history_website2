@@ -27,7 +27,7 @@ export default function Research({ params }: any) {
             <div className="col-lg-12  col-12">
               <h2 className={styles.head}>Research</h2>
             </div>
-            <div className="col-lg-4 col-md-12 col-12">
+            <div className="col-lg-4 col-md-12 col-6">
               <Link href={"/research/guide"} style={{ textDecoration: "none" }}>
                 <div
                   className={`${styles.card} ${
@@ -46,7 +46,7 @@ export default function Research({ params }: any) {
                 </div>
               </Link>
             </div>
-            <div className="col-lg-4 col-md-12 col-12">
+            <div className="col-lg-4 col-md-12 col-6">
               <Link
                 href={"/research/scholars"}
                 style={{ textDecoration: "none" }}
@@ -73,7 +73,7 @@ export default function Research({ params }: any) {
                 </div>
               </Link>
             </div>
-            <div className="col-lg-4  col-md-12  col-12">
+            <div className="col-lg-4  col-md-12  col-6">
               <Link
                 href={"/research/produced"}
                 style={{ textDecoration: "none" }}

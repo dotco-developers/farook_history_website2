@@ -18,17 +18,16 @@
   
   .facultywrap {
     display: flex;
-    justify-content: center;
     align-items: center;
   }
   
-  .card{
+  /* .card{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 2rem;
    
-}
+} */
 .faccard{
     text-align: center;
     background-color: #79797933;

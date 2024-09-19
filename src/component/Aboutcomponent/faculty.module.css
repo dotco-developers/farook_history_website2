@@ -1,122 +1,128 @@
-.outer_main {
+.outer_main_final {
     padding-top: 111px;
     position: relative;
   }
   
-  .headingfac {
+  .headingfac_final {
     width: 100%;
     text-align: center;
     padding: 40px 0px;
     padding-top: 50px;
   }
   
-  .headingfac h1 {
+  .headingfac_final h1 {
     color: #982b35;
     font-family: "Madimi One", sans-serif;
     font-size: 35px;
   }
   
-  .facultywrap {
+  .facultywrap_final {
     display: flex;
     align-items: center;
   }
   
-  /* .card{
+  /* .card_final{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 2rem;
-   
-} */
-.faccard{
+  } */
+  
+  .faccardmain_final {
     text-align: center;
     background-color: #79797933;
     margin: 0px 10px;
     padding: 1rem 1rem;
     padding-bottom: 2.5rem;
-   max-width: 200px;
+    max-width: 200px;
     border-radius: 500px 500px 500px 500px;
     position: relative;
     transition: 2s ease-in-out;
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-.readmore{
+  }
+  
+  .readmore_final {
     opacity: 0;
     position: absolute;
     bottom: 6%;
     left: 30%;
     transform: translate(-50% -50%);
     transition: 1s ease-in;
-    
-}
-.readmore a{
+  }
+  
+  .readmore_final a {
     font-family: "poppins";
     font-style: normal;
     text-decoration: none;
     color: #982B35;
-}
-
-.faccard:hover{
+  }
+  
+  .faccardmain_final:hover {
     padding-bottom: 5rem;
     transition: .5s ease-in-out;
-}
-.faccard:hover .readmore{
+  }
+  
+  .faccardmain_final:hover .readmore_final {
     opacity: 1;
-   
-   
-}
-.iconimg{
+  }
+  
+  .iconimg_final {
     color: #982B35;
     font-size: 2.5rem;
     width: 50px;
     height: 50px;
-}
-
-
-.facimg1{
+  }
+  
+  .facimg1_final {
     width: 150px;
     height: 150px;
     object-fit: cover;
     border-radius: 50%;
     margin: auto;
-}
-.facicons{
+  }
+  
+  .facicons_final {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.iconimg{
+  }
+  
+  .iconimg_final {
     color: #982B35;
     font-size: 2.5rem;
-}
-.facdata{
+  }
+  
+  .facdata_final {
     padding-top: 1rem;
-}
-.facdata h4{
+  }
+  
+  .facdata_final h4 {
     color: #982B35;
-    font-family:"poppins";
+    font-family: "poppins";
     font-weight: 500;
-}
-.facdata h6{
+  }
+  
+  .facdata_final h6 {
     color: black;
     font-family: "poppins";
     font-weight: 300;
-}
-  .lefti,
-  .righti {
+  }
+  
+  .lefti_final,
+  .righti_final {
     position: absolute;
     opacity: 0.1;
   }
   
-  .lefti {
+  .lefti_final {
     left: 0;
     top: -270px;
     width: 50%;
   }
   
-  .righti {
+  .righti_final {
     right: 0;
     top: -257px;
     width: 50%;
@@ -124,29 +130,29 @@
   
   /* Media Queries */
   @media (max-width: 991px) {
-    .card {
+    .card_final {
       margin-bottom: 2rem;
     }
   
-    .righti {
+    .righti_final {
       width: 60%;
       top: -50px;
     }
   
-    .lefti {
+    .lefti_final {
       top: -50px;
       width: 60%;
     }
   
-    .headingfac {
+    .headingfac_final {
       padding-top: 170px;
     }
   
-    .facultywrap {
+    .facultywrap_final {
       padding-bottom: 20px;
     }
   
-    .outer_main {
+    .outer_main_final {
       padding-top: 0px;
     }
   }

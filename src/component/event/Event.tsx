@@ -31,7 +31,7 @@ const Example = ({ eventdata }: any) => {
             ></Image>
           </div>
         <div className={`${styles.c_out2} col-lg-6 col-12`}>
-          <h2 className={styles.head}>{x.venue}</h2>
+          <h2 className={styles.head}>{x.title}</h2>
           <div
             className={styles.pera}
             dangerouslySetInnerHTML={{ __html: x.description }}

@@ -179,7 +179,7 @@ export async function testimonials_home_datafetcher() {
       }
     );
     const temp = await response.json();
-    const data = temp.slice(0, 6).reverse();
+    const data =temp.reverse()
     return data;
   } catch (error) {
     console.log("error in fetching  testimonials home data");

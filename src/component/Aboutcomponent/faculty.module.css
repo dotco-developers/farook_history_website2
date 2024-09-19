@@ -41,29 +41,19 @@
   }
   
   .readmore_final {
-    opacity: 0;
-    position: absolute;
-    bottom: 6%;
-    left: 30%;
-    transform: translate(-50% -50%);
-    transition: 1s ease-in;
+   position: relative;
+   margin-top: 9px;
   }
   
   .readmore_final a {
+
     font-family: "poppins";
     font-style: normal;
     text-decoration: none;
     color: #982B35;
   }
   
-  .faccardmain_final:hover {
-    padding-bottom: 5rem;
-    transition: .5s ease-in-out;
-  }
   
-  .faccardmain_final:hover .readmore_final {
-    opacity: 1;
-  }
   
   .iconimg_final {
     color: #982B35;

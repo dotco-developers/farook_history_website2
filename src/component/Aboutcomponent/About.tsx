@@ -10,6 +10,8 @@ export default function About({ data }: any) {
         const response =await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/countup/`)
         const countuptemp=await response.json()
         setcountupdata(countuptemp);
+        console.log("counter data",countupdata);
+        
       } catch (error) {
         console.log("error in fetching countup about page ",error);
         
@@ -42,7 +44,7 @@ export default function About({ data }: any) {
                 >
                   <h3>
                     <CountUp
-                      start={0}
+                      start={x.count}
                       end={x.count}
                       duration={4}
                       decimals={0}

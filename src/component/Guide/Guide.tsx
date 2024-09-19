@@ -33,7 +33,7 @@ export default async function Guide() {
                     <Link href={x.instagram==null ? "" : x.instagram}>
                     <Image src={insta} alt="" className={styles.iconimg}></Image>
                     </Link>
-                    <Link href={x.email==null ? "" : x.email}>
+                    <Link href={x.email==null ? "" : `mailto:${x.email}`}>
                       <Image src={mail} alt="" className={styles.iconimg}></Image>
                     </Link>
                     <Link href={x.linkedin==null ? "" : x.linkedin}>

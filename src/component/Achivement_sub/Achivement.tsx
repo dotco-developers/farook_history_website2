@@ -78,7 +78,7 @@ export default function Achivement({ data }: any) {
             <div className={`col-lg-3 col-12 ${styles.countersub} `} key={i}>
               <h3>
                 <CountUp
-                  start={0}
+                  start={x.count}
                   end={x.count}
                   duration={4}
                   decimals={0}

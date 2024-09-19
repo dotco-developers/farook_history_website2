@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import styles from "./Aboutcomponent.module.css";
 import CountUp from "react-countup";
-export default function About({ data }: any) {
+export default function About({ data ,countup}: any) {
   const [countupdata, setcountupdata] = useState([]);
   useEffect(() => {
     const fetchdata=async()=>{
@@ -11,8 +11,7 @@ export default function About({ data }: any) {
         const countuptemp=await response.json()
         setcountupdata(countuptemp);
       } catch (error) {
-        console.log("error in fetching countup about page ",error);
-        
+        console.log("error in fetching countup about page ",error);   
       }
     } 
     fetchdata() 
@@ -33,16 +32,16 @@ export default function About({ data }: any) {
               ></div>
             ))}
           </div>
-          {countupdata ? (
+          {countupdata && countupdata.length > 0 ? (
             <div className={styles.counter}>
-              {countupdata?.map((x: any, i: number) => (
+              {countupdata.map((x: any, i: number) => (
                 <div
-                  className={`col-lg-3 col-12 ${styles.countersub} `}
+                  className={`col-lg-3 col-12 ${styles.countersub}`}
                   key={i}
                 >
                   <h3>
                     <CountUp
-                      start={0}
+                      start={x.count}
                       end={x.count}
                       duration={4}
                       decimals={0}
@@ -60,7 +59,9 @@ export default function About({ data }: any) {
               ))}
             </div>
           ) : (
-            ""
+            <div className={styles.counter}>
+
+            </div>
           )}
         </div>
       </div>

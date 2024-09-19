@@ -107,6 +107,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 67px;
+    z-index: -1;
 }
 
 .content .btnwrap {
@@ -188,7 +189,7 @@
     margin-bottom: 2rem;
    
 }
-.faccard{
+.faccardmain{
     text-align: center;
     background-color: #79797933;
     margin: 0px 10px;
@@ -203,28 +204,28 @@
     margin-right: auto;
 }
 .readmore{
-    opacity: 0;
-    position: absolute;
+    display: none;
+    /* position: absolute;
     bottom: 6%;
     left: 30%;
-    transform: translate(-50% -50%);
+    transform: translate(-50% -50%); */
     transition: 1s ease-in;
-    
 }
 .readmore a{
     font-family: "poppins";
     font-style: normal;
     text-decoration: none;
     color: #982B35;
+    transition: .5s all ease-in-out;
 }
 
-.faccard:hover{
+/* .faccardmain:hover{
     padding-bottom: 5rem;
     transition: .5s ease-in-out;
-}
-.faccard:hover .readmore{
-    opacity: 1;
-   
+} */
+.faccardmain:hover .readmore{
+display: block;   
+transition: .5s all ease-in-out;
    
 }
 .iconimg{

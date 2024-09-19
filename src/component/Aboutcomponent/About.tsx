@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import styles from "./Aboutcomponent.module.css";
 import CountUp from "react-countup";
-export default function About({ data }: any) {
+export default function About({ data ,countup}: any) {
   const [countupdata, setcountupdata] = useState([]);
   useEffect(() => {
     const fetchdata=async()=>{
@@ -33,7 +33,7 @@ export default function About({ data }: any) {
               ></div>
             ))}
           </div>
-          {countupdata && countupdata.length > 0 ? (
+          {countup && countup.length > 0 ? (
             <div className={styles.counter}>
               {countupdata.map((x: any, i: number) => (
                 <div

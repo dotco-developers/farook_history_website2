@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from "@/component/Footer/Footer";
 import Navbar from "../component/navbar/Navbar"
-import { center_for_navbar_datafetcher } from "../component/api/route";
 
 
 const inter = Inter({ subsets: ["latin"] });

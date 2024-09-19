@@ -11,14 +11,13 @@ export default  function Faculty({data}:any) {
     <div className={styles.outer_main} id="faculty">
       <Image src={left} alt="" className={styles.lefti}></Image>
       <Image src={right} alt="" className={styles.righti}></Image>
-      <div className="container">
         <div className={styles.headingfac}  id={styles.faculty}>
           <h1>OUR FACULTY</h1>
         </div>
         <div className={styles.facultywrap}>
-          <div className="row">
+          <div className="row" style={{width:"100%"}}>
             {data?.map((x: any, i: number) => (
-              <div className={`col-lg-4 ${styles.card}`} key={i}>
+              <div className={`col-lg-4 col-12 ${styles.card}`} key={i}>
                 <div className={styles.faccard}>
                   <div className={styles.facimgdiv}>
                     <Image
@@ -41,7 +40,7 @@ export default  function Faculty({data}:any) {
                       className={styles.iconimg}
                     ></Image>
                     </Link>
-                    <Link href={x.mail==null?"":x.mail}>
+                    <Link href={x.email==null ? "" : `mailto:${x.email}`}>
                       <Image
                         src={mail}
                         alt=""
@@ -61,7 +60,6 @@ export default  function Faculty({data}:any) {
 
           </div>
         </div>
-      </div>
     </div>
   );
 }

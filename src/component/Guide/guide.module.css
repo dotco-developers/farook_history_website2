@@ -14,12 +14,12 @@
    max-width: 200px;
     border-radius: 500px 500px 500px 500px;
     position: relative;
-    transition: 2s ease-in-out;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-.readmore{
+
+/* .readmore{
     opacity: 0;
     position: absolute;
     bottom: 6%;
@@ -27,7 +27,11 @@
     transform: translate(-50% -50%);
     transition: 1s ease-in;
     
-}
+} */
+ .readmore{
+    position: relative;
+    margin-top: 8px;
+ }
 .readmore a{
     font-family: "poppins";
     font-style: normal;
@@ -35,7 +39,7 @@
     color: #982B35;
 }
 
-.faccard:hover{
+/* .faccard:hover{
     padding-bottom: 5rem;
     transition: .5s ease-in-out;
 }
@@ -43,7 +47,7 @@
     opacity: 1;
    
    
-}
+} */
 .iconimg{
     color: #982B35;
     font-size: 2.5rem;

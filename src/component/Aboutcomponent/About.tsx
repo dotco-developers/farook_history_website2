@@ -2,11 +2,21 @@
 import { useEffect, useState } from "react";
 import styles from "./Aboutcomponent.module.css";
 import CountUp from "react-countup";
-export default function About({ data, countup }: any) {
+export default function About({ data }: any) {
   const [countupdata, setcountupdata] = useState([]);
   useEffect(() => {
-    setcountupdata(countup);
-  }, [countup]);
+    const fetchdata=async()=>{
+      try {
+        const response =await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/countup/`)
+        const countuptemp=await response.json()
+        setcountupdata(countuptemp);
+      } catch (error) {
+        console.log("error in fetching countup about page ",error);
+        
+      }
+    } 
+    fetchdata() 
+  }, []);
 
   return (
     <div className={styles.headmain}>

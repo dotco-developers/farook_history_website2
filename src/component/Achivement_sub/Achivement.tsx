@@ -36,8 +36,18 @@ export default function Achivement({ data }: any) {
   }, [first]);
 
   useEffect(() => {
-    setcounterdata(data?.countup);
-  }, [counterdata]);
+    const fetchdata=async()=>{
+      try {
+        const response =await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/achivementcountup/`)
+        const countuptemp=await response.json()
+        setcounterdata(countuptemp);
+      } catch (error) {
+        console.log("error in fetching countup achievements page ",error);
+        
+      }
+    } 
+    fetchdata() 
+  }, []);
 
   return (
     <section id={styles.about}>
@@ -183,6 +193,9 @@ export default function Achivement({ data }: any) {
                         <div
                           dangerouslySetInnerHTML={{ __html: x.description }}
                         ></div>
+                         <Link href={`${x.cv}`}>
+                        <button className={styles.mobbtn}>Download CV</button>
+                      </Link>
                       </div>
                     </div>
                   </div>
@@ -234,6 +247,9 @@ export default function Achivement({ data }: any) {
                         <div
                           dangerouslySetInnerHTML={{ __html: x.description }}
                         ></div>
+                        <Link href={`${x.cv}`}>
+                        <button className={styles.mobbtn}>Download CV</button>
+                      </Link>
                       </div>
                     </div>
                   </div>

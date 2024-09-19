@@ -31,7 +31,7 @@ export default function Archieves() {
           </div>
           <div className={`col-lg-6 col-md-6 col-12 ${styles.algn}`}>
             <div className={styles.wrap}>
-              <Link href={"/center"} style={{ textDecoration: "none" }}>
+              <Link href={"/centers"} style={{ textDecoration: "none" }}>
                 <div className={styles.item}>
                   <p>CENTRES</p>
                 </div>

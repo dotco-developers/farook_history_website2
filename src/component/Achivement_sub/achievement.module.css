@@ -553,7 +553,9 @@ margin-left: 0;
 .cardcont h1{
     font-size: 24px;
 }
-
+.mobbtn{
+    display: none;
+}
 /* ends here */
 
 @media(max-width:991px){
@@ -567,7 +569,20 @@ margin-left: 0;
         height: auto;
     }
     .btncv{
+        display: none;
         top: 66%;
+    }
+    .mobbtn{
+        display: block;
+        background-color: #982B35;
+        padding: 7px 10px;
+        color: white;
+        font-size: 14px;
+      
+        border-radius: 10px;
+        margin-top: 14px;
+
+
     }
 }
 

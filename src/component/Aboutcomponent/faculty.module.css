@@ -1,0 +1,154 @@
+.outer_main {
+    padding-top: 111px;
+    position: relative;
+  }
+  
+  .headingfac {
+    width: 100%;
+    text-align: center;
+    padding: 40px 0px;
+    padding-top: 50px;
+  }
+  
+  .headingfac h1 {
+    color: #982b35;
+    font-family: "Madimi One", sans-serif;
+    font-size: 35px;
+  }
+  
+  .facultywrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+   
+}
+.faccard{
+    text-align: center;
+    background-color: #79797933;
+    margin: 0px 10px;
+    padding: 1rem 1rem;
+    padding-bottom: 2.5rem;
+   max-width: 200px;
+    border-radius: 500px 500px 500px 500px;
+    position: relative;
+    transition: 2s ease-in-out;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.readmore{
+    opacity: 0;
+    position: absolute;
+    bottom: 6%;
+    left: 30%;
+    transform: translate(-50% -50%);
+    transition: 1s ease-in;
+    
+}
+.readmore a{
+    font-family: "poppins";
+    font-style: normal;
+    text-decoration: none;
+    color: #982B35;
+}
+
+.faccard:hover{
+    padding-bottom: 5rem;
+    transition: .5s ease-in-out;
+}
+.faccard:hover .readmore{
+    opacity: 1;
+   
+   
+}
+.iconimg{
+    color: #982B35;
+    font-size: 2.5rem;
+    width: 50px;
+    height: 50px;
+}
+
+
+.facimg1{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: auto;
+}
+.facicons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iconimg{
+    color: #982B35;
+    font-size: 2.5rem;
+}
+.facdata{
+    padding-top: 1rem;
+}
+.facdata h4{
+    color: #982B35;
+    font-family:"poppins";
+    font-weight: 500;
+}
+.facdata h6{
+    color: black;
+    font-family: "poppins";
+    font-weight: 300;
+}
+  .lefti,
+  .righti {
+    position: absolute;
+    opacity: 0.1;
+  }
+  
+  .lefti {
+    left: 0;
+    top: -270px;
+    width: 50%;
+  }
+  
+  .righti {
+    right: 0;
+    top: -257px;
+    width: 50%;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 991px) {
+    .card {
+      margin-bottom: 2rem;
+    }
+  
+    .righti {
+      width: 60%;
+      top: -50px;
+    }
+  
+    .lefti {
+      top: -50px;
+      width: 60%;
+    }
+  
+    .headingfac {
+      padding-top: 170px;
+    }
+  
+    .facultywrap {
+      padding-bottom: 20px;
+    }
+  
+    .outer_main {
+      padding-top: 0px;
+    }
+  }
+  

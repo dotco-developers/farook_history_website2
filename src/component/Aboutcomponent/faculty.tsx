@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./Aboutcomponent.module.css";
+import styles from "./faculty.module.css";
 import insta from "../../../public/icons grey/instared.png";
 import mail from "../../../public/icons grey/mailred.png";
 import lin from "../../../public/icons grey/inred.png";

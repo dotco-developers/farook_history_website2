@@ -10,7 +10,6 @@ export default function About({ data ,countup}: any) {
         const response =await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/countup/`)
         const countuptemp=await response.json()
         setcountupdata(countuptemp);
-        console.log("counter data",countuptemp);
       } catch (error) {
         console.log("error in fetching countup about page ",error);   
       }
@@ -33,7 +32,7 @@ export default function About({ data ,countup}: any) {
               ></div>
             ))}
           </div>
-          {countup && countup.length > 0 ? (
+          {countupdata && countupdata.length > 0 ? (
             <div className={styles.counter}>
               {countupdata.map((x: any, i: number) => (
                 <div

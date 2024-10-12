@@ -20,7 +20,7 @@ export default async function Inner({ params }: any) {
   // useEffect(() => {
   //   setUrl(param);
   // }, [param]);
-  var urlmain = "http://localhost:3000";
+  var urlmain = "https://fchistory.in";
   return (
     <section className={styles.sec}>
       <div className="container">
@@ -52,7 +52,7 @@ export default async function Inner({ params }: any) {
               <a
                 target="blank"
                 href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
-                  "Department of history : " + urlmain + "/news/" + params.news
+                  `${x.title} : ` + urlmain + "/news/" + params.news 
                 )}`}
               >
                 <Image src={share} alt="" className={styles.sh}></Image>

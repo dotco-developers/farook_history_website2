@@ -6,7 +6,6 @@ import Programme from "@/component/Aboutcomponent/programme";
 import { About_countup_datafetcher, aboutus_datafetcher, faculty_datafetcher, programme_datafetcher } from "../../component/api/route";
 
 export default async function about() {
-  
   const facdata=await faculty_datafetcher()
   const abouutusdata=await aboutus_datafetcher()
   const countup=await About_countup_datafetcher()
@@ -15,7 +14,9 @@ export default async function about() {
     <section id="about">
       <About data={abouutusdata} countup={countup}></About>
       <Mission data={abouutusdata}></Mission>
+      <div  id="faculty">
       <Faculty  data={facdata}></Faculty>
+      </div>
       <Programme programdata={programm} ></Programme>
     </section>
   );

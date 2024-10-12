@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function Faculty({ data }: any) {
   return (
-    <div className={styles.outer_main_final} id="faculty">
+    <div className={styles.outer_main_final}>
       <Image src={left} alt="" className={styles.lefti_final}></Image>
       <Image src={right} alt="" className={styles.righti_final}></Image>
       <div className={styles.headingfac_final}>
@@ -17,7 +17,7 @@ export default function Faculty({ data }: any) {
       </div>
       <div className={styles.facultywrap_final}>
         <div className="row" style={{ width: "100%" }}>
-          {data?.map((x: any, i: number) => (
+          {data.non_former?.map((x: any, i: number) => (
             <div className={`col-lg-4 col-12 ${styles.card_final}`} key={i}>
               <div className={styles.faccardmain_final}>
                 <div className={styles.facimgdiv_final}>
@@ -49,7 +49,11 @@ export default function Faculty({ data }: any) {
                     ></Image>
                   </Link>
                   <Link href={x.linkedin == null ? "" : x.linkedin}>
-                    <Image src={lin} alt="" className={styles.iconimg_final}></Image>
+                    <Image
+                      src={lin}
+                      alt=""
+                      className={styles.iconimg_final}
+                    ></Image>
                   </Link>
                 </div>
                 <div className={styles.readmore_final}>
@@ -58,6 +62,11 @@ export default function Faculty({ data }: any) {
               </div>
             </div>
           ))}
+          <div className="col-lg-12 col-12 ">
+            <Link href={"/former-faculty"} style={{textDecoration:'none'}}>
+              <button className={styles.former}>Former primcipal</button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -18,13 +18,14 @@ export default async function Eventinner({params}:any) {
   const image =await eventimages_datafetcher(params.slug)
   const video =await eventvideo_datafetcher()
 
-  const dateoptions: Intl.DateTimeFormatOptions = {
+  const option: Intl.DateTimeFormatOptions={
     year: "numeric",  
     month: "long",    
     day: "numeric",   
     hour: "numeric",
     minute: "numeric",
     hour12: true,
+    timeZone: "UTC"
   };
 
   return (
@@ -44,16 +45,18 @@ export default async function Eventinner({params}:any) {
               <h2>{x.title}</h2>
               <p style={{marginTop:"20px"}}>
                 <FontAwesomeIcon icon={faClock} className={styles.icc} /> 
-                {new Date(x.date).toLocaleString("en-US",dateoptions)}
+                {new Date(x.date).toLocaleDateString("en-US",option)}
                 </p>
               <p style={{marginBottom:"20px"}}>
               <FontAwesomeIcon icon={faLocationDot} className={styles.icc} />
                 {x.venue}
               </p>
               <div>
-                <label>education</label>
-                <label>education</label>
-                <label>education</label>
+                {
+                  x.tags.map((tag:any)=>(
+                    <label>{tag}</label>
+                  ))
+                }
               </div>
             </div>
             <div className="col-lg-6 col-12">
@@ -73,7 +76,7 @@ export default async function Eventinner({params}:any) {
                   <div className={`col-lg-4 ${styles.card}`} key={index}>
                   <div className={styles.faccard}>
                     <div className={styles.facimgdiv}>
-                      <Image className={styles.facimg1} width={200} height={200} src={item.image} alt="" />
+                      <Image className={styles.facimg1} width={200} height={200} src={item.image==null?"":item.image} alt="" />
                     </div>
                     <div className={styles.facdata}>
                       <h4>{item.name}</h4>

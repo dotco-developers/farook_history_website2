@@ -5,7 +5,6 @@ import { blog__datafetcher, blog_inner_datafetcher } from "../../component/api/r
 
 export default async function Blog({searchParams}:any){
   const data=await blog__datafetcher()
-  
   return(
     <Blogs data={data} searchParams={searchParams}></Blogs>
   )

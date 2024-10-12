@@ -339,7 +339,6 @@ export async function blog__datafetcher(id) {
     });
     const temp = await response.json();
     const data = temp.filter((x) => x.is_accepted == true);
-    console.log("blog data is :",data);
     return data;
   } catch (error) {
     console.log("error in fetching blog  data");

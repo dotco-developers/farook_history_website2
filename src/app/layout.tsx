@@ -3,7 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from "@/component/Footer/Footer";
-import Navbar from "../component/navbar/Navbar"
+import Navbar from "../component/navbar/Navbar";
+import dynamic from 'next/dynamic';
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,15 +17,19 @@ export const metadata: Metadata = {
 
 export default  function RootLayout({
 
+
+
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   
+  
+
   return (
     <html lang="en">
       <head>
-      <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      <link rel="icon" href="/farook-log.png" />
       </head>
       <body className={inter.className}>
         <Navbar ></Navbar>

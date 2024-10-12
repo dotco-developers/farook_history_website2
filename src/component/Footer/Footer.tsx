@@ -91,9 +91,9 @@ export default function Footer() {
                 <Image src={mail} alt="" className={styles.l_ic}></Image>
               </div>
               </Link>
-              <div className={styles.outer}>
+              {/* <div className={styles.outer}>
               <Image src={app} alt="" className={styles.l_ic}></Image>
-              </div>
+              </div> */}
               <Link href={"https://www.facebook.com/history.farookcollege/"}>
               <div className={styles.outer}>
               <Image src={insta} alt="" className={styles.l_ic}></Image>

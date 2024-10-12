@@ -11,8 +11,8 @@ import {
 import Link from "next/link";
 export default async function Centers({params}:any) {
   const data = await center_datafetcher();
-  const head = await center_for_navbar_datafetcher(params.id);
-  console.log("params is ",params.id);
+  // const head = await center_for_navbar_datafetcher(params.id);
+  // console.log("params is ",params.id);
   
   return (
     <section className={styles.sec}>

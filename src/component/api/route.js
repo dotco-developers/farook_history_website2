@@ -302,7 +302,7 @@ export async function histosa_reports_datafetcher() {
 export async function histosa_gallery_datafetcher() {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/activityimage/`,
+      `${process.env.NEXT_PUBLIC_BASE_URL}/histosa_gallery/`,
       {
         method: "get",
         cache: "no-cache",
@@ -337,8 +337,9 @@ export async function blog__datafetcher(id) {
       method: "GET",
       cache: "no-cache",
     });
-    const temp = await resdeponse.json();
+    const temp = await response.json();
     const data = temp.filter((x) => x.is_accepted == true);
+    console.log("blog data is :",data);
     return data;
   } catch (error) {
     console.log("error in fetching blog  data");

@@ -53,8 +53,8 @@ export default async function Eventinner({params}:any) {
               </p>
               <div>
                 {
-                  x.tags.map((tag:any)=>(
-                    <label>{tag}</label>
+                  x.tags.map((tag:any,i:number)=>(
+                    <label key={i}>{tag}</label>
                   ))
                 }
               </div>

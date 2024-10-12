@@ -69,6 +69,7 @@ export default  function Event({ searchParams,data }:any) {
     hour: "numeric",
     minute: "numeric",
     hour12: true,
+    timeZone:"UTC"
   };
 
   
@@ -131,7 +132,7 @@ export default  function Event({ searchParams,data }:any) {
                   <Link href={`/event/${x.id}`}>
                   <Image src={arr} alt="" className={styles.arr}></Image>
                   </Link>
-                  <Image src={x.image} alt="" className={styles.im} width={300} height={400} ></Image>
+                  <Image src={x.image==null?"":x.image} alt="" className={styles.im} width={300} height={400} ></Image>
                 </div>
                 <h2>{x.title}</h2>
                 <div className={styles.auth}></div>

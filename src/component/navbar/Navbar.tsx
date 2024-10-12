@@ -7,9 +7,9 @@ import { useState } from 'react';
 import im from "../../../public/fc-logo.svg";
 import "../../app/globals.css"
 function NavBar({id}:any) {
-  if (typeof window !== "undefined") {
-    require("bootstrap/dist/js/bootstrap");
-  }
+  // if (typeof window !== "undefined") {
+  //   require("bootstrap/dist/js/bootstrap");
+  // }
   const [navbar, setNavbar] = useState(false);
   return (
       <nav style={{position:"sticky",top:"0"}} className="w-full bg-white  top-0 left-0 right-0  py-2 z-[99999] ">

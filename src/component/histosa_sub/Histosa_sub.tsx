@@ -27,7 +27,7 @@ export default  function Histosa({histosa,execome,activity,gallery,reports}:any)
             <h2 className={styles.head}>HISTOSA</h2>
             {
               histosa?.map((x:any,i:number)=>(
-                <div className={styles.pera} key={i} dangerouslySetInnerHTML={{__html:x.description}}>               
+                <div className={styles.pera} key={i} dangerouslySetInnerHTML={{__html:x.main_description}}>               
               </div>
               ))
             }

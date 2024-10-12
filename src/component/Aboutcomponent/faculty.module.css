@@ -129,6 +129,20 @@
     top: -257px;
     width: 50%;
   }
+  .faccardmain_final{
+    margin-top: 10px;
+    margin-bottom: 6px;
+  }
+  .former{
+    display: block;
+    margin: auto;
+    background-color: #982B35;
+    color: white;
+    padding: 10px;
+    border-radius: 9px;
+    border: none;
+    margin-top: 15px;
+  }
   
   /* Media Queries */
   @media (max-width: 991px) {

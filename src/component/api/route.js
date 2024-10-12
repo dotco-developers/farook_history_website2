@@ -196,7 +196,9 @@ export async function faculty_datafetcher() {
       }
     );
     const data = await response.json();
-    return data;
+    const former=data.filter((x)=>x.is_former==true)
+    const non_former=data.filter((x)=>x.is_former==false)
+    return {former,non_former};
   } catch (error) {
     console.log("error in fetching faculty  data");
   }
@@ -335,7 +337,7 @@ export async function blog__datafetcher(id) {
       method: "GET",
       cache: "no-cache",
     });
-    const temp = await response.json();
+    const temp = await resdeponse.json();
     const data = temp.filter((x) => x.is_accepted == true);
     return data;
   } catch (error) {

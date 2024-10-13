@@ -4,13 +4,11 @@ import "./globals.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from "@/component/Footer/Footer";
 import Navbar from "../component/navbar/Navbar";
-import dynamic from 'next/dynamic';
-
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "farook college history department",
+  title: "History Department Farook College ",
   description: "farook college autonomous department of history",
   keywords:"Farook college history department,farook college ,autonomous college,history department ,farook college news,department,farook department, college, education,academic programs,top colleges"
 };
@@ -23,6 +21,7 @@ export default  function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   
   
 

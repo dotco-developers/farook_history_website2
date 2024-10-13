@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import ic1 from "../../../../public/icons grey/mail.png";
 import ic2 from "../../../../public/icons grey/insta.png";
-import ic3 from "../../../../public/icons grey/app.png";
+import ic3 from "../../../../public/icons grey/lin-grey2.png";
 
 import Link from "next/link";
 import { faculty_inner_datafetcher } from "@/component/api/route";
@@ -26,7 +26,7 @@ export default async function Staff({ params }: any) {
                   <h2>{x.name}</h2>
                   <p className={styles.pera1}>{x.designation}</p>
                   <div className={styles.icim}>
-                    <Link href={x.email == null ? "" : x.email}>
+                    <Link href={x.email == null ? "" : `mailto:${x.email}`}>
                       <Image src={ic1} alt=""></Image>
                     </Link>
                     <Link href={x.instagram == null ? "" : x.instagram}>
@@ -112,7 +112,7 @@ export default async function Staff({ params }: any) {
                   <h2>{x.name}</h2>
                   <p className={styles.pera1}>{x.designation}</p>
                   <div className={styles.icim}>
-                    <Link href={x.email == null ? "" : x.email}>
+                    <Link href={x.email == null ? "" : `mailto:${x.email}`}>
                       <Image src={ic1} alt=""></Image>
                     </Link>
                     <Link href={x.instagram == null ? "" : x.instagram}>

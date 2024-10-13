@@ -26,7 +26,7 @@ export default function Activity({ data }: any) {
                   {x.date}
                   </h4>
                   <br />
-                  <div dangerouslySetInnerHTML={{__html:x.desctiption}}>
+                  <div dangerouslySetInnerHTML={{__html:x.description}}>
 
                   </div>
                 </div>

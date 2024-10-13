@@ -8,6 +8,9 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 
 export default function Management_sidmenu({ data, params, head }: any) {
+  if (typeof window !== "undefined") {
+    require("bootstrap/dist/js/bootstrap");
+  }
   const pathname = usePathname();
   return (
     <>

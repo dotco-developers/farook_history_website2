@@ -37,7 +37,13 @@ export default function Gallery({ image, video }: any) {
           {image.map((x: any, i: number) => (
             <div className="col-lg-4 col-12" key={i}>
               <Link href={x.image} target="_blank">
-                <Image width={400} height={400} src={x.image} alt="" className={styles.im}></Image>
+                <Image
+                  width={400}
+                  height={400}
+                  src={x.image}
+                  alt=""
+                  className={styles.im}
+                ></Image>
               </Link>
             </div>
           ))}
@@ -46,10 +52,22 @@ export default function Gallery({ image, video }: any) {
         // video
         <div className="row">
           {video.map((x: any, i: number) => (
-            <div className="col-lg-4 col-12" style={{ position: "relative" }} key={i}>
-              <FontAwesomeIcon icon={faPlay} className={styles.play} />
-              <Image width={300} height={300} src={im} alt="" className={styles.vid}></Image>
-            </div>
+            <Link href={x.url}target="_blank">
+              <div
+                className="col-lg-4 col-12"
+                style={{ position: "relative" }}
+                key={i}
+              >
+                <FontAwesomeIcon icon={faPlay} className={styles.play} />
+                <Image
+                  width={300}
+                  height={300}
+                  src={x.video_thumbnail}
+                  alt=""
+                  className={styles.vid}
+                ></Image>
+              </div>
+            </Link>
           ))}
         </div>
       )}

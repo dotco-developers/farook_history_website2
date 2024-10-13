@@ -65,7 +65,7 @@ export default function Activity({ data }: any) {
               {data
                 .filter((x: any) => x.link != null)
                 .map((item: any, i: any) => (
-                  <Link href={`${item.link}`}>
+                  <Link href={`${item.link}`} target="_blank">
                     <div
                       className="col-lg-4 col-12"
                       style={{ position: "relative" }}

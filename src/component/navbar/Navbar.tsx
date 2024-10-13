@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import im from "../../../public/fc-logo.svg";
-// import "../../app/globals.css";
+import "../../app/globals.css";
 import styles from "./Navbar.module.css"
 function NavBar({id}:any) {
   // if (typeof window !== "undefined") {

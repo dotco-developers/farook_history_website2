@@ -45,10 +45,16 @@ export default function Activity({ data }: any) {
           </div>
           {content ? (
             <div className="row">
-              {data.map((x: any, i: number) => (
+              {data.filter((x: any) => x.link == null).map((x: any, i: number) => (
                 <div className="col-lg-4 col-12" key={i}>
                   <Link href={x.image} target="_blank">
-                    <Image src={x.image} width={400} height={400} alt="" className={styles.im}></Image>
+                    <Image
+                      src={x.image}
+                      width={400}
+                      height={400}
+                      alt=""
+                      className={styles.im}
+                    ></Image>
                   </Link>
                 </div>
               ))}
@@ -56,14 +62,26 @@ export default function Activity({ data }: any) {
           ) : (
             // video
             <div className="row">
-              <div className="col-lg-4 col-12" style={{ position: "relative" }}>
-                <FontAwesomeIcon icon={faPlay} className={styles.play} />
-                <Image src={im} alt="" className={styles.vid}></Image>
-              </div>
-              <div className="col-lg-4 col-12" style={{ position: "relative" }}>
-                <FontAwesomeIcon icon={faPlay} className={styles.play} />
-                <Image src={im} alt="" className={styles.vid}></Image>
-              </div>
+              {data
+                .filter((x: any) => x.link != null)
+                .map((item: any, i: any) => (
+                  <Link href={`${item.link}`} target="_blank" key={i}>
+                    <div
+                      className="col-lg-4 col-12"
+                      style={{ position: "relative" }}
+                      key={i}
+                    >
+                      <FontAwesomeIcon icon={faPlay} className={styles.play} />
+                      <Image
+                        src={item.image}
+                        width={400}
+                        height={400}
+                        alt=""
+                        className={styles.vid}
+                      ></Image>
+                    </div>
+                  </Link>
+                ))}
             </div>
           )}
         </div>

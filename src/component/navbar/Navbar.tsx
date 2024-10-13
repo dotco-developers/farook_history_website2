@@ -5,12 +5,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import im from "../../../public/fc-logo.svg";
-import "../../app/globals.css"
+// import "../../app/globals.css";
+import styles from "./Navbar.module.css"
 function NavBar({id}:any) {
-  // if (typeof window !== "undefined") {
-  //   require("bootstrap/dist/js/bootstrap");
-  // }
+
+  if (typeof window !== "undefined") {
+    require("bootstrap/dist/js/bootstrap");
+  }
   const [navbar, setNavbar] = useState(false);
+  
   return (
       <nav style={{position:"sticky",top:"0"}} className="w-full bg-white  top-0 left-0 right-0  py-2 z-[99999] ">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8 ">
@@ -53,9 +56,9 @@ function NavBar({id}:any) {
                   </Link>
                 </li>
                 <li className="mx-1 font-semibold text-[Madimi One]	 pb-6 text-xl text-black py-2 md:px-6 text-center   hover:text-[#982B35] list  ">
-                  <Link href="/about#programme" onClick={() => setNavbar(!navbar)} className='text-black hover:text-[#982B35] no-underline w-max'>
+                  <a href="/about#programme" onClick={() => setNavbar(!navbar)} className='text-black hover:text-[#982B35] no-underline w-max'>
                    <p className='hover:text-[#982B35] block m-auto w-max'>Programme</p> 
-                  </Link>
+                  </a>
                 </li>
                 <li className="mx-1 font-semibold text-[Madimi One]	 pb-6 text-xl text-black py-2 md:px-6 text-center   hover:text-[#982B35] list  ">
                   <Link href={`/centers`} onClick={() => setNavbar(!navbar)} className='text-black hover:text-[#982B35] no-underline w-max'>
@@ -63,9 +66,9 @@ function NavBar({id}:any) {
                   </Link>
                 </li>
                 <li className="mx-1 font-semibold text-[Madimi One]	 pb-6 text-xl text-black py-2 md:px-6 text-center   hover:text-[#982B35] list  ">
-                  <Link href="/about#faculty" onClick={() => setNavbar(!navbar)} className='text-black hover:text-[#982B35] no-underline w-max'>
+                  <a href="/about#faculty" onClick={() => setNavbar(!navbar)} className='text-black hover:text-[#982B35] no-underline w-max'>
                    <p className='hover:text-[#982B35] block m-auto w-max'>Faculty</p> 
-                  </Link>
+                  </a>
                 </li>
                 <li className="mx-1 font-semibold text-[Madimi One]	 pb-6 text-xl text-black py-2 md:px-6 text-center   hover:text-[#982B35] list  ">
                   <Link href="/blogs" onClick={() => setNavbar(!navbar)} className='text-black hover:text-[#982B35] no-underline w-max'>

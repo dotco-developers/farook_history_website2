@@ -13,7 +13,7 @@ export default async function Former_faculty() {
         <div className="row" style={{display:"flex"}}>
           <div className="col-lg-12 col-12 ">
             <h4 className={styles.head}>
-                Former faculty
+                Former faculties
             </h4>
           </div>
           {

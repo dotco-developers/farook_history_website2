@@ -64,6 +64,7 @@ export default function Achivement({ data }: any) {
               <br />
               {data.data?.map((x: any, i: number) => (
                 <div
+                 className={styles.desc}
                   dangerouslySetInnerHTML={{ __html: x.description }}
                   key={i}
                 ></div>
@@ -191,6 +192,7 @@ export default function Achivement({ data }: any) {
                         <br />
 
                         <div
+                          className={styles.descachiv}
                           dangerouslySetInnerHTML={{ __html: x.description }}
                         ></div>
                          <Link href={`${x.cv}`}>

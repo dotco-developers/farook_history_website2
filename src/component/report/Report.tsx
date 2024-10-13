@@ -36,7 +36,7 @@ export default function REPORTS({ data }: any) {
                   <p>{x.year}</p>
                 </div>
                 <div className="col-lg-3 col-3">
-                  <p>{x.topic}</p>
+                  <p>{x.title}</p>
                 </div>
                 <div className="col-lg-3 col-3 ">
                   <Link href={`${x.report}`}>

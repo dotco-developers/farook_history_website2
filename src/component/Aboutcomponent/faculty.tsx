@@ -64,7 +64,7 @@ export default function Faculty({ data }: any) {
           ))}
           <div className="col-lg-12 col-12 ">
             <Link href={"/former-faculty"} style={{textDecoration:'none'}}>
-              <button className={styles.former}>Former primcipal</button>
+              <button className={styles.former}>Former faculties</button>
             </Link>
           </div>
         </div>

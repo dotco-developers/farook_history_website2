@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 
 export default function Management_sidmenu({ data, params, head }: any) {
+
   const pathname = usePathname();
   return (
     <>

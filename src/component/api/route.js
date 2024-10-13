@@ -74,10 +74,10 @@ export async function eventimages_datafetcher(id) {
     console.log("error in fetching eventimages  data");
   }
 }
-export async function eventvideo_datafetcher() {
+export async function eventvideo_datafetcher(id) {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/eventvideo/`,
+      `${process.env.NEXT_PUBLIC_BASE_URL}/eventvideo/?event=${id}`,
       {
         method: "GET",
         cache: "no-store",
@@ -196,8 +196,8 @@ export async function faculty_datafetcher() {
       }
     );
     const data = await response.json();
-    const former=data.filter((x)=>x.is_former==true)
-    const non_former=data.filter((x)=>x.is_former==false)
+    const former=data.filter((x)=>x.is_former==true )
+    const non_former=data.filter((x)=>x.is_former==false )
     return {former,non_former};
   } catch (error) {
     console.log("error in fetching faculty  data");
@@ -339,7 +339,6 @@ export async function blog__datafetcher(id) {
     });
     const temp = await response.json();
     const data = temp.filter((x) => x.is_accepted == true);
-    console.log("blog data is :",data);
     return data;
   } catch (error) {
     console.log("error in fetching blog  data");
@@ -349,13 +348,14 @@ export async function blog__datafetcher(id) {
 export async function Research_guide_datafetcher() {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/researchguide`,
+      `${process.env.NEXT_PUBLIC_BASE_URL}/faculty`,
       {
         method: "GET",
         cache: "no-cache",
       }
     );
-    const data = await response.json();
+    const temp = await response.json();
+    const data=temp.filter((x)=>x.is_research==true)
     return data;
   } catch (error) {
     console.log("error in fetching research guide  data");

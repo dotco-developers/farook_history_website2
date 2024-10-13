@@ -556,6 +556,11 @@ margin-left: 0;
 .mobbtn{
     display: none;
 }
+.desc p{
+    font-weight: 400;
+    color: grey;
+}
+
 /* ends here */
 
 @media(max-width:991px){

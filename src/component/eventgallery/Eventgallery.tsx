@@ -52,7 +52,7 @@ export default function Gallery({ image, video }: any) {
         // video
         <div className="row">
           {video.map((x: any, i: number) => (
-            <Link href={x.url}target="_blank">
+            <Link href={x.url}target="_blank" key={i}>
               <div
                 className="col-lg-4 col-12"
                 style={{ position: "relative" }}

@@ -8,6 +8,7 @@ import im from "../../../public/fc-logo.svg";
 import "../../app/globals.css";
 import styles from "./Navbar.module.css"
 function NavBar({id}:any) {
+  
   if (typeof window !== "undefined") {
     require("bootstrap/dist/js/bootstrap");
   }

@@ -85,7 +85,7 @@ export default function Programme({programdata}:any) {
   return (
     <div className={styles.outer_main}  id={`programme`}>
       <Image src={world} alt="" className={styles.wrld}></Image>
-      <div className={styles.peogrammehead}>
+      <div className={styles.peogrammehead} >
         <h1 >PROGRAMME</h1>
       </div>
       <div className={styles.div3}>

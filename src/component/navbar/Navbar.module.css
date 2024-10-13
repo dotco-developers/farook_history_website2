@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+/* Navbar.module.css */
+
+/* General styles for the navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    padding: 0.5rem 0;
+    z-index: 99999;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    width: 16rem; /* equivalent to w-64 */
+    height: auto;
+  }
+  
+  .hamburger {
+    padding: 0.5rem;
+    color: #982B35;
+    border: none;
+    background: none;
+    outline: none;
+  }
+  
+  .hamburgerIcon {
+    width: 1.5rem; /* equivalent to w-6 */
+    height: 1.5rem; /* equivalent to h-6 */
+  }
+  
+  .navMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+  }
+  
+
+  
+  .navMenu.show {
+    display: block;
+    padding: 3rem;
+  }
+  
+  .navItem {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem; /* equivalent to text-xl */
+    padding-bottom: 1.5rem; /* equivalent to pb-6 */
+    color: black;
+    transition: color 0.3s;
+  }
+  
+  .navItem:hover {
+    color: #982B35;
+  }
+  
+  .navLink {
+    text-decoration: none;
+    color: inherit;
+  }
+  .ulmain{
+    display: flex;
+  }
+  @media (min-width: 768px) {
+    /* For larger screens, convert the layout to row-based */
+    .navMenu {
+      flex-direction: row;
+      height: auto;
+      justify-content: flex-end;
+      padding: 0;
+    }
+  
+    .navItem {
+      padding: 0.5rem 1.5rem;
+    }
+  }
+  

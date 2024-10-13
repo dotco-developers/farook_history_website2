@@ -29,8 +29,10 @@ export default function News_sub({ searchParams, data }: any) {
     setFilteredData(filtered);
   }, [searchQuery, selectedDate, data]);
 
-  const dateOptions = Array.from(new Set(data.map((x: any) => x.date)));
-
+  const dateOptions = Array.from(
+    new Set(data.map((x: any) => new Date(x.date).getFullYear()))
+  );
+  
   const handleSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const query = e.currentTarget.search.value;
@@ -51,6 +53,11 @@ export default function News_sub({ searchParams, data }: any) {
       `/news/?search=${searchQuery}&date=${date}`
     );
   };
+
+  useEffect(() => {
+   
+  }, [])
+  
 
   return (
     <section className={styles.sec}>

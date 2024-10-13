@@ -16,7 +16,7 @@ export default async function Eventinner({params}:any) {
   const data=await event_innner_datafetcher(params.slug)
   const eventhost=await eventhost_datafetcher(params.slug)
   const image =await eventimages_datafetcher(params.slug)
-  const video =await eventvideo_datafetcher()
+  const video =await eventvideo_datafetcher(params.slug)
 
   const option: Intl.DateTimeFormatOptions={
     year: "numeric",  

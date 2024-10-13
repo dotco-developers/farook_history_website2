@@ -7,6 +7,7 @@ export default async function Management_in({ params }: any) {
   const sidebardata = await center_sidebar_datafetcher(params.id);
   const head = await center_head_datafetcher(params.id);
   const data = await center_inner_datafetcher(params.name);
+  
   return (
     <>
       <section className={styles._sec}>

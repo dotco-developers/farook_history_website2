@@ -28,7 +28,7 @@ export default  function RootLayout({
   return (
     <html lang="en">
       <head>
-      <link rel="icon" href="/farook-log.png" />
+      <link rel="icon" href="/log-final-crop.png" />
       </head>
       <body className={inter.className}>
         <Navbar ></Navbar>
